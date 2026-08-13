@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Consultoría Financiera Gratuita de 30 Minutos | Lucho Nerbutti</title>
+<meta name="description" content="Reserva tu consultoría financiera gratuita de 30 minutos con Lucho Nerbutti. Sin compromiso, por Zoom. Te explico qué opciones encajan con tu situación.">
+<link rel="canonical" href="https://luchonerbutti.com/consultoria/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Consultoría Financiera Gratuita de 30 Minutos | Lucho Nerbutti">
+<meta property="og:description" content="Reserva tu consultoría financiera gratuita de 30 minutos con Lucho Nerbutti. Sin compromiso, por Zoom. Te explico qué opciones encajan con tu situación.">
+<meta property="og:url" content="https://luchonerbutti.com/consultoria/">
+<meta property="og:site_name" content="Lucho Nerbutti">
+<meta property="og:image" content="/assets/perfil-lucho.png">
+<meta property="og:image:width" content="415">
+<meta property="og:image:height" content="497">
+
+<link rel="icon" href="/assets/favicon-32x32.png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/favicon-180x180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/shared.css">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+#consultoria-page {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: #f5f5f5;
+  width: 100%;
+}
+
+.con-wrap {
+  width: 100%; max-width: 1100px;
+  margin: 0 auto; padding: 0 2rem;
+}
+
+.con-hero { padding: 4rem 0 3rem; border-bottom: 1px solid #141414; display: flex; justify-content: center; width: 100%; }
+.con-hero-inner { display: flex; align-items: flex-end; justify-content: center; gap: 2rem; max-width: 1100px; margin: 0 auto; padding: 0 2rem; box-sizing: border-box; }
+.con-hero-text { flex: 0 0 auto; max-width: 680px; padding-bottom: 1rem; }
+.con-hero-photo { flex: 0 0 auto; display: flex; align-items: flex-end; justify-content: center; }
+.con-hero-photo img { width: auto; max-width: 100%; height: 420px; object-fit: contain; display: block; mask-image: linear-gradient(to bottom, black 55%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%); }
+.con-hero-eyebrow2 { font-size: 12px; color: #d4af37; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }
+.con-hero-h1 { font-size: 3.4rem; font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; color: #f5f5f5; margin-bottom: 0.5rem; text-transform: uppercase; white-space: nowrap; }
+.con-hero-h1 em { font-style: normal; color: #d4af37; }
+.con-hero-tagline2 { font-size: 1.25rem; font-weight: 700; color: #f5f5f5; margin-bottom: 1.5rem; }
+.con-hero-sub2 { font-size: 1.05rem; color: #666; line-height: 1.7; max-width: 500px; margin-bottom: 2.5rem; }
+.con-hero-btn2 { display: inline-block; background: #d4af37; color: #0a0a0a; border: 2px solid #d4af37; border-radius: 8px; padding: 1.1rem 2.5rem; font-size: 0.9rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; font-family: 'Inter', sans-serif; width: fit-content; }
+.con-hero-guarantee2 { font-size: 0.8rem; color: #444; margin-top: 1rem; letter-spacing: 0.05em; }
+
+.con-section { padding: 4rem 0; border-bottom: 1px solid #141414; }
+.con-section-eyebrow { font-size: 11px; color: #d4af37; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }
+.con-section-title { font-size: 2rem; font-weight: 900; color: #f5f5f5; letter-spacing: -0.02em; margin-bottom: 2.5rem; text-transform: uppercase; }
+.con-section-title em { font-style: normal; color: #d4af37; }
+.con-pasos { display: flex; flex-direction: column; gap: 1.5rem; }
+.con-paso { display: flex; gap: 1.5rem; align-items: flex-start; background: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 12px; padding: 1.75rem; }
+.con-paso-num { width: 36px; height: 36px; border-radius: 50%; background: #d4af37; color: #0a0a0a; font-size: 14px; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.con-paso-title { font-size: 1.05rem; font-weight: 800; color: #f5f5f5; margin-bottom: 0.4rem; letter-spacing: -0.01em; }
+.con-paso-body { font-size: 0.95rem; color: #666; line-height: 1.75; }
+
+.con-fit { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.con-fit-block { background: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 12px; padding: 1.75rem; }
+.con-fit-block.yes { border-color: #d4af37; background: #0c0c00; }
+.con-fit-title { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 1.25rem; color: #555; }
+.con-fit-block.yes .con-fit-title { color: #b8920a; }
+.con-fit-item { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem; color: #888; line-height: 1.6; margin-bottom: 0.75rem; }
+.con-fit-item:last-child { margin-bottom: 0; }
+.con-fit-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.05rem; }
+.con-fit-block.yes .con-fit-item { color: #c9a830; }
+
+.con-faq { display: flex; flex-direction: column; gap: 1.25rem; }
+.con-faq-item { background: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 12px; padding: 1.75rem; }
+.con-faq-q { font-size: 1.05rem; font-weight: 800; color: #f5f5f5; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+.con-faq-a { font-size: 0.95rem; color: #666; line-height: 1.75; }
+
+.con-cta { background: #d4af37; border-radius: 14px; padding: 3rem 2rem; text-align: center; margin: 4rem 0; }
+.con-cta-title { font-size: 1.75rem; font-weight: 900; color: #0a0a0a; margin-bottom: 0.5rem; line-height: 1.2; letter-spacing: -0.02em; text-transform: uppercase; }
+.con-cta-sub { font-size: 0.95rem; color: #4a3800; margin-bottom: 1.75rem; line-height: 1.65; }
+.con-cta-btn { display: inline-block; background: #0a0a0a; color: #d4af37; border: none; border-radius: 9px; padding: 1.2rem 3rem; font-size: 0.92rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; font-family: 'Inter', sans-serif; transition: background 0.2s, transform 0.15s; }
+.con-cta-btn:hover { background: #181818; transform: translateY(-2px); }
+.con-cta-guarantee { font-size: 0.8rem; color: #7a6000; margin-top: 1rem; }
+
+#con-footer { font-family: 'Inter', sans-serif; background: #0a0a0a; border-top: 1px solid #1a1a1a; color: #f5f5f5; padding: 2.5rem 2rem 2rem; display: flex; justify-content: center; }
+.footer-wrap { width: 100%; max-width: 1100px; }
+.footer-top { margin-bottom: 1.25rem; }
+.footer-nombre { font-size: 1.1rem; font-weight: 900; color: #f5f5f5; letter-spacing: -0.01em; margin-bottom: 0.2rem; }
+.footer-nombre span { color: #d4af37; }
+.footer-cargo { font-size: 0.72rem; color: #555; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+.footer-legal-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.footer-legal-link { text-decoration: none; color: #555; font-size: 0.8rem; transition: color 0.2s; }
+.footer-legal-link:hover { color: #d4af37; }
+.footer-sep { color: #2a2a2a; font-size: 0.8rem; }
+.footer-bottom { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; border-top: 1px solid #141414; padding-top: 1.25rem; flex-wrap: wrap; }
+.footer-copyright { font-size: 0.72rem; color: #444; }
+.footer-disclaimer { font-size: 0.68rem; color: #333; text-align: right; line-height: 1.5; max-width: 420px; }
+
+@media (max-width: 768px) {
+  .con-hero { padding: 2.5rem 0 2rem; }
+  .con-hero-inner { flex-direction: column-reverse; align-items: center; gap: 0; padding: 0 1.25rem; }
+  .con-hero-photo { width: 55%; max-width: 200px; margin: 0 auto; justify-content: center; }
+  .con-hero-photo img { width: 100%; max-width: 100%; height: auto; }
+  .con-hero-text { width: 100%; padding-bottom: 1.5rem; text-align: center; }
+  .con-hero-eyebrow2 { font-size: 11px; }
+  .con-hero-h1 { font-size: 2.6rem; white-space: normal; }
+  .con-hero-tagline2 { font-size: 1.1rem; }
+  .con-hero-sub2 { font-size: 1rem; max-width: 100%; }
+  .con-hero-btn2 { width: 100%; text-align: center; box-sizing: border-box; padding: 1.1rem 1rem; font-size: 0.8rem; letter-spacing: 0.04em; }
+  .con-section { padding: 2.5rem 0; }
+  .con-section-title { font-size: 1.6rem; }
+  .con-fit { grid-template-columns: 1fr; }
+  .con-cta { padding: 2rem 1.25rem; margin: 2rem 0; }
+  .con-cta-title { font-size: 1.4rem; }
+  .con-cta-btn { font-size: 0.88rem; padding: 1rem 1.5rem; letter-spacing: 0.04em; }
+  .con-wrap { padding: 0 1.25rem; }
+  #con-footer { padding: 2rem 1.25rem 1.5rem; }
+  .footer-bottom { flex-direction: column; }
+  .footer-disclaimer { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<div id="consultoria-page">
+
+  <div class="con-hero">
+    <div class="con-hero-inner">
+      <div class="con-hero-text">
+        <div class="con-hero-eyebrow2">Consultoría Financiera Gratuita<br>Lucho Nerbutti</div>
+        <h1 class="con-hero-h1">RESERVA TU<br><em>CONSULTORÍA</em></h1>
+        <div class="con-hero-tagline2">consultoría financiera gratuita</div>
+        <p class="con-hero-sub2">30 minutos por Zoom. Sin compromiso. Te explico exactamente qué opciones existen para tu situación.</p>
+        <a href="/test-perfil-inversor-consultoria.html" class="con-hero-btn2">Empezar el test previo</a>
+        <div class="con-hero-guarantee2">3 minutos · Gratuito · Accede a la consultoría al terminar</div>
+      </div>
+      <div class="con-hero-photo">
+        <img decoding="async" src="/assets/perfil-lucho.png" alt="Lucho Nerbutti - Consultoría financiera gratuita">
+      </div>
+    </div>
+  </div>
+
+  <div class="con-wrap">
+    <div class="con-section">
+      <div class="con-section-eyebrow">Cómo funciona</div>
+      <h2 class="con-section-title">TU CONSULTORÍA<br><em>FINANCIERA GRATUITA</em></h2>
+      <div class="con-pasos">
+        <div class="con-paso">
+          <div class="con-paso-num">1</div>
+          <div class="con-paso-content">
+            <div class="con-paso-title">Analizamos tu situación real</div>
+            <div class="con-paso-body">Capital disponible, ingresos, horizonte temporal. Sin formularios previos — lo hacemos juntos en la llamada. En 10 minutos tengo el contexto que necesito para entender de dónde partes y qué margen real tienes para ahorrar o invertir.</div>
+          </div>
+        </div>
+        <div class="con-paso">
+          <div class="con-paso-num">2</div>
+          <div class="con-paso-content">
+            <div class="con-paso-title">Te explico qué herramientas encajan contigo</div>
+            <div class="con-paso-body">No productos genéricos. Lo que tiene sentido para tu perfil concreto y tu momento actual — con números reales, no con ejemplos de manual. Vemos juntos los costes, los plazos y el riesgo real de cada opción, sin tecnicismos innecesarios.</div>
+          </div>
+        </div>
+        <div class="con-paso">
+          <div class="con-paso-num">3</div>
+          <div class="con-paso-content">
+            <div class="con-paso-title">Si no hay nada para ti, te lo digo</div>
+            <div class="con-paso-body">Si en los primeros 10 minutos veo que no puedo ayudarte, te lo digo directamente y no perdemos el tiempo ninguno de los dos. Prefiero una consultoría financiera gratuita honesta que una venta forzada.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="con-wrap">
+    <div class="con-section">
+      <div class="con-section-eyebrow">Antes de reservar</div>
+      <h2 class="con-section-title">¿ES PARA <em>TI?</em></h2>
+      <p class="con-faq-a" style="margin-bottom: 2rem; max-width: 600px;">Antes de agendar tu consultoría financiera gratuita, conviene que sepas si encajas con el perfil de persona al que puedo ayudar realmente. Esto nos ahorra tiempo a los dos y evita que reserves una llamada que no te va a aportar nada.</p>
+      <div class="con-fit">
+        <div class="con-fit-block yes">
+          <div class="con-fit-title">Es para ti si...</div>
+          <div class="con-fit-item"><span class="con-fit-icon">✓</span>Resides en España</div>
+          <div class="con-fit-item"><span class="con-fit-icon">✓</span>Tienes ingresos recurrentes o capital ahorrado</div>
+          <div class="con-fit-item"><span class="con-fit-icon">✓</span>Quieres un plan coherente y personalizado</div>
+          <div class="con-fit-item"><span class="con-fit-icon">✓</span>Estás dispuesto a tomar una decisión informada</div>
+        </div>
+        <div class="con-fit-block">
+          <div class="con-fit-title">No es para ti si...</div>
+          <div class="con-fit-item"><span class="con-fit-icon">✗</span>Buscas hacerte rico rápido</div>
+          <div class="con-fit-item"><span class="con-fit-icon">✗</span>No tienes ningún margen de ahorro ni capital</div>
+          <div class="con-fit-item"><span class="con-fit-icon">✗</span>No resides en España</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="con-wrap">
+    <div class="con-section">
+      <div class="con-section-eyebrow">Resolviendo dudas</div>
+      <h2 class="con-section-title">PREGUNTAS SOBRE LA<br><em>CONSULTORÍA FINANCIERA GRATUITA</em></h2>
+      <div class="con-faq">
+        <div class="con-faq-item">
+          <h3 class="con-faq-q">¿La consultoría financiera gratuita tiene algún coste oculto?</h3>
+          <p class="con-faq-a">No. Los 30 minutos son completamente gratuitos y sin compromiso. Si después de la llamada decides seguir adelante con algún plan, te explico con total transparencia qué costes tiene cada opción antes de que tomes ninguna decisión.</p>
+        </div>
+        <div class="con-faq-item">
+          <h3 class="con-faq-q">¿Quién hace la consultoría financiera gratuita?</h3>
+          <p class="con-faq-a">La realiza una persona de mi equipo de trabajo, especializada en planes de ahorro para residentes en España. Yo coordino el primer contacto y ella se encarga de la consultoría técnica.</p>
+        </div>
+        <div class="con-faq-item">
+          <h3 class="con-faq-q">¿Necesito tener un capital mínimo para reservar?</h3>
+          <p class="con-faq-a">No hace falta un capital concreto antes de la llamada. Durante la consultoría financiera gratuita evaluamos juntos tu situación real y, si tu caso encaja, te explico qué opciones existen según tu capacidad de ahorro o inversión.</p>
+        </div>
+        <div class="con-faq-item">
+          <h3 class="con-faq-q">¿La consultoría es presencial o por videollamada?</h3>
+          <p class="con-faq-a">Es por Zoom, con cámara encendida. Así puedes resolver tus dudas en tiempo real sin necesidad de desplazarte hasta ningún sitio, y nosotros podemos explicarte con pantalla compartida cualquier simulación o número concreto que necesites ver.</p>
+        </div>
+        <div class="con-faq-item">
+          <h3 class="con-faq-q">¿Qué pasa si no resido en España?</h3>
+          <p class="con-faq-a">Esta consultoría financiera gratuita está pensada para residentes en España, por la normativa de los productos que se ofrecen. Si vives fuera de España, contáctame de todos modos por WhatsApp: tengo otras opciones de inversión, como nuestros apartamentos en City Las Terrenas, República Dominicana, abiertas a cualquier país.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="con-wrap">
+    <div class="con-cta">
+      <div class="con-cta-title">30 minutos que pueden<br>cambiar lo que haces con tu dinero</div>
+      <div class="con-cta-sub">Sin coste · Sin compromiso · Por Zoom</div>
+      <a href="/test-perfil-inversor-consultoria.html" class="con-cta-btn">Empezar el test previo</a>
+      <div class="con-cta-guarantee">3 minutos · Gratuito · Accede a la consultoría al terminar</div>
+    </div>
+  </div>
+
+  <div id="con-footer">
+    <div class="footer-wrap">
+      <div class="footer-top">
+        <div class="footer-nombre">Lucho <span>Nerbutti</span></div>
+        <div class="footer-cargo">Consultor Financiero Independiente</div>
+      </div>
+      <div class="footer-legal-row">
+        <a href="/politica-de-privacidad/" class="footer-legal-link">Política de privacidad</a>
+        <span class="footer-sep">·</span>
+        <a href="/aviso-legal/" class="footer-legal-link">Aviso legal</a>
+        <span class="footer-sep">·</span>
+        <a href="/politica-de-cookies/" class="footer-legal-link">Política de cookies</a>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">© 2026 Luciano Enrique Nerbutti · Todos los derechos reservados</div>
+        <div class="footer-disclaimer">Los servicios de consultoría financiera se prestan a través de una entidad autorizada y regulada. Las inversiones conllevan riesgo. Rentabilidades pasadas no garantizan resultados futuros.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="/assets/cookie-consent.js"></script>
+</body>
+</html>

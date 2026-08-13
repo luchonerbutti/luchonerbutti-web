@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>¿Amortizar Hipoteca o Invertir? Simulador Gratuito</title>
+<meta name="description" content="Descubre si te conviene más amortizar hipoteca o invertir en paralelo. Simulador gratuito con tus propios números: capital, plazo y rentabilidad.">
+<link rel="canonical" href="https://luchonerbutti.com/amortizar-hipoteca-o-invertir/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:type" content="article">
+<meta property="og:title" content="¿Amortizar Hipoteca o Invertir? Simulador Gratuito">
+<meta property="og:description" content="Descubre si te conviene más amortizar hipoteca o invertir en paralelo. Simulador gratuito con tus propios números: capital, plazo y rentabilidad.">
+<meta property="og:url" content="https://luchonerbutti.com/amortizar-hipoteca-o-invertir/">
+<meta property="og:site_name" content="Lucho Nerbutti">
+<meta property="og:image" content="/assets/og-amortizar-o-invertir.png">
+
+<link rel="icon" href="/assets/favicon-32x32.png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/favicon-180x180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/shared.css">
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .simh-outer {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a;
+    color: #f5f5f5;
+    padding: 2rem 1rem;
+  }
+  .simh-outer, .simh-outer * { box-sizing: border-box; }
+  .wrapper { width: 100%; max-width: 920px; margin: 0 auto; }
+
+  .header-block { text-align: center; margin-bottom: 2rem; }
+  .header-tag { display: inline-block; background: #d4af37; color: #0a0a0a; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 6px; margin-bottom: 1rem; }
+  .header-title { font-size: 1.7rem; font-weight: 700; line-height: 1.3; color: #f5f5f5; margin-bottom: 0.6rem; }
+  .header-sub { font-size: 1.05rem; color: #a8a8a8; line-height: 1.5; max-width: 620px; margin: 0 auto; }
+
+  .panel { background: #111111; border: 1px solid #2a2a2a; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
+  .panel-title { font-size: 12px; color: #d4af37; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; font-weight: 600; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  @media (max-width: 720px) { .grid-2 { grid-template-columns: 1fr; } }
+
+  .field { margin-bottom: 1.1rem; }
+  .field:last-child { margin-bottom: 0; }
+  .field label { display: block; font-size: 0.92rem; color: #d8d8d8; margin-bottom: 0.4rem; }
+  .field .hint { font-size: 0.82rem; color: #999; margin-top: 0.3rem; line-height: 1.4; }
+  .field input {
+    width: 100% !important; background: #0a0a0a !important; border: 1px solid #2a2a2a !important; border-radius: 8px !important;
+    padding: 0.7rem 0.9rem !important; color: #f5f5f5 !important; font-size: 1.02rem !important; font-family: inherit !important;
+    transition: border-color 0.2s; box-shadow: none !important; -webkit-appearance: none; appearance: none;
+  }
+  .field input:focus { outline: none !important; border-color: #d4af37 !important; box-shadow: none !important; }
+  .input-group { position: relative; }
+  .input-suffix { position: absolute; right: 0.9rem; top: 50%; transform: translateY(-50%); color: #999; font-size: 0.9rem; pointer-events: none; }
+
+  .rate-toggle { display: flex; gap: 0.6rem; }
+  .rate-btn { flex: 1; background: #0a0a0a !important; border: 1px solid #2a2a2a !important; border-radius: 8px !important; padding: 0.65rem !important; color: #a8a8a8 !important; font-size: 0.95rem !important; font-weight: 600 !important; cursor: pointer; transition: all 0.2s; box-shadow: none !important; text-transform: none !important; letter-spacing: normal !important; }
+  .rate-btn.active { background: #1a1800 !important; border-color: #d4af37 !important; color: #d4af37 !important; }
+  .rate-btn:hover:not(.active) { border-color: #444 !important; color: #d8d8d8 !important; background: #0a0a0a !important; }
+
+  .toggle-row { display: flex; align-items: center; gap: 0.6rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #222; }
+  .toggle-row input[type="checkbox"] { width: 18px; height: 18px; accent-color: #d4af37; cursor: pointer; }
+  .toggle-row label { font-size: 0.94rem; color: #d8d8d8; cursor: pointer; }
+
+  .btn-calc {
+    display: block !important; width: 100% !important; background: #d4af37 !important; color: #0a0a0a !important; border: none !important; border-radius: 8px !important;
+    padding: 0.95rem !important; font-size: 1rem !important; font-weight: 700 !important; cursor: pointer; margin-top: 0.5rem;
+    transition: background 0.2s; box-shadow: none !important; text-transform: none !important; letter-spacing: normal !important;
+  }
+  .btn-calc:hover { background: #e6c44a !important; }
+
+  .btn-add {
+    display: block !important; width: 100% !important; background: transparent !important; color: #d4af37 !important; border: 1px dashed #d4af37 !important; border-radius: 8px !important;
+    padding: 0.7rem !important; font-size: 0.88rem !important; font-weight: 600 !important; cursor: pointer; margin-top: 0.5rem;
+    transition: all 0.2s; box-shadow: none !important; text-transform: none !important; letter-spacing: normal !important;
+  }
+  .btn-add:hover { background: #14140a !important; }
+
+  .aportacion-row { display: grid; grid-template-columns: 1fr 1fr 1.4fr auto; grid-template-areas: "anio mes importe borrar"; gap: 0.6rem; align-items: end; margin-bottom: 0.75rem; }
+  @media (max-width: 620px) { .aportacion-row { grid-template-columns: 1fr 1fr; grid-template-areas: "anio mes" "importe importe" "borrar borrar"; } }
+  .aportacion-row .field { margin-bottom: 0; }
+  .aportacion-row select {
+    width: 100% !important; background: #0a0a0a !important; border: 1px solid #2a2a2a !important; border-radius: 8px !important;
+    padding: 0.7rem 0.9rem !important; color: #f5f5f5 !important; font-size: 1.02rem !important; font-family: inherit !important;
+    box-shadow: none !important; -webkit-appearance: none; appearance: none;
+  }
+  .btn-remove {
+    background: #1a0a0a !important; border: 1px solid #3a1a1a !important; color: #c8544a !important; border-radius: 8px !important;
+    width: 42px !important; height: 42px !important; cursor: pointer; font-size: 1.1rem !important; transition: all 0.2s; box-shadow: none !important;
+  }
+  .btn-remove:hover { background: #2a0f0f !important; }
+  .lista-vacia { color: #999; font-size: 0.92rem; padding: 0.5rem 0; line-height: 1.4; }
+
+  /* RESULTADOS */
+  .results { display: none; }
+  .results.active { display: block; }
+
+  .crossover-block { background: #0f0f0a; border: 1px solid #2a2500; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; text-align: center; }
+  .crossover-label { font-size: 0.88rem; color: #a8a8a8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+  .crossover-value { font-size: 1.9rem; font-weight: 700; color: #d4af37; margin-bottom: 0.4rem; }
+  .crossover-sub { font-size: 0.94rem; color: #d8d8d8; }
+
+  .chart-container { background: #0a0a0a; border-radius: 8px; padding: 1rem 0.5rem 0.5rem; margin-bottom: 1.5rem; position: relative; }
+  svg { width: 100%; height: auto; display: block; }
+  .chart-tooltip {
+    position: absolute; display: none; pointer-events: none; z-index: 10;
+    background: #111111; border: 1px solid #d4af37; border-radius: 8px;
+    padding: 0.7rem 0.9rem; font-size: 0.88rem; color: #f5f5f5; white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  }
+  .chart-tooltip .tt-mes { color: #d4af37; font-weight: 700; margin-bottom: 0.4rem; font-size: 0.82rem; }
+  .chart-tooltip .tt-row { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.2rem; }
+  .chart-tooltip .tt-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+  .legend { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 0.75rem; font-size: 0.88rem; color: #d8d8d8; }
+  .legend-item { display: flex; align-items: center; gap: 0.4rem; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+  @media (max-width: 620px) { .compare-grid { grid-template-columns: 1fr; } }
+  .compare-card { background: #111111; border: 1px solid #2a2a2a; border-radius: 10px; padding: 1.25rem; }
+  .compare-card.win { border-color: #d4af37; background: #14140a; }
+  .compare-card-title { font-size: 0.88rem; color: #a8a8a8; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
+  .compare-card-value { font-size: 1.55rem; font-weight: 700; color: #f5f5f5; margin-bottom: 0.35rem; }
+  .compare-card-detail { font-size: 0.88rem; color: #a8a8a8; line-height: 1.5; }
+  .compare-card.win .compare-card-value { color: #d4af37; }
+
+  .disclaimer { background: #111111; border-left: 3px solid #d4af37; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; font-size: 0.92rem; color: #aaaaaa; line-height: 1.6; margin-bottom: 1.5rem; }
+  .disclaimer strong { color: #d4af37; }
+
+  .resumen-titulo { font-size: 1.1rem; font-weight: 700; color: #f5f5f5; margin-bottom: 0.3rem; }
+  .resumen-sub { font-size: 0.92rem; color: #a8a8a8; margin-bottom: 1.5rem; }
+
+  .barra-wrap { margin-bottom: 1.75rem; }
+  .barra-track { width: 100%; height: 40px; border-radius: 8px; overflow: hidden; display: flex; background: #0a0a0a; border: 1px solid #2a2a2a; }
+  .barra-seg { height: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.82rem; font-weight: 700; color: #0a0a0a; white-space: nowrap; overflow: hidden; }
+  .barra-leyenda { display: flex; justify-content: space-between; margin-top: 0.6rem; font-size: 0.85rem; color: #aaaaaa; }
+  .barra-leyenda span { display: flex; align-items: center; gap: 0.4rem; }
+  .barra-leyenda .dot { width: 9px; height: 9px; border-radius: 2px; }
+
+  .resumen-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  @media (max-width: 780px) { .resumen-stats { grid-template-columns: 1fr 1fr; } }
+  .resumen-stat { background: #0a0a0a; border: 1px solid #2a2a2a; border-radius: 10px; padding: 1.1rem 1rem; text-align: center; }
+  .resumen-stat-label { font-size: 0.8rem; color: #a8a8a8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; line-height: 1.3; min-height: 2.1em; }
+  .resumen-stat-value { font-size: 1.35rem; font-weight: 700; color: #d4af37; }
+
+  .cta-block { background: #d4af37; border-radius: 12px; padding: 1.75rem; text-align: center; }
+  .cta-title { font-size: 1.15rem; font-weight: 700; color: #0a0a0a; margin-bottom: 0.5rem; }
+  .cta-sub { font-size: 0.95rem; color: #2a2000; margin-bottom: 1.25rem; line-height: 1.55; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .cta-btn { display: inline-block !important; background: #0a0a0a !important; color: #d4af37 !important; border: none !important; border-radius: 8px !important; padding: 0.9rem 2.25rem !important; font-size: 1rem !important; font-weight: 700 !important; letter-spacing: 0.04em; cursor: pointer; text-decoration: none !important; transition: background 0.2s; box-shadow: none !important; text-transform: none; }
+  .cta-btn:hover { background: #1a1a1a !important; color: #d4af37 !important; }
+  .cta-btn:visited { color: #d4af37 !important; }
+  /* AJUSTES MÓVIL */
+  @media (max-width: 600px) {
+    .simh-outer { padding: 1.5rem 0.9rem; }
+    .header-block { margin-bottom: 1.5rem; }
+    .header-title { font-size: 1.35rem; line-height: 1.35; }
+    .header-sub { font-size: 0.92rem; line-height: 1.45; }
+    .header-tag { font-size: 10px; padding: 0.3rem 0.7rem; }
+
+    .panel { padding: 1.15rem; margin-bottom: 1.15rem; border-radius: 10px; }
+    .panel-title { font-size: 11px; margin-bottom: 1rem; }
+
+    .grid-2 { gap: 1rem; }
+    .field label { font-size: 0.88rem; }
+    .field input, .aportacion-row select { font-size: 0.98rem !important; padding: 0.62rem 0.8rem !important; }
+
+    .crossover-block { padding: 1.15rem; }
+    .crossover-value { font-size: 1.5rem; }
+    .crossover-label { font-size: 0.78rem; }
+    .crossover-sub { font-size: 0.85rem; }
+
+    .chart-container { padding: 0.75rem 0.3rem 0.3rem; }
+    .legend { gap: 0.9rem 1.1rem; font-size: 0.78rem; }
+
+    .compare-card { padding: 1rem; }
+    .compare-card-value { font-size: 1.3rem; }
+    .compare-card-title { font-size: 0.78rem; }
+    .compare-card-detail { font-size: 0.82rem; }
+
+    .resumen-titulo { font-size: 1rem; }
+    .resumen-sub { font-size: 0.85rem; }
+    .resumen-stats { grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+    .resumen-stat { padding: 0.9rem 0.7rem; }
+    .resumen-stat-label { font-size: 0.72rem; min-height: 0; }
+    .resumen-stat-value { font-size: 1.1rem; }
+    .barra-leyenda { flex-direction: column; gap: 0.4rem; }
+
+    .disclaimer { padding: 0.9rem 1rem; font-size: 0.85rem; }
+
+    .cta-block { padding: 1.4rem 1.1rem; }
+    .cta-title { font-size: 1.02rem; }
+    .cta-sub { font-size: 0.87rem; }
+    .cta-btn { width: 100%; padding: 0.85rem 1rem !important; }
+
+    .chart-tooltip { font-size: 0.78rem; padding: 0.55rem 0.7rem; max-width: 180px; white-space: normal; }
+  }
+</style>
+</head>
+<body>
+<div class="simh-outer">
+<div class="wrapper">
+
+  <div class="header-block">
+    <div class="header-tag">Simulador</div>
+    <div class="header-title">¿Amortizar hipoteca o dejar el dinero trabajando?</div>
+    <div class="header-sub">Compara amortizar hipoteca o invertir en paralelo: descubre con tus propios números qué te conviene más.</div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Datos de tu hipoteca</div>
+
+    <div class="field">
+      <label>Tipo de interés</label>
+      <div class="rate-toggle">
+        <button type="button" class="rate-btn active" id="btnFijo" onclick="setTipoInteres('fijo')">Fijo</button>
+        <button type="button" class="rate-btn" id="btnVariable" onclick="setTipoInteres('variable')">Variable</button>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="field">
+        <label>Capital pendiente</label>
+        <div class="input-group">
+          <input type="number" id="capital" value="180000" min="1000" step="1000">
+          <span class="input-suffix">€</span>
+        </div>
+      </div>
+
+      <div class="field" id="campoTinFijo">
+        <label>Tipo de interés (TIN)</label>
+        <div class="input-group">
+          <input type="number" id="tin" value="3.2" min="0" max="20" step="0.05">
+          <span class="input-suffix">%</span>
+        </div>
+      </div>
+
+      <div class="field" id="campoEuribor" style="display:none;">
+        <label>Euríbor actual (referencia)</label>
+        <div class="input-group">
+          <input type="number" id="euribor" value="2.79" min="-2" max="10" step="0.01">
+          <span class="input-suffix">%</span>
+        </div>
+        <div class="hint">Media de julio 2026, orientativa. Actualízala si tienes un dato más reciente.</div>
+      </div>
+      <div class="field" id="campoDiferencial" style="display:none;">
+        <label>Diferencial fijado por el banco</label>
+        <div class="input-group">
+          <input type="number" id="diferencial" value="0.99" min="0" max="5" step="0.01">
+          <span class="input-suffix">%</span>
+        </div>
+      </div>
+
+      <div class="field" id="campoTinVariable" style="display:none;">
+        <label>TIN resultante (Euríbor + diferencial)</label>
+        <div class="input-group">
+          <input type="text" id="tinVariableDisplay" readonly style="color:#d4af37; font-weight:600;">
+          <span class="input-suffix">%</span>
+        </div>
+        <div class="hint">Se asume constante durante toda la simulación — el Euríbor real varía con cada revisión.</div>
+      </div>
+
+      <div class="field">
+        <label>Plazo pendiente</label>
+        <div class="input-group">
+          <input type="number" id="plazoMeses" value="300" min="1" max="600" step="1">
+          <span class="input-suffix">meses</span>
+        </div>
+        <div class="hint" id="plazoAnios">= 25 años</div>
+      </div>
+      <div class="field">
+        <label>Cuota mensual</label>
+        <div class="input-group">
+          <input type="text" id="cuotaMensual" readonly style="color:#d4af37; font-weight:600;">
+          <span class="input-suffix">€/mes</span>
+        </div>
+        <div class="hint">Calculada automáticamente (sistema francés)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Camino A · Amortización manual al banco</div>
+    <div class="hint" style="margin-bottom: 1rem;">Añade los importes que le darías al banco, en el año y mes en que realmente los darías — no una simulación automática.</div>
+    <div id="listaAportacionesManual"></div>
+    <button type="button" class="btn-add" onclick="agregarAportacionManual()">+ Añadir aportación</button>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Datos del ahorro alternativo</div>
+    <div class="grid-2">
+      <div class="field">
+        <label>Aportación mensual</label>
+        <div class="input-group">
+          <input type="number" id="aportacion" value="300" min="0" step="10">
+          <span class="input-suffix">€/mes</span>
+        </div>
+        <div class="hint">Lo que invertirías en paralelo a la hipoteca</div>
+      </div>
+      <div class="field">
+        <label>Capital inicial (opcional)</label>
+        <div class="input-group">
+          <input type="number" id="capitalInicial" value="0" min="0" step="500">
+          <span class="input-suffix">€</span>
+        </div>
+      </div>
+      <div class="field">
+        <label>Rentabilidad anual estimada</label>
+        <div class="input-group">
+          <input type="number" id="rentabilidad" value="5" min="0" max="15" step="0.1">
+          <span class="input-suffix">%</span>
+        </div>
+        <div class="hint">Estimación conservadora, editable. No es una garantía de rentabilidad.</div>
+      </div>
+    </div>
+    <div class="toggle-row">
+      <input type="checkbox" id="revalorizar">
+      <label for="revalorizar">Revalorizar la aportación mensual cada año (para que no pierda valor frente a la inflación)</label>
+    </div>
+    <div class="field" id="campoRevalorizacion" style="display:none; margin-top: 0.9rem;">
+      <label>Incremento anual de la aportación</label>
+      <div class="input-group">
+        <input type="number" id="pctRevalorizacion" value="2" min="0" max="10" step="0.1">
+        <span class="input-suffix">%</span>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn-calc" onclick="calcular()">Calcular evolución</button>
+
+  <div class="results" id="results">
+
+    <div class="crossover-block" id="crossoverBlock">
+      <div class="crossover-label">Tu ahorro iguala tu deuda pendiente en</div>
+      <div class="crossover-value" id="crossoverValue">—</div>
+      <div class="crossover-sub" id="crossoverSub">A partir de ese momento podrías cancelar la hipoteca de una vez</div>
+    </div>
+
+    <div class="chart-container">
+      <svg id="chartSvg" viewBox="0 0 800 340" preserveAspectRatio="xMidYMid meet"></svg>
+      <div class="chart-tooltip" id="chartTooltip"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+
+    <div class="compare-grid" id="compareGrid"></div>
+
+    <div class="panel" id="panelResumenVisual">
+      <div class="resumen-titulo">Lo que consigues invirtiendo en paralelo</div>
+      <div class="resumen-sub" id="resumenSub">Desglose de tu dinero en el momento en que cancelas la hipoteca con el ahorro.</div>
+      <div class="barra-wrap" id="barraWrap"></div>
+      <div class="resumen-stats" id="resumenStats"></div>
+    </div>
+
+    <div class="disclaimer" id="disclaimerText">
+      <strong>Nota:</strong> esta proyección asume una rentabilidad anual constante en el ahorro, algo que no ocurre en la realidad — los mercados no son lineales. Esta herramienta es orientativa y no sustituye un análisis personalizado.
+    </div>
+
+    <div class="cta-block">
+      <div class="cta-title">¿Quieres ver esto aplicado a tu caso?</div>
+      <div class="cta-sub">Al pulsar el botón reservas una consultoría gratuita de 30 minutos, donde analizamos tu situación concreta con herramientas reales — no otra simulación genérica.</div>
+      <a href="https://wa.me/34646604591" id="ctaWhatsapp" class="cta-btn" target="_blank">CONCERTAR CITA</a>
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+<script>
+const fmtEUR = n => new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
+const fmtMeses = m => {
+  const a = Math.floor(m / 12);
+  const mm = m % 12;
+  if (a === 0) return `${mm} meses`;
+  if (mm === 0) return `${a} año${a !== 1 ? 's' : ''}`;
+  return `${a} año${a !== 1 ? 's' : ''} y ${mm} mes${mm !== 1 ? 'es' : ''}`;
+};
+
+let tipoInteresActual = 'fijo';
+let aportacionesManual = [];
+let contadorAportacion = 0;
+
+document.getElementById('revalorizar').addEventListener('change', function() {
+  document.getElementById('campoRevalorizacion').style.display = this.checked ? 'block' : 'none';
+});
+
+function agregarAportacionManual() {
+  contadorAportacion++;
+  aportacionesManual.push({ id: contadorAportacion, anio: 1, mes: 12, importe: 3000 });
+  renderListaAportacionesManual();
+}
+
+function eliminarAportacionManual(id) {
+  aportacionesManual = aportacionesManual.filter(a => a.id !== id);
+  renderListaAportacionesManual();
+}
+
+function actualizarAportacionManual(id, campo, valor) {
+  const item = aportacionesManual.find(a => a.id === id);
+  if (item) item[campo] = valor;
+}
+
+function renderListaAportacionesManual() {
+  const cont = document.getElementById('listaAportacionesManual');
+  if (aportacionesManual.length === 0) {
+    cont.innerHTML = '<div class="lista-vacia">Todavía no has añadido ninguna aportación. Si no añades ninguna, Camino A se queda sin datos para comparar.</div>';
+    return;
+  }
+  const plazoAniosMax = Math.max(1, Math.ceil((parseInt(document.getElementById('plazoMeses').value) || 300) / 12));
+  cont.innerHTML = aportacionesManual.map(a => `
+    <div class="aportacion-row">
+      <div class="field" style="grid-area: anio;">
+        <label>Año</label>
+        <input type="number" min="1" max="${plazoAniosMax}" value="${a.anio}" onchange="actualizarAportacionManual(${a.id}, 'anio', parseInt(this.value)||1)">
+      </div>
+      <div class="field" style="grid-area: mes;">
+        <label>Mes</label>
+        <select onchange="actualizarAportacionManual(${a.id}, 'mes', parseInt(this.value))">
+          ${['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'].map((nombre, idx) => `<option value="${idx+1}" ${idx+1===a.mes?'selected':''}>${nombre}</option>`).join('')}
+        </select>
+      </div>
+      <div class="field" style="grid-area: importe;">
+        <label>Importe</label>
+        <div class="input-group">
+          <input type="number" min="0" step="100" value="${a.importe}" onchange="actualizarAportacionManual(${a.id}, 'importe', parseFloat(this.value)||0)">
+          <span class="input-suffix">€</span>
+        </div>
+      </div>
+      <button type="button" class="btn-remove" style="grid-area: borrar;" onclick="eliminarAportacionManual(${a.id})" title="Eliminar">×</button>
+    </div>
+  `).join('');
+}
+renderListaAportacionesManual();
+
+function setTipoInteres(tipo) {
+  tipoInteresActual = tipo;
+  document.getElementById('btnFijo').classList.toggle('active', tipo === 'fijo');
+  document.getElementById('btnVariable').classList.toggle('active', tipo === 'variable');
+  document.getElementById('campoTinFijo').style.display = tipo === 'fijo' ? 'block' : 'none';
+  document.getElementById('campoEuribor').style.display = tipo === 'variable' ? 'block' : 'none';
+  document.getElementById('campoDiferencial').style.display = tipo === 'variable' ? 'block' : 'none';
+  document.getElementById('campoTinVariable').style.display = tipo === 'variable' ? 'block' : 'none';
+  actualizarCuota();
+}
+
+function getTinActual() {
+  if (tipoInteresActual === 'fijo') {
+    return parseFloat(document.getElementById('tin').value) || 0;
+  } else {
+    const euribor = parseFloat(document.getElementById('euribor').value) || 0;
+    const diferencial = parseFloat(document.getElementById('diferencial').value) || 0;
+    return euribor + diferencial;
+  }
+}
+
+document.getElementById('plazoMeses').addEventListener('input', function() {
+  const meses = parseInt(this.value) || 0;
+  document.getElementById('plazoAnios').textContent = `= ${(meses / 12).toFixed(1)} años`;
+  actualizarCuota();
+});
+document.getElementById('capital').addEventListener('input', actualizarCuota);
+document.getElementById('tin').addEventListener('input', actualizarCuota);
+document.getElementById('euribor').addEventListener('input', actualizarCuota);
+document.getElementById('diferencial').addEventListener('input', actualizarCuota);
+
+function cuotaFrances(capital, tinAnual, meses) {
+  const i = (tinAnual / 100) / 12;
+  if (i === 0) return capital / meses;
+  return capital * (i * Math.pow(1 + i, meses)) / (Math.pow(1 + i, meses) - 1);
+}
+
+function actualizarCuota() {
+  const capital = parseFloat(document.getElementById('capital').value) || 0;
+  const tin = getTinActual();
+  const meses = parseInt(document.getElementById('plazoMeses').value) || 1;
+  const cuota = cuotaFrances(capital, tin, meses);
+  document.getElementById('cuotaMensual').value = fmtEUR(cuota);
+  if (tipoInteresActual === 'variable') {
+    document.getElementById('tinVariableDisplay').value = tin.toFixed(2);
+  }
+}
+actualizarCuota();
+
+// tabla deuda pendiente sin amortizar, mes a mes
+function tablaDeudaBase(capital, tinAnual, meses) {
+  const i = (tinAnual / 100) / 12;
+  const cuota = cuotaFrances(capital, tinAnual, meses);
+  let saldo = capital;
+  const arr = [saldo];
+  for (let m = 1; m <= meses; m++) {
+    const interes = saldo * i;
+    const amortCapital = cuota - interes;
+    saldo = Math.max(0, saldo - amortCapital);
+    arr.push(saldo);
+  }
+  return { arr, cuota };
+}
+
+// tabla deuda pendiente aplicando amortizaciones manuales en meses concretos
+function tablaDeudaManual(capital, tinAnual, cuotaBase, aportacionesPorMes, mesesMax) {
+  const i = (tinAnual / 100) / 12;
+  let saldo = capital;
+  const arr = [saldo];
+  let mesesReales = 0;
+  let totalAportado = 0;
+  for (let m = 1; m <= mesesMax; m++) {
+    if (saldo <= 0) { arr.push(0); continue; }
+    const interes = saldo * i;
+    const amortCapital = cuotaBase - interes;
+    saldo = Math.max(0, saldo - amortCapital);
+    if (saldo > 0 && aportacionesPorMes[m]) {
+      saldo = Math.max(0, saldo - aportacionesPorMes[m]);
+      totalAportado += aportacionesPorMes[m];
+    }
+    arr.push(saldo);
+    if (saldo > 0) mesesReales = m;
+  }
+  return { arr, mesesReales: mesesReales + 1, totalAportado };
+}
+
+// ahorro acumulado mes a mes, con revalorización anual opcional de la aportación
+function tablaAhorro(inicial, aportacionInicial, rentAnual, meses, revalorizar, pctRevalorizacion) {
+  const iMensual = (rentAnual / 100) / 12;
+  let saldo = inicial;
+  let aportacionActual = aportacionInicial;
+  let acumulado = inicial;
+  const arr = [saldo];
+  const aportadoAcumulado = [acumulado];
+  for (let m = 1; m <= meses; m++) {
+    saldo = saldo * (1 + iMensual) + aportacionActual;
+    acumulado += aportacionActual;
+    arr.push(saldo);
+    aportadoAcumulado.push(acumulado);
+    if (revalorizar && m % 12 === 0) {
+      aportacionActual = aportacionActual * (1 + pctRevalorizacion / 100);
+    }
+  }
+  return { arr, aportadoAcumulado };
+}
+
+function interesTotalSinAmortizar(capital, tinAnual, meses) {
+  const cuota = cuotaFrances(capital, tinAnual, meses);
+  return cuota * meses - capital;
+}
+
+function calcular() {
+  const capital = parseFloat(document.getElementById('capital').value) || 0;
+  const tin = getTinActual();
+  const plazoMeses = parseInt(document.getElementById('plazoMeses').value) || 1;
+  const aportacionMensual = parseFloat(document.getElementById('aportacion').value) || 0;
+  const capitalInicial = parseFloat(document.getElementById('capitalInicial').value) || 0;
+  const rentabilidad = parseFloat(document.getElementById('rentabilidad').value) || 0;
+  const revalorizar = document.getElementById('revalorizar').checked;
+  const pctRevalorizacion = parseFloat(document.getElementById('pctRevalorizacion').value) || 0;
+
+  const { arr: deudaBase, cuota } = tablaDeudaBase(capital, tin, plazoMeses);
+  const { arr: ahorroArr, aportadoAcumulado } = tablaAhorro(capitalInicial, aportacionMensual, rentabilidad, plazoMeses, revalorizar, pctRevalorizacion);
+
+  // convertir la lista de aportaciones manuales (año+mes) en un mapa mes-absoluto -> importe
+  const aportacionesPorMes = {};
+  aportacionesManual.forEach(a => {
+    const mesAbsoluto = Math.min(plazoMeses, Math.max(1, (a.anio - 1) * 12 + a.mes));
+    aportacionesPorMes[mesAbsoluto] = (aportacionesPorMes[mesAbsoluto] || 0) + a.importe;
+  });
+  const hayAportacionesManual = aportacionesManual.length > 0;
+  const deudaManual = hayAportacionesManual ? tablaDeudaManual(capital, tin, cuota, aportacionesPorMes, plazoMeses) : null;
+
+  // punto de cruce: ahorro >= deuda pendiente base
+  let crossMonth = null;
+  for (let m = 0; m <= plazoMeses; m++) {
+    if (ahorroArr[m] >= deudaBase[m]) { crossMonth = m; break; }
+  }
+
+  // resultados
+  document.getElementById('results').classList.add('active');
+
+  const crossoverValue = document.getElementById('crossoverValue');
+  const crossoverSub = document.getElementById('crossoverSub');
+  if (crossMonth !== null) {
+    crossoverValue.textContent = fmtMeses(crossMonth);
+    crossoverSub.textContent = `En el mes ${crossMonth} tu ahorro (${fmtEUR(ahorroArr[crossMonth])}) iguala tu deuda pendiente (${fmtEUR(deudaBase[crossMonth])})`;
+  } else {
+    crossoverValue.textContent = 'No se alcanza en el plazo';
+    crossoverSub.textContent = 'Con estos datos, el ahorro no llega a igualar la deuda dentro del plazo de la hipoteca';
+  }
+
+  dibujarGrafico(deudaBase, ahorroArr, deudaManual, plazoMeses, crossMonth, aportacionMensual);
+  dibujarComparativa(plazoMeses, ahorroArr, deudaManual, cuota, aportadoAcumulado, crossMonth);
+  dibujarResumenVisual(plazoMeses, ahorroArr, aportadoAcumulado, deudaBase, cuota, crossMonth);
+  actualizarDisclaimer();
+  actualizarEnlaceWhatsapp(capital, tin, plazoMeses, cuota, aportacionMensual, rentabilidad, crossMonth, ahorroArr, deudaBase, deudaManual);
+
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function actualizarDisclaimer() {
+  const base = 'esta proyección asume una rentabilidad anual constante en el ahorro, algo que no ocurre en la realidad — los mercados no son lineales.';
+  const variable = ' Igualmente, el TIN de tu hipoteca variable se calcula sobre el Euríbor actual y se asume constante durante toda la simulación, cuando en realidad se revisa periódicamente y puede subir o bajar.';
+  const fija = ' El tipo fijo, en cambio, sí es una certeza contractual: no cambia durante toda la hipoteca.';
+  const texto = base + (tipoInteresActual === 'variable' ? variable : fija) + ' Esta herramienta es orientativa y no sustituye un análisis personalizado.';
+  document.getElementById('disclaimerText').innerHTML = '<strong>Nota:</strong> ' + texto;
+}
+
+function dibujarComparativa(plazoMeses, ahorroArr, deudaManual, cuota, aportadoAcumulado, crossMonth) {
+  const grid = document.getElementById('compareGrid');
+  grid.innerHTML = '';
+
+  let ahorroNoPagarA = null, ahorroNoPagarB = null;
+
+  // CAMINO A: amortizaciones manuales del cliente, aplicadas en su mes exacto
+  let mesA = null;
+  if (deudaManual && deudaManual.mesesReales < plazoMeses) {
+    mesA = deudaManual.mesesReales;
+    ahorroNoPagarA = cuota * (plazoMeses - mesA);
+  }
+
+  // CAMINO B: ahorrar e invertir, cancela de golpe en el mes de cruce
+  let mesB = null, desembolsoTotalB = null, rendimientoB = null;
+  if (crossMonth !== null) {
+    mesB = crossMonth;
+    const desembolsoCuotasB = cuota * mesB;
+    const aportadoB = aportadoAcumulado[mesB];
+    desembolsoTotalB = desembolsoCuotasB + aportadoB;
+    rendimientoB = ahorroArr[mesB] - aportadoB;
+    ahorroNoPagarB = cuota * (plazoMeses - mesB);
+  }
+
+  const ganaAmort = ahorroNoPagarA !== null && (ahorroNoPagarB === null || ahorroNoPagarA > ahorroNoPagarB);
+  const ganaAhorro = ahorroNoPagarB !== null && (ahorroNoPagarA === null || ahorroNoPagarB > ahorroNoPagarA);
+
+  let cardAmort = '';
+  if (mesA !== null) {
+    cardAmort = `
+      <div class="compare-card ${ganaAmort ? 'win' : ''}">
+        <div class="compare-card-title">Camino A · Amortizar al banco</div>
+        <div class="compare-card-value">${fmtEUR(ahorroNoPagarA)}</div>
+        <div class="compare-card-detail">Con tus aportaciones (${fmtEUR(deudaManual.totalAportado)} en total), cancela la hipoteca en ${fmtMeses(mesA)}. Al cancelar tanto antes, deja de pagarle al banco ${fmtMeses(plazoMeses - mesA)} más de cuota.</div>
+      </div>`;
+  } else {
+    cardAmort = `
+      <div class="compare-card">
+        <div class="compare-card-title">Camino A · Amortizar al banco</div>
+        <div class="compare-card-value">—</div>
+        <div class="compare-card-detail">Añade al menos una aportación manual arriba para ver este camino.</div>
+      </div>`;
+  }
+
+  let cardAhorro = '';
+  if (mesB !== null) {
+    cardAhorro = `
+      <div class="compare-card ${ganaAhorro ? 'win' : ''}">
+        <div class="compare-card-title">Camino B · Ahorrar e invertir</div>
+        <div class="compare-card-value">${fmtEUR(ahorroNoPagarB)}</div>
+        <div class="compare-card-detail">Cancela la hipoteca de golpe en ${fmtMeses(mesB)}. De su bolsillo salieron ${fmtEUR(desembolsoTotalB)} (de esos, ${fmtEUR(rendimientoB)} los puso la inversión, no él). Al cancelar tanto antes, deja de pagarle al banco ${fmtMeses(plazoMeses - mesB)} más de cuota.</div>
+      </div>`;
+  } else {
+    cardAhorro = `
+      <div class="compare-card">
+        <div class="compare-card-title">Camino B · Ahorrar e invertir</div>
+        <div class="compare-card-value">—</div>
+        <div class="compare-card-detail">Con estos datos, el ahorro no llega a igualar la deuda dentro del plazo de la hipoteca.</div>
+      </div>`;
+  }
+
+  grid.innerHTML = cardAmort + cardAhorro;
+}
+
+function dibujarResumenVisual(plazoMeses, ahorroArr, aportadoAcumulado, deudaBase, cuota, crossMonth) {
+  const barraWrap = document.getElementById('barraWrap');
+  const stats = document.getElementById('resumenStats');
+  const sub = document.getElementById('resumenSub');
+
+  if (crossMonth === null) {
+    barraWrap.innerHTML = '';
+    stats.innerHTML = '';
+    sub.textContent = 'Con estos datos, el ahorro no llega a igualar la deuda dentro del plazo de la hipoteca — no hay momento de cancelación que resumir todavía.';
+    return;
+  }
+
+  const mesB = crossMonth;
+  const aportado = aportadoAcumulado[mesB];
+  const ahorroFinal = ahorroArr[mesB];
+  const rendimiento = ahorroFinal - aportado;
+  const desembolsoTotal = (cuota * mesB) + aportado;
+  const mesesRestantes = plazoMeses - mesB;
+  // intereses reales que se dejan de pagar al cancelar ya: de los pagos que quedaban,
+  // lo que no era devolver capital (eso ya lo cubre el ahorro) sino intereses puros
+  const interesEvitado = Math.max(0, (cuota * mesesRestantes) - deudaBase[mesB]);
+
+  sub.textContent = `Desglose de tu dinero en el mes ${mesB} (${fmtMeses(mesB)}), cuando cancelas la hipoteca con el ahorro acumulado.`;
+
+  const pctAportado = (aportado / ahorroFinal) * 100;
+  const pctRendimiento = 100 - pctAportado;
+
+  barraWrap.innerHTML = `
+    <div class="barra-track">
+      <div class="barra-seg" style="width:${pctAportado}%; background:#8a6d1f;">${pctAportado > 18 ? fmtEUR(aportado) : ''}</div>
+      <div class="barra-seg" style="width:${pctRendimiento}%; background:#d4af37;">${pctRendimiento > 18 ? fmtEUR(rendimiento) : ''}</div>
+    </div>
+    <div class="barra-leyenda">
+      <span><span class="dot" style="background:#8a6d1f;"></span> De tu bolsillo (${pctAportado.toFixed(0)}%)</span>
+      <span><span class="dot" style="background:#d4af37;"></span> Rendimiento de la inversión (${pctRendimiento.toFixed(0)}%)</span>
+    </div>
+  `;
+
+  stats.innerHTML = `
+    <div class="resumen-stat">
+      <div class="resumen-stat-label">Dinero que salió<br>de tu bolsillo</div>
+      <div class="resumen-stat-value">${fmtEUR(desembolsoTotal)}</div>
+    </div>
+    <div class="resumen-stat">
+      <div class="resumen-stat-label">Lo que acumulaste<br>en tu ahorro</div>
+      <div class="resumen-stat-value">${fmtEUR(ahorroFinal)}</div>
+    </div>
+    <div class="resumen-stat">
+      <div class="resumen-stat-label">Intereses que dejaste<br>de pagarle al banco</div>
+      <div class="resumen-stat-value">${fmtEUR(interesEvitado)}</div>
+    </div>
+    <div class="resumen-stat">
+      <div class="resumen-stat-label">Tiempo que<br>te ahorras</div>
+      <div class="resumen-stat-value">${fmtMeses(mesesRestantes)}</div>
+    </div>
+  `;
+}
+
+let chartData = null;
+
+function dibujarGrafico(deudaBase, ahorro, deudaAmort, plazoMeses, crossMonth, aportacion) {
+  const svg = document.getElementById('chartSvg');
+  const W = 800, H = 340, padL = 55, padR = 20, padT = 20, padB = 40;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+
+  const maxVal = Math.max(
+    ...deudaBase, ...ahorro,
+    ...(deudaAmort ? deudaAmort.arr : [0])
+  );
+
+  const x = m => padL + (m / plazoMeses) * plotW;
+  const y = v => padT + plotH - (v / maxVal) * plotH;
+
+  // guardar todo lo necesario para el hover interactivo
+  chartData = { deudaBase, ahorro, deudaAmort, plazoMeses, padL, padT, plotW, plotH, x, y };
+
+  const pathFrom = arr => {
+    let d = `M ${x(0)} ${y(arr[0])}`;
+    const step = Math.max(1, Math.floor(plazoMeses / 150));
+    for (let m = step; m <= plazoMeses; m += step) {
+      d += ` L ${x(m)} ${y(arr[m])}`;
+    }
+    d += ` L ${x(plazoMeses)} ${y(arr[plazoMeses])}`;
+    return d;
+  };
+
+  let svgContent = '';
+
+  // ejes
+  svgContent += `<line x1="${padL}" y1="${padT}" x2="${padL}" y2="${padT + plotH}" stroke="#2a2a2a" stroke-width="1"/>`;
+  svgContent += `<line x1="${padL}" y1="${padT + plotH}" x2="${padL + plotW}" y2="${padT + plotH}" stroke="#2a2a2a" stroke-width="1"/>`;
+
+  // etiquetas eje Y
+  for (let f = 0; f <= 4; f++) {
+    const val = (maxVal / 4) * f;
+    const yy = y(val);
+    svgContent += `<line x1="${padL}" y1="${yy}" x2="${padL + plotW}" y2="${yy}" stroke="#1a1a1a" stroke-width="1"/>`;
+    svgContent += `<text x="${padL - 8}" y="${yy + 4}" text-anchor="end" font-size="10" fill="#666">${Math.round(val / 1000)}k</text>`;
+  }
+
+  // etiquetas eje X (años)
+  const anios = Math.ceil(plazoMeses / 12);
+  const stepAnios = Math.max(1, Math.ceil(anios / 8));
+  for (let a = 0; a <= anios; a += stepAnios) {
+    const m = Math.min(a * 12, plazoMeses);
+    svgContent += `<text x="${x(m)}" y="${padT + plotH + 20}" text-anchor="middle" font-size="10" fill="#666">${a}a</text>`;
+  }
+
+  // linea deuda amortizada (si aplica) - dibujada primero, en celeste discontinua
+  if (deudaAmort) {
+    svgContent += `<path d="${pathFrom(deudaAmort.arr)}" fill="none" stroke="#74acdf" stroke-width="4" stroke-dasharray="9,6" stroke-linecap="round"/>`;
+  }
+
+  // linea deuda base
+  svgContent += `<path d="${pathFrom(deudaBase)}" fill="none" stroke="#c8544a" stroke-width="4" stroke-linecap="round"/>`;
+
+  // linea ahorro
+  svgContent += `<path d="${pathFrom(ahorro)}" fill="none" stroke="#d4af37" stroke-width="4" stroke-linecap="round"/>`;
+
+  // punto de cruce
+  if (crossMonth !== null) {
+    svgContent += `<circle cx="${x(crossMonth)}" cy="${y(ahorro[crossMonth])}" r="5" fill="#f5f5f5" stroke="#d4af37" stroke-width="2"/>`;
+    svgContent += `<line x1="${x(crossMonth)}" y1="${padT}" x2="${x(crossMonth)}" y2="${padT + plotH}" stroke="#d4af37" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>`;
+  }
+
+  // capa de hover: grupo vacio que se rellena al mover el raton, y un rect transparente que capta los eventos
+  svgContent += `<g id="hoverLayer"></g>`;
+  svgContent += `<rect x="${padL}" y="${padT}" width="${plotW}" height="${plotH}" fill="transparent" style="cursor:crosshair; touch-action:none;" onmousemove="onChartHover(event)" onmouseleave="onChartLeave()" ontouchstart="onChartTouch(event)" ontouchmove="onChartTouch(event)" ontouchend="onChartLeave()"/>`;
+
+  svg.innerHTML = svgContent;
+
+  // leyenda
+  let legendHtml = `
+    <div class="legend-item"><span class="legend-dot" style="background:#c8544a;"></span> Deuda si no haces nada</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#d4af37;"></span> Ahorro si inviertes esos ${fmtEUR(aportacion)}/mes</div>
+  `;
+  if (deudaAmort) {
+    legendHtml += `<div class="legend-item"><span class="legend-dot" style="background:#74acdf;"></span> Deuda con tus aportaciones manuales al banco</div>`;
+  }
+  document.getElementById('legend').innerHTML = legendHtml;
+}
+
+function onChartTouch(evt) {
+  if (evt.touches && evt.touches.length > 0) {
+    evt.preventDefault();
+    const touch = evt.touches[0];
+    onChartHover({ clientX: touch.clientX, clientY: touch.clientY });
+  }
+}
+
+function onChartHover(evt) {
+  if (!chartData) return;
+  const { deudaBase, ahorro, deudaAmort, plazoMeses, padL, padT, plotW, plotH, x, y } = chartData;
+
+  const svg = document.getElementById('chartSvg');
+  const pt = svg.createSVGPoint();
+  pt.x = evt.clientX;
+  pt.y = evt.clientY;
+  const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+
+  let m = Math.round(((svgP.x - padL) / plotW) * plazoMeses);
+  m = Math.max(0, Math.min(plazoMeses, m));
+
+  const hoverLayer = document.getElementById('hoverLayer');
+  let hoverSvg = `<line x1="${x(m)}" y1="${padT}" x2="${x(m)}" y2="${padT + plotH}" stroke="#f5f5f5" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>`;
+  hoverSvg += `<circle cx="${x(m)}" cy="${y(deudaBase[m])}" r="5" fill="#c8544a" stroke="#0a0a0a" stroke-width="2"/>`;
+  hoverSvg += `<circle cx="${x(m)}" cy="${y(ahorro[m])}" r="5" fill="#d4af37" stroke="#0a0a0a" stroke-width="2"/>`;
+  if (deudaAmort) {
+    hoverSvg += `<circle cx="${x(m)}" cy="${y(deudaAmort.arr[m])}" r="5" fill="#74acdf" stroke="#0a0a0a" stroke-width="2"/>`;
+  }
+  hoverLayer.innerHTML = hoverSvg;
+
+  const anio = Math.floor(m / 12);
+  const mesEnAnio = m % 12;
+  let etiquetaMes = m === 0 ? 'Hoy (mes 0)' : `Mes ${m} — año ${anio}${mesEnAnio > 0 ? `, mes ${mesEnAnio}` : ''}`;
+
+  let tooltipHtml = `<div class="tt-mes">${etiquetaMes}</div>`;
+  tooltipHtml += `<div class="tt-row"><span class="tt-dot" style="background:#c8544a;"></span> Deuda: ${fmtEUR(deudaBase[m])}</div>`;
+  tooltipHtml += `<div class="tt-row"><span class="tt-dot" style="background:#d4af37;"></span> Ahorro: ${fmtEUR(ahorro[m])}</div>`;
+  if (deudaAmort) {
+    tooltipHtml += `<div class="tt-row"><span class="tt-dot" style="background:#74acdf;"></span> Deuda con amortización: ${fmtEUR(deudaAmort.arr[m])}</div>`;
+  }
+
+  const tooltip = document.getElementById('chartTooltip');
+  tooltip.innerHTML = tooltipHtml;
+  tooltip.style.display = 'block';
+
+  const containerRect = document.querySelector('.chart-container').getBoundingClientRect();
+  const tooltipWidth = tooltip.offsetWidth || 220;
+  let left = evt.clientX - containerRect.left + 16;
+  let top = evt.clientY - containerRect.top - 10;
+  // evitar que el tooltip se salga por la derecha
+  if (left + tooltipWidth > containerRect.width) left = evt.clientX - containerRect.left - tooltipWidth - 16;
+  if (left < 0) left = 4;
+  tooltip.style.left = left + 'px';
+  tooltip.style.top = top + 'px';
+}
+
+function onChartLeave() {
+  const hoverLayer = document.getElementById('hoverLayer');
+  if (hoverLayer) hoverLayer.innerHTML = '';
+  const tooltip = document.getElementById('chartTooltip');
+  if (tooltip) tooltip.style.display = 'none';
+}
+
+function actualizarEnlaceWhatsapp(capital, tin, plazoMeses, cuota, aportacion, rentabilidad, crossMonth, ahorroArr, deudaBase, deudaManual) {
+  let mensaje = `Hola Lucho, he hecho la simulación de amortizar vs invertir en tu web y quiero reservar mi consultoría gratuita.\n\n`;
+  mensaje += `📊 Mi simulación:\n`;
+  mensaje += `• Capital pendiente: ${fmtEUR(capital)}\n`;
+  mensaje += `• Tipo de interés: ${tin.toFixed(2)}% (${tipoInteresActual})\n`;
+  mensaje += `• Plazo: ${plazoMeses} meses (${(plazoMeses/12).toFixed(1)} años)\n`;
+  mensaje += `• Cuota mensual: ${fmtEUR(cuota)}\n`;
+  mensaje += `• Aportación mensual al ahorro: ${fmtEUR(aportacion)}\n`;
+  mensaje += `• Rentabilidad estimada: ${rentabilidad}%\n\n`;
+
+  if (crossMonth !== null) {
+    mensaje += `📈 Resultado invirtiendo:\n`;
+    mensaje += `• Cancelo la hipoteca en el mes ${crossMonth} (${fmtMeses(crossMonth)})\n`;
+    mensaje += `• Ahorro acumulado en ese momento: ${fmtEUR(ahorroArr[crossMonth])}\n`;
+  } else {
+    mensaje += `📈 Con estos datos, el ahorro no llega a igualar la deuda dentro del plazo.\n`;
+  }
+
+  if (deudaManual && deudaManual.mesesReales < plazoMeses) {
+    mensaje += `\n🏦 Con mis aportaciones al banco:\n`;
+    mensaje += `• Cancelo la hipoteca en el mes ${deudaManual.mesesReales} (${fmtMeses(deudaManual.mesesReales)})\n`;
+    mensaje += `• Total aportado: ${fmtEUR(deudaManual.totalAportado)}\n`;
+  }
+
+  mensaje += `\n¿Cuándo podemos hablar?`;
+
+  const link = document.getElementById('ctaWhatsapp');
+  if (link) link.href = `https://wa.me/34646604591?text=${encodeURIComponent(mensaje)}`;
+}
+
+calcular();
+</script>
+
+<script src="/assets/cookie-consent.js"></script>
+</body>
+</html>
