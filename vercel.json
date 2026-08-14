@@ -1,9 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": true,
-  "rewrites": [
-    { "source": "/aviso-legal/", "destination": "/legal/aviso-legal.html" },
-    { "source": "/politica-de-privacidad/", "destination": "/legal/politica-de-privacidad.html" },
-    { "source": "/politica-de-cookies/", "destination": "/legal/politica-de-cookies.html" }
-  ]
+  "trailingSlash": true
 }
