@@ -100,7 +100,7 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: center;
   background: linear-gradient(to top, #0a0a0a 0%, rgba(10,10,10,0.4) 20%, transparent 50%);
 }
@@ -119,8 +119,8 @@
 .hero-foto-fade {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 40%;
-  background: linear-gradient(to top, #0a0a0a 0%, rgba(10,10,10,0.85) 30%, rgba(10,10,10,0.4) 60%, transparent 100%);
+  height: 55%;
+  background: linear-gradient(to top, #0a0a0a 0%, rgba(10,10,10,0.9) 25%, rgba(10,10,10,0.5) 55%, transparent 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -248,8 +248,10 @@
 .herr-title { font-size: 2.25rem; font-weight: 900; line-height: 1.1; color: #f5f5f5; letter-spacing: -0.02em; }
 .herr-title em { font-style: normal; color: #d4af37; }
 .herr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.herr-card { display: flex; flex-direction: column; background: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 14px; padding: 1.75rem 1.5rem; text-decoration: none; transition: border-color 0.2s, transform 0.15s, background 0.2s; }
-.herr-card:hover { border-color: #d4af37; transform: translateY(-3px); background: #111; }
+.herr-card { display: flex; flex-direction: column; background: linear-gradient(160deg, #141414 0%, #0d0d0d 100%); border: 1px solid #202020; border-radius: 14px; padding: 1.75rem 1.5rem; text-decoration: none; position: relative; overflow: hidden; transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease; }
+.herr-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: #d4af37; transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+.herr-card:hover { border-color: #2a2a2a; transform: translateY(-4px); background: linear-gradient(160deg, #181818 0%, #101010 100%); }
+.herr-card:hover::before { transform: scaleX(1); }
 .herr-card-tag { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 10px; color: #d4af37; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }
 .herr-card-tag-dot { width: 5px; height: 5px; border-radius: 50%; background: #d4af37; flex-shrink: 0; }
 .herr-card-title { font-size: 1.35rem; font-weight: 900; color: #f5f5f5; letter-spacing: -0.01em; line-height: 1.2; margin-bottom: 0.5rem; min-height: 3.24rem; display: flex; align-items: flex-start; }
