@@ -28,6 +28,7 @@
 <link rel="stylesheet" href="/assets/shared.css">
 
 <style>
+<style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 #lucho-hero {
@@ -223,204 +224,6 @@
   .hero-cred-sep { height: 28px; }
 }
 
-#lucho-herramientas-root {
-  font-family: 'Inter', sans-serif;
-  background: #0a0a0a;
-  color: #f5f5f5;
-  width: 100%;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes simFadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-#lucho-test-wrapper {
-  font-family: 'Inter', sans-serif;
-  background: #0a0a0a; color: #f5f5f5;
-  padding: 4rem 2rem 3.5rem;
-  display: flex; justify-content: center;
-  border-bottom: 1px solid #141414;
-}
-.quiz-wrapper { width: 100%; max-width: 1100px; }
-
-.test-titular-wrap { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #1a1a1a; }
-.test-titular-eyebrow { font-size: 12px; color: #666; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.85rem; }
-.test-titular-title { font-size: 5rem; font-weight: 900; line-height: 1.05; color: #f5f5f5; letter-spacing: -0.03em; margin-bottom: 0.85rem; }
-.test-titular-title em { font-style: normal; color: #d4af37; }
-.test-titular-sub { font-size: 1.1rem; color: #555; line-height: 1.6; max-width: 540px; }
-
-.progress-bar-bg { height: 2px; background: #1a1a1a; margin-bottom: 2.75rem; overflow: hidden; }
-.progress-bar-fill { height: 100%; background: #d4af37; transition: width 0.4s ease; }
-
-.question-block, .filter-block, .filter-out-block, .result-block { display: none; }
-.question-block.active, .filter-block.active, .filter-out-block.active, .result-block.active { display: block; animation: fadeIn 0.3s ease; }
-
-.step-label { font-size: 13px; color: #d4af37; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }
-.question-text { font-size: 1.75rem; font-weight: 700; line-height: 1.3; color: #f5f5f5; margin-bottom: 0.6rem; }
-.question-context { font-size: 0.95rem; color: #666; margin-bottom: 1.75rem; line-height: 1.55; }
-
-.options { display: flex; flex-direction: column; gap: 0.65rem; }
-.option-btn {
-  background: #d4af37; border: 1px solid #d4af37; border-radius: 9px;
-  padding: 1.05rem 1.3rem; color: #0a0a0a; font-size: 1rem;
-  text-align: left; cursor: pointer;
-  transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.15s;
-  line-height: 1.5; font-family: 'Inter', sans-serif; font-weight: 600;
-  white-space: normal; word-break: break-word; overflow-wrap: break-word;
-}
-.option-btn:hover { background: #0a0a0a; color: #d4af37; border-color: #d4af37; transform: translateX(3px); }
-.option-btn.selected { background: #0a0a0a; color: #d4af37; border-color: #d4af37; font-weight: 700; }
-
-.nav-row { display: flex; justify-content: flex-end; margin-top: 1.75rem; }
-.btn-next { background: #d4af37; color: #0a0a0a; border: none; border-radius: 7px; padding: 0.9rem 2rem; font-size: 1rem; font-weight: 700; cursor: pointer; display: none; font-family: 'Inter', sans-serif; letter-spacing: 0.04em; transition: background 0.2s; }
-.btn-next:hover { background: #e6c44a; }
-.btn-next.visible { display: inline-block; }
-
-.filter-out-icon { font-size: 2rem; margin-bottom: 1.1rem; }
-.filter-out-title { font-size: 1.4rem; font-weight: 700; color: #f5f5f5; line-height: 1.3; margin-bottom: 1rem; }
-.filter-out-body { font-size: 1rem; color: #888; line-height: 1.8; margin-bottom: 2rem; }
-
-#ahorro-msg { display: none; margin-top: 0.75rem; border-left: 2px solid #d4af37; padding: 0.8rem 1rem; font-size: 0.92rem; color: #c9a830; line-height: 1.6; background: #0c0c00; border-radius: 0 6px 6px 0; }
-
-.result-profile-label { font-size: 11px; color: #d4af37; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.7rem; }
-.result-title { font-size: 3.25rem; font-weight: 800; color: #f5f5f5; letter-spacing: -0.02em; line-height: 1; margin-bottom: 0.6rem; }
-.result-subtitle { font-size: 1.05rem; color: #666; line-height: 1.55; margin-bottom: 2rem; }
-.result-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2.25rem; }
-.result-card { background: #111; border: 1px solid #1e1e1e; border-radius: 9px; padding: 0.95rem 1.1rem; }
-.result-card-label { font-size: 10px; color: #555; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.35rem; }
-.result-card-value { font-size: 0.95rem; color: #d4af37; font-weight: 600; line-height: 1.3; }
-.result-truth { border-left: 2px solid #d4af37; padding: 1rem 1.25rem; margin-bottom: 2rem; background: #0c0c00; border-radius: 0 8px 8px 0; }
-.result-truth p { font-size: 1rem; color: #c9a830; line-height: 1.7; }
-.result-truth p + p { margin-top: 0.6rem; }
-.result-truth strong { color: #e0c96a; font-weight: 700; }
-.result-insight-wrap { margin-bottom: 2.5rem; }
-.result-insight-wrap p { font-size: 1rem; color: #888; line-height: 1.75; }
-.result-insight-wrap strong { color: #d4af37; font-weight: 600; }
-.cta-block { background: #d4af37; border-radius: 14px; padding: 2.5rem 2rem; text-align: center; }
-.cta-title { font-size: 1.55rem; font-weight: 800; color: #0a0a0a; margin-bottom: 0.4rem; line-height: 1.2; }
-.cta-sub { font-size: 0.95rem; color: #4a3800; margin-bottom: 1.6rem; line-height: 1.6; }
-.cta-btn { display: inline-block; background: #0a0a0a; color: #d4af37; border: none; border-radius: 8px; padding: 1.1rem 2.5rem; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; font-family: 'Inter', sans-serif; transition: background 0.2s, transform 0.1s; }
-.cta-btn:hover { background: #181818; transform: translateY(-1px); }
-.cta-guarantee { font-size: 0.82rem; color: #7a6000; margin-top: 1rem; }
-
-.sim-toggle-section { padding: 2.5rem 2rem; display: flex; justify-content: center; background: #050505; }
-.sim-toggle-inner { width: 100%; max-width: 1100px; }
-.sim-toggle-card { background: #0f0f0f; border: 1px solid #1e1e1e; border-radius: 14px; padding: 2rem 2rem 1.75rem; cursor: pointer; transition: border-color 0.25s, background 0.25s, transform 0.15s; user-select: none; position: relative; }
-.sim-toggle-card:hover { border-color: #d4af37; background: #0d0d08; transform: translateY(-2px); }
-.sim-toggle-card.open { border-color: #d4af37; background: #0c0c00; transform: none; cursor: default; }
-.sim-toggle-card-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.sim-toggle-card-left { flex: 1; }
-.sim-toggle-tag { font-size: 11px; color: #d4af37; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 800; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.4rem; }
-.sim-toggle-tag-dot { width: 5px; height: 5px; border-radius: 50%; background: #d4af37; flex-shrink: 0; }
-.sim-toggle-card-title { font-size: 1.85rem; font-weight: 700; color: #f5f5f5; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 0.5rem; }
-.sim-toggle-card-desc { font-size: 0.95rem; color: #555; line-height: 1.6; }
-.sim-toggle-card.open .sim-toggle-card-desc { color: #777; }
-.sim-toggle-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #d4af37; color: #0a0a0a; border: none; border-radius: 8px; padding: 0.85rem 1.5rem; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Inter', sans-serif; cursor: pointer; transition: background 0.2s; flex-shrink: 0; white-space: nowrap; pointer-events: none; }
-.sim-toggle-card:hover .sim-toggle-btn { background: #e6c44a; }
-.sim-toggle-card.open .sim-toggle-btn { background: #1a1a1a; color: #d4af37; }
-.sim-toggle-btn-arrow { font-size: 1rem; line-height: 1; transition: transform 0.3s; }
-.sim-toggle-card.open .sim-toggle-btn-arrow { transform: rotate(90deg); }
-.herramientas-heading { margin-bottom: 1.75rem; }
-.herramientas-eyebrow { font-size: 12px; color: #666; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.6rem; }
-.herramientas-title { font-size: 2.25rem; font-weight: 900; color: #f5f5f5; letter-spacing: -0.02em; line-height: 1.1; }
-.sim-toggle-card-link { display: block; text-decoration: none; color: inherit; }
-.sim-toggle-card + .sim-toggle-card-link,
-.sim-toggle-card-link + .sim-toggle-card,
-.sim-toggle-card + .sim-toggle-card { margin-top: 1rem; }
-.sim-panel { display: none; padding: 2rem 0 0; animation: simFadeIn 0.35s ease; }
-.sim-panel.open { display: block; }
-.sim-eyebrow { font-size: 12px; color: #666; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.85rem; }
-.sim-title { font-size: 3rem; font-weight: 900; line-height: 1.05; color: #f5f5f5; letter-spacing: -0.03em; text-transform: uppercase; margin-bottom: 0.65rem; }
-.sim-title em { font-style: normal; color: #d4af37; }
-.sim-subtitle { font-size: 1.05rem; color: #555; line-height: 1.65; margin-bottom: 2.5rem; }
-.sim-section { margin-bottom: 0.85rem; }
-.sim-section-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
-.sim-section-num { width: 26px; height: 26px; border-radius: 50%; background: #d4af37; color: #0a0a0a; font-size: 12px; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.sim-section-title { font-size: 14px; color: #777; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; }
-.sim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; }
-.sim-grid.one { grid-template-columns: 1fr; }
-.sim-field { background: #111; border: 1px solid #1a1a1a; border-radius: 10px; padding: 1.2rem 1.3rem; transition: border-color 0.2s; }
-.sim-field:focus-within { border-color: #d4af37; }
-.sim-field label { display: block; font-size: 12px; color: #666; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.4rem; }
-.sim-field input { background: none; border: none; outline: none; color: #f5f5f5; font-size: 1.75rem; font-weight: 800; width: 100%; font-family: 'Inter', sans-serif; letter-spacing: -0.02em; }
-.sim-field input::placeholder { color: #222; font-weight: 500; font-size: 1.3rem; }
-.sim-field .unit { font-size: 0.9rem; color: #555; margin-top: 0.25rem; }
-.sim-divider { height: 1px; background: #1a1a1a; margin: 1rem 0; }
-.sim-slider-wrap { background: #111; border: 1px solid #1a1a1a; border-radius: 10px; padding: 1.3rem; margin-top: 0.65rem; margin-bottom: 2rem; }
-.sim-slider-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem; }
-.sim-slider-head .lbl { font-size: 11px; color: #444; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; }
-.sim-slider-head .val { font-size: 2rem; font-weight: 900; color: #d4af37; letter-spacing: -0.02em; }
-.sim-slider { -webkit-appearance: none; width: 100%; height: 2px; background: #222; outline: none; border-radius: 2px; }
-.sim-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #d4af37; cursor: pointer; border: 3px solid #0a0a0a; box-shadow: 0 0 0 4px rgba(212,175,55,0.15); }
-.sim-rent-nota { display: none; background: #0c0c00; border-left: 2px solid #d4af37; border-radius: 0 8px 8px 0; padding: 0.75rem 1rem; font-size: 0.9rem; color: #c9a830; line-height: 1.6; margin-bottom: 1.5rem; }
-.sim-result { display: none; }
-.sim-result.visible { display: block; animation: fadeIn 0.4s ease; }
-.sim-historica { display: none; background: #0a0a00; border: 1px solid #2a2000; border-radius: 10px; padding: 1.25rem 1.4rem; margin-bottom: 1.5rem; }
-.sim-historica-label { font-size: 12px; color: #b8920a; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.4rem; }
-.sim-historica-value { font-size: 2.5rem; font-weight: 900; color: #c9a830; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
-.sim-historica-sub { font-size: 1rem; color: #8a6a20; line-height: 1.5; }
-.sim-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.55rem; margin-bottom: 1rem; }
-.sim-card { background: #111; border: 1px solid #1a1a1a; border-radius: 10px; padding: 1.3rem 1rem; text-align: center; }
-.sim-card.win { background: #0c0c00; border-color: #d4af37; }
-.sim-card-lbl { font-size: 12px; color: #888; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.65rem; line-height: 1.4; }
-.sim-card.win .sim-card-lbl { color: #b8920a; }
-.sim-card-val { font-size: 1.65rem; font-weight: 900; color: #e8e8e8; letter-spacing: -0.03em; line-height: 1; }
-.sim-card.win .sim-card-val { color: #d4af37; font-size: 1.75rem; }
-.sim-card-sub { font-size: 0.85rem; color: #666; margin-top: 0.45rem; line-height: 1.35; }
-.sim-card.win .sim-card-sub { color: #7a5a10; }
-.sim-diff { background: #d4af37; border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.sim-diff-eyebrow { font-size: 12px; color: #3a2a00; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.35rem; }
-.sim-diff-label { font-size: 1.05rem; font-weight: 700; color: #0a0a0a; line-height: 1.3; }
-.sim-diff-number { font-size: 3rem; font-weight: 900; color: #0a0a0a; white-space: nowrap; letter-spacing: -0.04em; flex-shrink: 0; }
-.sim-msg-wrap { margin-bottom: 2rem; }
-.sim-msg-highlight { font-size: 1.25rem; font-weight: 800; color: #f5f5f5; line-height: 1.4; margin-bottom: 0.6rem; }
-.sim-msg-highlight em { font-style: normal; color: #d4af37; }
-.sim-msg-body { font-size: 1rem; color: #555; line-height: 1.8; }
-.sim-persuasion { margin-bottom: 2rem; }
-.sim-persuasion-main { font-size: 1.2rem; font-weight: 800; color: #f5f5f5; line-height: 1.4; margin-bottom: 0.5rem; }
-.sim-persuasion-sub { font-size: 0.95rem; color: #555; line-height: 1.8; }
-.sim-cta-final { background: #d4af37; border-radius: 14px; padding: 2.25rem 2rem; text-align: center; margin-bottom: 1.5rem; }
-.sim-cta-final-eyebrow { font-size: 11px; color: #7a6000; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; }
-.sim-cta-final-title { font-size: 1.45rem; font-weight: 900; color: #0a0a0a; margin-bottom: 0.4rem; line-height: 1.2; }
-.sim-cta-final-sub { font-size: 0.92rem; color: #4a3800; margin-bottom: 1.4rem; line-height: 1.6; }
-.sim-cta-final-btn { display: inline-block; background: #0a0a0a; color: #d4af37; border: none; border-radius: 8px; padding: 1.05rem 2.5rem; font-size: 0.9rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; font-family: 'Inter', sans-serif; transition: background 0.2s, transform 0.1s; }
-.sim-cta-final-btn:hover { background: #181818; transform: translateY(-1px); }
-.sim-cta-final-guarantee { font-size: 0.82rem; color: #7a6000; margin-top: 0.9rem; }
-.sim-disclaimer { font-size: 0.75rem; color: #222; line-height: 1.6; text-align: center; margin-top: 1rem; }
-.sim-grafico-wrap { margin-bottom: 1.25rem; }
-.sim-grafico-titulo { font-size: 11px; color: #888; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }
-.sim-grafico-leyenda { display: flex; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
-.sim-leyenda-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #888; }
-.sim-leyenda-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
-.sim-grafico-canvas-wrap { position: relative; height: 180px; display: flex; align-items: flex-end; gap: 4px; padding-bottom: 24px; border-bottom: 1px solid #1a1a1a; }
-.sim-barra-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; position: relative; }
-.sim-barra-stack { width: 100%; display: flex; flex-direction: column; justify-content: flex-end; border-radius: 3px 3px 0 0; overflow: hidden; }
-.sim-barra-stack:hover { opacity: 0.85; }
-.sim-barra-intereses { background: #d4af37; width: 100%; }
-.sim-barra-capital { background: #2a2a2a; width: 100%; }
-.sim-barra-label { position: absolute; bottom: -20px; font-size: 8px; color: #444; white-space: nowrap; }
-.sim-badge-inflacion { display: none; background: rgba(140,20,20,0.9); border: 1px solid #ff4444; border-radius: 7px; padding: 0.5rem 0.9rem; margin-bottom: 0.75rem; width: fit-content; }
-.sim-badge-inflacion-label { font-size: 9px; color: rgba(255,200,200,0.8); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.15rem; }
-.sim-badge-inflacion-value { font-size: 1rem; font-weight: 900; color: #fff; letter-spacing: -0.02em; line-height: 1; }
-.sim-linea-inflacion { position: absolute; left: 0; right: 0; border-top: 2px dashed #ff4444; pointer-events: none; z-index: 2; }
-.sim-desglose-toggle { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; user-select: none; padding: 0.85rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
-.sim-desglose-toggle-icon { width: 20px; height: 20px; border-radius: 50%; background: #1a1a1a; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #d4af37; flex-shrink: 0; transition: background 0.2s; }
-.sim-desglose-toggle:hover .sim-desglose-toggle-icon { background: #d4af37; color: #0a0a0a; }
-.sim-desglose-toggle-label { font-size: 12px; color: #888; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; }
-.sim-tabla { display: none; width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
-.sim-tabla.visible { display: table; }
-.sim-tabla th { font-size: 10px; color: #444; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; padding: 0.5rem 0.75rem; text-align: right; border-bottom: 1px solid #1a1a1a; }
-.sim-tabla th:first-child { text-align: left; }
-.sim-tabla td { font-size: 0.88rem; color: #888; padding: 0.65rem 0.75rem; text-align: right; border-bottom: 1px solid #111; }
-.sim-tabla td:first-child { text-align: left; color: #555; }
-.sim-tabla td.dorado { color: #d4af37; font-weight: 700; }
-.sim-tabla td.blanco { color: #f5f5f5; font-weight: 700; }
-.sim-tabla tr:last-child td { border-bottom: none; }
 
 #lucho-footer { font-family: 'Inter', sans-serif; background: #0a0a0a; border-top: 1px solid #1a1a1a; color: #f5f5f5; padding: 2.5rem 2rem 2rem; display: flex; justify-content: center; }
 .footer-wrap { width: 100%; max-width: 1100px; }
@@ -436,38 +239,30 @@
 .footer-copyright { font-size: 0.72rem; color: #444; }
 .footer-disclaimer { font-size: 0.68rem; color: #333; text-align: right; line-height: 1.5; max-width: 420px; }
 
+
+/* ===== Herramientas: 3 tarjetas-gancho ===== */
+#lucho-herramientas { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #f5f5f5; padding: 4rem 2rem; display: flex; justify-content: center; border-top: 1px solid #141414; }
+.herr-wrap { width: 100%; max-width: 1100px; }
+.herr-head { margin-bottom: 2.5rem; }
+.herr-eyebrow { font-size: 12px; color: #666; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; }
+.herr-title { font-size: 2.25rem; font-weight: 900; line-height: 1.1; color: #f5f5f5; letter-spacing: -0.02em; }
+.herr-title em { font-style: normal; color: #d4af37; }
+.herr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.herr-card { display: flex; flex-direction: column; background: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 14px; padding: 1.75rem 1.5rem; text-decoration: none; transition: border-color 0.2s, transform 0.15s, background 0.2s; }
+.herr-card:hover { border-color: #d4af37; transform: translateY(-3px); background: #111; }
+.herr-card-tag { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 10px; color: #d4af37; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }
+.herr-card-tag-dot { width: 5px; height: 5px; border-radius: 50%; background: #d4af37; flex-shrink: 0; }
+.herr-card-title { font-size: 1.35rem; font-weight: 900; color: #f5f5f5; letter-spacing: -0.01em; line-height: 1.2; margin-bottom: 0.5rem; min-height: 3.24rem; display: flex; align-items: flex-start; }
+.herr-card-desc { font-size: 0.9rem; color: #666; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
+.herr-card-cta { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 800; color: #d4af37; letter-spacing: 0.03em; }
+.herr-card-cta-arrow { transition: transform 0.2s; }
+.herr-card:hover .herr-card-cta-arrow { transform: translateX(4px); }
+
 @media (max-width: 768px) {
-  #lucho-test-wrapper { padding: 2.5rem 1.25rem 3rem; }
-  .test-titular-title { font-size: 2.75rem; line-height: 1.05; }
-  .test-titular-sub { font-size: 1rem; }
-  .test-titular-wrap { margin-bottom: 1.5rem; padding-bottom: 1.5rem; }
-  .question-context { display: none; }
-  .question-text { font-size: 1.5rem; }
-  .option-btn { font-size: 1rem; padding: 1.1rem; }
-  .result-title { font-size: 2.5rem; }
-  .result-cards { grid-template-columns: 1fr; }
-  .cta-block { padding: 1.75rem 1.25rem; }
-  .cta-title { font-size: 1.3rem; }
-  .cta-btn { font-size: 0.92rem; padding: 1rem 1.5rem; }
-  .sim-toggle-section { padding: 2rem 1.25rem; }
-  .sim-toggle-card { padding: 1.5rem 1.25rem; }
-  .sim-toggle-card-top { flex-direction: column; align-items: flex-start; gap: 1rem; }
-  .sim-toggle-card-title { font-size: 1.4rem; }
-  .sim-toggle-card-desc { font-size: 0.88rem; }
-  .sim-toggle-btn { width: 100%; justify-content: center; }
-  .herramientas-title { font-size: 1.6rem; }
-  .sim-panel { padding: 1.5rem 0 0; }
-  .sim-title { font-size: 2rem; }
-  .sim-subtitle { display: none; }
-  .sim-grid { grid-template-columns: 1fr !important; }
-  .sim-cards { grid-template-columns: 1fr; gap: 0.5rem; }
-  .sim-diff { flex-direction: column; text-align: center; gap: 0.5rem; }
-  .sim-diff-number { font-size: 2.5rem; }
-  .sim-persuasion-sub { display: none; }
-  .sim-cta-final { padding: 1.75rem 1.25rem; }
-  .sim-cta-final-title { font-size: 1.25rem; }
-  .sim-cta-final-btn { font-size: 0.88rem; padding: 1rem 1.5rem; }
-  .sim-historica-value { font-size: 2rem; }
+  .herr-title { font-size: 1.6rem; }
+  .herr-grid { grid-template-columns: 1fr; }
+  .herr-card-title { min-height: 0; }
+  #lucho-herramientas { padding: 2.5rem 1.25rem; }
   #lucho-footer { padding: 2rem 1.25rem 1.5rem; }
   .footer-legal-row { gap: 0.5rem; }
   .footer-bottom { flex-direction: column; gap: 0.35rem; }
@@ -501,7 +296,6 @@
         </p>
         <div class="hero-btns">
           <a href="https://wa.me/34646604591?text=Hola%20Lucho%2C%20quiero%20reservar%20una%20consultor%C3%ADa%20gratuita%20para%20que%20valores%20mi%20caso" class="hero-btn-primary" target="_blank">Quiero mi consultoría gratuita</a>
-          <a href="#lucho-test-wrapper" class="hero-btn-secondary">Descubre tu perfil de inversor</a>
         </div>
       </div>
 
@@ -538,313 +332,38 @@
   </div>
 </div>
 
-<div id="lucho-herramientas-root">
-
-  <div id="lucho-test-wrapper">
-  <div class="quiz-wrapper">
-
-    <div class="test-titular-wrap">
-      <div class="test-titular-eyebrow">Paso 1 · Gratuito · 3 minutos</div>
-      <div class="test-titular-title">TEST DE <em>INVERSOR</em></div>
-      <div class="test-titular-sub">Descubre qué tipo de inversor eres y qué estrategia encaja con tu situación real.</div>
+<div id="lucho-herramientas">
+  <div class="herr-wrap">
+    <div class="herr-head">
+      <div class="herr-eyebrow">Herramientas gratuitas</div>
+      <div class="herr-title">Empieza por aquí. <em>Sin registro, sin compromiso.</em></div>
     </div>
+    <div class="herr-grid">
 
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+      <a href="/calculadora-interes-compuesto/" class="herr-card">
+        <div class="herr-card-tag"><span class="herr-card-tag-dot"></span>Calculadora · 30 seg</div>
+        <div class="herr-card-title">¿Cuánto te cuesta no invertir?</div>
+        <div class="herr-card-desc">Descubre en segundos cuánto pierdes cada año que tu dinero sigue parado en el banco. Inflación incluida.</div>
+        <span class="herr-card-cta">Calcular ahora <span class="herr-card-cta-arrow">→</span></span>
+      </a>
+
+      <a href="/test-perfil-inversor/" class="herr-card">
+        <div class="herr-card-tag"><span class="herr-card-tag-dot"></span>Test · 3 min</div>
+        <div class="herr-card-title">¿Qué tipo de inversor eres?</div>
+        <div class="herr-card-desc">Responde 7 preguntas y descubre qué estrategia encaja con tu situación real y tu tolerancia al riesgo.</div>
+        <span class="herr-card-cta">Hacer el test <span class="herr-card-cta-arrow">→</span></span>
+      </a>
+
+      <a href="/amortizar-hipoteca-o-invertir/" class="herr-card">
+        <div class="herr-card-tag"><span class="herr-card-tag-dot"></span>Simulador · 2 min</div>
+        <div class="herr-card-title">¿Amortizar hipoteca o invertir?</div>
+        <div class="herr-card-desc">Compara los dos caminos con tus propios números y descubre cuál te conviene más a largo plazo.</div>
+        <span class="herr-card-cta">Comparar ahora <span class="herr-card-cta-arrow">→</span></span>
+      </a>
+
     </div>
-
-    <div class="filter-block active" id="f1">
-      <div class="step-label">Antes de empezar · 1 de 2</div>
-      <div class="question-text">¿Resides actualmente en España?</div>
-      <div class="question-context">Algunos servicios están disponibles solo para residentes en España.</div>
-      <div class="options">
-        <button class="option-btn" onclick="filterSelect('f1','si')">Sí, resido en España</button>
-        <button class="option-btn" onclick="filterSelect('f1','no')">No, vivo fuera de España</button>
-      </div>
-    </div>
-
-    <div class="filter-out-block" id="f1-out">
-      <div class="filter-out-icon">🌍</div>
-      <div class="filter-out-title">La consultoría financiera es para residentes en España — pero eso no significa que no pueda ayudarte.</div>
-      <div class="filter-out-body">Tengo un proyecto inmobiliario en República Dominicana abierto a inversores de cualquier país — apartamentos desde 195.000 USD con rentabilidad proyectada del 8-10% anual. Si te interesa, hablamos.</div>
-      <div class="cta-block">
-        <div class="cta-title">Hablemos de tus opciones</div>
-        <div class="cta-sub">Cuéntame tu situación y te explico qué hay disponible para ti.</div>
-        <a href="https://wa.me/34646604591?text=Hola%20Lucho%2C%20vivo%20fuera%20de%20Espa%C3%B1a%20y%20acabo%20de%20hacer%20tu%20test.%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20los%20apartamentos%20en%20Las%20Terrenas%2C%20Rep%C3%BAblica%20Dominicana.%20Me%20gustar%C3%ADa%20reservar%20una%20consultor%C3%ADa%20para%20hablarlo." class="cta-btn" target="_blank">Me interesa la inversión inmobiliaria</a>
-        <div class="cta-guarantee">Sin compromiso · Te respondo en menos de 24h</div>
-      </div>
-    </div>
-
-    <div class="filter-block" id="f2">
-      <div class="step-label">Antes de empezar · 2 de 2</div>
-      <div class="question-text">¿Tienes ingresos recurrentes — nómina, autónomo, pensión o similar?</div>
-      <div class="question-context">No todas las estrategias de inversión requieren ingresos periódicos.</div>
-      <div class="options">
-        <button class="option-btn" onclick="filterSelect('f2','si')">Sí, tengo ingresos periódicos</button>
-        <button class="option-btn" onclick="filterSelect('f2','no')">No, ahora mismo no tengo ingresos estables</button>
-      </div>
-    </div>
-
-    <div class="filter-out-block" id="f2-out">
-      <div class="filter-out-icon">💡</div>
-      <div class="filter-out-title">Sin ingresos periódicos no tiene sentido construir un plan de ahorro — pero puede que haya otra vía.</div>
-      <div class="filter-out-body">Si tienes capital acumulado — da igual la cantidad — hay opciones tanto en España como fuera. En la consultoría vemos qué encaja con tu situación real.</div>
-      <div class="cta-block">
-        <div class="cta-title">Tengo capital y quiero invertirlo</div>
-        <div class="cta-sub">Cuéntame tu situación y vemos si hay opciones reales para ti.</div>
-        <a href="https://wa.me/34646604591?text=Hola%20Lucho%2C%20he%20hecho%20tu%20test.%20Ahora%20mismo%20no%20tengo%20ingresos%20peri%C3%B3dicos%20estables%20pero%20tengo%20capital%20ahorrado%20y%20quiero%20ponerlo%20a%20trabajar.%20Me%20gustar%C3%ADa%20reservar%20una%20consultor%C3%ADa%20para%20hablarlo." class="cta-btn" target="_blank">Quiero poner mi capital a trabajar</a>
-        <div class="cta-guarantee">Sin compromiso · Hablamos y vemos qué encaja</div>
-      </div>
-    </div>
-
-    <div class="question-block" id="q1">
-      <div class="step-label">Pregunta 1 de 7</div>
-      <div class="question-text">¿En cuánto tiempo quieres alcanzar tu objetivo financiero principal?</div>
-      <div class="question-context">Si tienes varios objetivos, piensa en el más importante.</div>
-      <div class="options">
-        <button class="option-btn" onclick="selectOption(this,'q1','A')">Menos de 2 años — lo necesito pronto</button>
-        <button class="option-btn" onclick="selectOption(this,'q1','B')">Entre 5 y 10 años</button>
-        <button class="option-btn" onclick="selectOption(this,'q1','C')">Más de 10 años o para la jubilación</button>
-      </div>
-      <div class="nav-row"><button class="btn-next" id="next1" onclick="goNext(1)">Siguiente →</button></div>
-    </div>
-
-    <div class="question-block" id="q2">
-      <div class="step-label">Pregunta 2 de 7</div>
-      <div class="question-text">Tu inversión cae un 15% en un mes. ¿Qué harías?</div>
-      <div class="options">
-        <button class="option-btn" onclick="selectOption(this,'q2','A')">Lo saco todo — no me puedo permitir perder</button>
-        <button class="option-btn" onclick="selectOption(this,'q2','B')">Espero — las bajadas son temporales</button>
-        <button class="option-btn" onclick="selectOption(this,'q2','C')">Invierto más — es una oportunidad</button>
-      </div>
-      <div class="nav-row"><button class="btn-next" id="next2" onclick="goNext(2)">Siguiente →</button></div>
-    </div>
-
-    <div class="question-block" id="q3">
-      <div class="step-label">Pregunta 3 de 7</div>
-      <div class="question-text">¿Qué parte de tus ingresos ahorras al mes?</div>
-      <div class="question-context">Si tienes economía compartida con tu pareja, incluye los ingresos de los dos.</div>
-      <div class="options">
-        <button class="option-btn" onclick="selectOption(this,'q3','A');showAhorroMsg()">Casi nada — llego justo</button>
-        <button class="option-btn" onclick="selectOption(this,'q3','B');hideAhorroMsg()">Entre un 10% y un 20%</button>
-        <button class="option-btn" onclick="selectOption(this,'q3','C');hideAhorroMsg()">Más del 20%</button>
-      </div>
-      <div id="ahorro-msg">Para poder ayudarte necesitas reservar al menos 100€ al mes de forma constante. Si crees que puedes hacerlo, en la consultoría vemos cómo encajarlo.</div>
-      <div class="nav-row"><button class="btn-next" id="next3" onclick="goNext(3)">Siguiente →</button></div>
-    </div>
-
-    <div class="question-block" id="q4">
-      <div class="step-label">Pregunta 4 de 7</div>
-      <div class="question-text">Cuando piensas en tu dinero, ¿qué es lo que más te importa?</div>
-      <div class="options">
-        <button class="option-btn" onclick="selectOption(this,'q4','A')">Seguridad ante todo</button>
-        <button class="option-btn" onclick="selectOption(this,'q4','B')">Que no pierda valor con la inflación</button>
-        <button class="option-btn" onclick="selectOption(this,'q4','C')">Generar ingresos pasivos — que el dinero trabaje por mí</button>
-        <button class="option-btn" onclick="selectOption(this,'q4','D')">Maximizar la rentabilidad</button>
-      </div>
-      <div class="nav-row"><button class="btn-next" id="next4" onclick="goNext(4)">Siguiente →</button></div>
-    </div>
-
-    <div class="question-block" id="q5">
-      <div class="step-label">Pregunta 5 de 7</div>
-      <div class="question-text">¿Tienes experiencia invirtiendo?</div>
-      <div class="options">
-        <button class="option-btn" onclick="selectOption(this,'q5','A')">Nunca — no sé por dónde empezar</button>
-        <button class="option-btn" onclick="selectOption(this,'q5','B')">Algo — he tenido algún producto de ahorro o inversión</button>
-        <button class="option-btn" onclick="selectOption(this,'q5','C')">Sí — tengo experiencia con distintos tipos de activos</button>
-      </div>
-      <div class="nav-row"><button class="btn-next" id="next5" onclick="goNext(5)">Siguiente →</button></div>
-    </div>
-
-    <div class="question-block" id="q6">
-      <div class="step-label">Pregunta 6 de 7</div>
-      <div class="question-text">¿Con qué capital cuentas actualmente para invertir?</div>
-      <div class="options">
-        <button class="option-btn" onclick="selectOption(this,'q6','A')">Solo aportación mensual — no tengo capital acumulado</button>
-        <button class="option-btn" onclick="selectOption(this,'q6','B')">Menos de 10.000€</button>
-        <button class="option-btn" onclick="selectOption(this,'q6','C')">Entre 10.000€ y 50.000€</button>
-        <button class="option-btn" onclick="selectOption(this,'q6','D')">Más de 50.000€</button>
-      </div>
-      <div class="nav-row"><button class="btn-next" id="next6" onclick="goNext(6)">Siguiente →</button></div>
-    </div>
-
-    <div class="question-block" id="q7">
-      <div class="step-label">Pregunta 7 de 7</div>
-      <div class="question-text">¿Qué tipo de inversión encaja mejor con lo que buscas?</div>
-      <div class="options">
-        <button class="option-btn" onclick="selectOption(this,'q7','A')">Ahorrar de forma constante y darle un impulso inicial con ese capital</button>
-        <button class="option-btn" onclick="selectOption(this,'q7','B')">Invertir ese dinero de una vez y que genere rentabilidad</button>
-        <button class="option-btn" onclick="selectOption(this,'q7','C')">Invertir en un activo que genere ingresos pasivos y se revalorice</button>
-      </div>
-      <div class="nav-row"><button class="btn-next" id="next7" onclick="showResult()">Ver mi perfil →</button></div>
-    </div>
-
-        <div class="result-block" id="result-conservador">
-      <div class="result-profile-label">Tu perfil inversor</div>
-      <div class="result-title">Conservador</div>
-      <div class="result-subtitle">Tu dinero está parado. Y parado no significa seguro — significa que la inflación lo está consumiendo en silencio, sin que aparezca en ningún extracto.</div>
-      <div class="result-cards" id="cards-conservador"></div>
-      <div class="result-truth"><p><strong>El coste de no hacer nada:</strong> entre un 2% y un 3% de poder adquisitivo perdido cada año. No lo ves porque no te llega ningún cargo. Pero está pasando.</p><p>Si tienes 20.000€ parados, en 10 años habrán perdido el equivalente a más de 5.000€ en valor real — sin que hayas tomado ninguna decisión equivocada. Solo por no tener un plan.</p></div>
-      <div class="result-insight-wrap" id="insight-conservador"></div>
-      <div class="cta-block">
-        <div class="cta-title">Hay herramientas diseñadas para exactamente tu situación</div>
-        <div class="cta-sub">En 30 minutos te digo exactamente cuánto te está costando la situación actual — con tus números, no con ejemplos genéricos. Si no hay solución real para ti, te lo digo antes de los 10 minutos.</div>
-        <a href="#" onclick="this.href=buildWhatsappUrl('conservador');return true;" class="cta-btn" target="_blank">Reservar Mi Consultoría Gratuita</a>
-        <div class="cta-guarantee">Gratuita · 30 minutos · Respondo en menos de 24h</div>
-      </div>
-    </div>
-
-
-        <div class="result-block" id="result-moderado">
-      <div class="result-profile-label">Tu perfil inversor</div>
-      <div class="result-title">Moderado</div>
-      <div class="result-subtitle">Sabes que tu dinero tiene que moverse. Llevas tiempo sabiéndolo. El problema no es la intención — es que nadie te ha explicado qué opción encaja exactamente con tu situación.</div>
-      <div class="result-cards" id="cards-moderado"></div>
-      <div class="result-truth"><p><strong>Por qué el banco no es la solución:</strong> te han ofrecido productos diseñados para su margen, no para tu perfil. Demasiado conservadores pierden contra la inflación. Demasiado agresivos no te dejan dormir.</p><p>Y mientras decides, el tiempo pasa — y el tiempo en inversión no se recupera. Cada año que no tienes un plan es un año de interés compuesto que se pierde para siempre.</p></div>
-      <div class="result-insight-wrap" id="insight-moderado"></div>
-      <div class="cta-block">
-        <div class="cta-title">Tu situación tiene más potencial del que parece</div>
-        <div class="cta-sub">En la consultoría no te vendo nada. Analizo tu situación real y calculo qué diferencia habría entre empezar hoy y esperar 12 meses más. Ese número suele aclarar la decisión mejor que cualquier explicación.</div>
-        <a href="#" onclick="this.href=buildWhatsappUrl('moderado');return true;" class="cta-btn" target="_blank">Reservar Mi Consultoría Gratuita</a>
-        <div class="cta-guarantee">Gratuita · 30 minutos · Respondo en menos de 24h</div>
-      </div>
-    </div>
-
-
-        <div class="result-block" id="result-dinamico">
-      <div class="result-profile-label">Tu perfil inversor</div>
-      <div class="result-title">Dinámico</div>
-      <div class="result-subtitle">Tienes el horizonte, tienes capacidad de ahorro y entiendes que el riesgo forma parte del juego. Solo falta una cosa: una estrategia estructurada. Sin ella, el potencial que tienes sobre el papel no se traduce en resultados reales.</div>
-      <div class="result-cards" id="cards-dinamico"></div>
-      <div class="result-truth"><p><strong>Lo que te está costando no tener un plan:</strong> con tu perfil y tu horizonte, cada mes que pasa sin una estrategia clara es interés compuesto que no vuelve. No de forma abstracta — de forma matemática.</p><p>La diferencia entre empezar hoy y haber empezado hace 12 meses, con aportaciones periódicas y el efecto del coste medio, puede ser de miles de euros. Y la diferencia entre empezar hoy y esperar otros 12 meses será exactamente la misma.</p></div>
-      <div class="result-insight-wrap" id="insight-dinamico"></div>
-      <div class="cta-block">
-        <div class="cta-title">Tienes el perfil y el horizonte. Solo falta el plan.</div>
-        <div class="cta-sub">En la consultoría calculamos ese número con tu situación real. No es una reunión de ventas — es una sesión de trabajo de 30 minutos donde sales con información que ahora mismo no tienes.</div>
-        <a href="#" onclick="this.href=buildWhatsappUrl('dinamico');return true;" class="cta-btn" target="_blank">Reservar Mi Consultoría Gratuita</a>
-        <div class="cta-guarantee">Gratuita · 30 minutos · Respondo en menos de 24h</div>
-      </div>
-    </div>
-
   </div>
-  </div>
-
-  
-  <div style="height:1px; background: linear-gradient(to right, transparent, #d4af37, transparent); margin: 0 2rem;"></div>
-<div class="sim-toggle-section" id="lucho-herramientas">
-  <div class="sim-toggle-inner">
-
-    <div class="herramientas-heading">
-      <div class="herramientas-eyebrow">Herramientas</div>
-      <div class="herramientas-title">Pon tus números a prueba</div>
-    </div>
-
-    <div class="sim-toggle-card" id="sim-toggle-card" onclick="toggleSim()">
-      <div class="sim-toggle-card-top">
-        <div class="sim-toggle-card-left">
-          <div class="sim-toggle-tag"><div class="sim-toggle-tag-dot"></div>Calculadora · 1 minuto</div>
-          <div class="sim-toggle-card-title">¿Cuánto te cuesta no invertir?</div>
-          <div class="sim-toggle-card-desc">Calcula en segundos cuánto dinero estás perdiendo — y qué diferencia haría empezar hoy.</div>
-        </div>
-        <div class="sim-toggle-btn">Calcular ahora<span class="sim-toggle-btn-arrow">›</span></div>
-      </div>
-      <div class="sim-panel" id="sim-panel" onclick="event.stopPropagation()">
-        <div class="sim-eyebrow">Simulador financiero</div>
-        <div class="sim-title">¿CUÁNTO TE CUESTA<br><em>NO INVERTIR?</em></div>
-        <div class="sim-subtitle">Introduce tus datos y descubre en segundos cuánto te está costando no invertir.</div>
-        <div class="sim-section">
-          <div class="sim-section-head"><div class="sim-section-num">1</div><div class="sim-section-title">Tus datos</div></div>
-          <div class="sim-grid">
-            <div class="sim-field"><label>Tu edad</label><input type="number" id="sim-edad" placeholder="35" min="18" max="70" oninput="calcular()"/><div class="unit">años</div></div>
-            <div class="sim-field"><label>Capital ahorrado</label><input type="text" id="sim-capital" placeholder="20.000" inputmode="numeric" oninput="fmtInputLive(this);calcular()"/><div class="unit">€ parados en el banco</div></div>
-          </div>
-        </div>
-        <div class="sim-divider"></div>
-        <div class="sim-section">
-          <div class="sim-section-head"><div class="sim-section-num">2</div><div class="sim-section-title">¿Cuántos años lleva parado tu dinero?</div></div>
-          <div class="sim-grid one">
-            <div class="sim-field"><label>Años que lleva parado sin invertir</label><input type="number" id="sim-pasado" placeholder="0" min="0" max="30" oninput="calcular()"/><div class="unit">años</div></div>
-          </div>
-        </div>
-        <div class="sim-divider"></div>
-        <div class="sim-section">
-          <div class="sim-section-head"><div class="sim-section-num">3</div><div class="sim-section-title">¿Cuánto puedes aportar cada mes?</div></div>
-          <div class="sim-grid">
-            <div class="sim-field"><label>Aportación mensual <span style="color:#2a2a2a;font-weight:400;text-transform:none;letter-spacing:0;font-size:9px">(opcional)</span></label><input type="text" id="sim-mensual" placeholder="0" inputmode="numeric" oninput="fmtInputLive(this);calcular()"/><div class="unit">€ / mes</div></div>
-            <div class="sim-field" style="display:flex;flex-direction:column;justify-content:center"><label>Proyección a futuro</label><div style="font-size:2rem;font-weight:900;color:#f5f5f5;letter-spacing:-0.02em;margin-top:0.2rem" id="sim-anios-display">10 años</div></div>
-          </div>
-          <div class="sim-slider-wrap">
-            <div class="sim-slider-head"><span class="lbl">Arrastra para ajustar el plazo</span><span class="val" id="sim-anios-label">10 años</span></div>
-            <input type="range" class="sim-slider" id="sim-anios" min="1" max="30" value="10" oninput="updateSlider();calcular()"/>
-          </div>
-        </div>
-        <div class="sim-result" id="sim-result">
-          <div class="sim-rent-nota" id="sim-rent-nota"></div>
-          <div class="sim-historica" id="sim-historica">
-            <div class="sim-historica-label">Ya has perdido hasta hoy</div>
-            <div class="sim-historica-value" id="hist-value">—</div>
-            <div class="sim-historica-sub" id="hist-sub"></div>
-          </div>
-          <div class="sim-cards">
-            <div class="sim-card"><div class="sim-card-lbl">Total que aportarás</div><div class="sim-card-val" id="card-aportado">—</div><div class="sim-card-sub">capital + aportaciones<br>sin rendimiento</div></div>
-            <div class="sim-card"><div class="sim-card-lbl">Valor real sin invertir</div><div class="sim-card-val" id="card-inflacion">—</div><div class="sim-card-sub">inflación 3,5% anual<br>poder adquisitivo real</div></div>
-            <div class="sim-card win"><div class="sim-card-lbl" id="card-rent-lbl">Invirtiendo al 8% anual</div><div class="sim-card-val" id="card-inversion">—</div><div class="sim-card-sub">interés compuesto<br>capital + aportaciones</div></div>
-          </div>
-          <div class="sim-grafico-wrap" id="sim-grafico-wrap" style="display:none">
-            <div class="sim-grafico-titulo">Evolución del capital por año</div>
-            <div class="sim-grafico-leyenda">
-              <div class="sim-leyenda-item"><div class="sim-leyenda-dot" style="background:#d4af37"></div>Intereses generados</div>
-              <div class="sim-leyenda-item"><div class="sim-leyenda-dot" style="background:#2a2a2a"></div>Capital aportado</div>
-              <div class="sim-leyenda-item"><div class="sim-leyenda-dot" style="background:none;border-top:2px dashed #ff4444;width:16px;height:0;margin-top:5px"></div><span style="color:#ff4444;font-weight:700">Sin invertir</span></div>
-            </div>
-            <div class="sim-badge-inflacion" id="sim-badge-inflacion"><div class="sim-badge-inflacion-label">Sin invertir (con inflación)</div><div class="sim-badge-inflacion-value" id="sim-badge-inflacion-value">—</div></div>
-            <div class="sim-grafico-canvas-wrap" id="sim-grafico-canvas"></div>
-          </div>
-          <div class="sim-desglose-toggle" id="sim-desglose-toggle" style="display:none" onclick="toggleTabla()">
-            <div class="sim-desglose-toggle-icon" id="sim-desglose-icon">+</div>
-            <div class="sim-desglose-toggle-label">Ver desglose año a año</div>
-          </div>
-          <table class="sim-tabla" id="sim-tabla">
-            <thead><tr><th>Año</th><th>Interés del año</th><th>Interés acumulado</th><th>Capital total</th></tr></thead>
-            <tbody id="sim-tabla-body"></tbody>
-          </table>
-          <div class="sim-diff">
-            <div><div class="sim-diff-eyebrow">Lo que te estás perdiendo</div><div class="sim-diff-label" id="sim-diff-label">—</div></div>
-            <div class="sim-diff-number" id="sim-diff-number">—</div>
-          </div>
-          <div class="sim-msg-wrap">
-            <div class="sim-msg-highlight" id="sim-msg-highlight"></div>
-            <div class="sim-msg-body" id="sim-msg-body"></div>
-          </div>
-          <div class="sim-persuasion">
-            <div class="sim-persuasion-main">Estos números no son una proyección optimista. Son matemáticas.</div>
-            <div class="sim-persuasion-sub">La única variable que puedes controlar es cuándo empiezas. Cada mes que pasa sin un plan es un mes de interés compuesto que no se recupera.</div>
-          </div>
-          <div class="sim-cta-final">
-            <div class="sim-cta-final-eyebrow">Siguiente paso</div>
-            <div class="sim-cta-final-title">Convierte estos números en un plan real</div>
-            <div class="sim-cta-final-sub">30 minutos por Zoom · Sin compromiso · Sin coste<br><strong style="color:#2a1e00;">Si no veo cómo ayudarte, te lo digo en los primeros 10 minutos.</strong></div>
-            <a href="#" id="sim-cta-btn" class="sim-cta-final-btn" target="_blank">Reservar Mi Consultoría Gratuita</a>
-            <div class="sim-cta-final-guarantee">Gratuita · 30 minutos · Respondo en menos de 24h</div>
-          </div>
-          <div class="sim-disclaimer">* Simulación orientativa. Inflación aplicada: 3,5% anual. Rentabilidad de referencia variable según plazo. Las rentabilidades pasadas no garantizan rentabilidades futuras. Este simulador no constituye asesoramiento financiero.</div>
-        </div>
-      </div>
-    </div>
-
-    <a href="/amortizar-hipoteca-o-invertir/" class="sim-toggle-card sim-toggle-card-link">
-      <div class="sim-toggle-card-top">
-        <div class="sim-toggle-card-left">
-          <div class="sim-toggle-tag"><div class="sim-toggle-tag-dot"></div>Simulador · 2 minutos</div>
-          <div class="sim-toggle-card-title">¿Amortizar hipoteca o invertir?</div>
-          <div class="sim-toggle-card-desc">Compara los dos caminos con tus propios números y descubre cuál te conviene más.</div>
-        </div>
-        <div class="sim-toggle-btn">Comparar ahora<span class="sim-toggle-btn-arrow">›</span></div>
-      </div>
-    </a>
-
-  </div>
-  </div>
+</div>
 
   <div id="lucho-footer">
   <div class="footer-wrap">
@@ -866,263 +385,6 @@
   </div>
   </div>
 
-</div>
-
-<script>
-function toggleSim() {
-  var card = document.getElementById('sim-toggle-card');
-  var panel = document.getElementById('sim-panel');
-  var isOpen = panel.classList.contains('open');
-  if (isOpen) { panel.classList.remove('open'); card.classList.remove('open'); }
-  else { panel.classList.add('open'); card.classList.add('open'); setTimeout(function() { card.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 80); updateSlider(); }
-}
-
-var answers={}, totalVisible=7;
-var lH={'A':'Menos de 2 años','B':'5 a 10 años','C':'Más de 10 años'};
-var lR={'A':'Retiraría el dinero','B':'Esperaría','C':'Invertiría más'};
-var lA={'A':'Menos del 10%','B':'10% - 20%','C':'Más del 20%'};
-var lP={'A':'Seguridad','B':'Proteger vs inflación','C':'Ingresos pasivos','D':'Máxima rentabilidad'};
-var lE={'A':'Sin experiencia','B':'Experiencia básica','C':'Inversor activo'};
-var lC={'A':'Solo aportación mensual','B':'Menos de 10.000€','C':'10.000€ - 50.000€','D':'Más de 50.000€'};
-var lI={'A':'Ahorro periódico con capital inicial','B':'Inversión del capital acumulado','C':'Inversión en activo inmobiliario'};
-
-function showAhorroMsg(){document.getElementById('ahorro-msg').style.display='block';}
-function hideAhorroMsg(){document.getElementById('ahorro-msg').style.display='none';}
-
-function filterSelect(id,val){
-  document.getElementById(id).classList.remove('active');
-  if(id==='f1') document.getElementById(val==='si'?'f2':'f1-out').classList.add('active');
-  else document.getElementById(val==='si'?'q1':'f2-out').classList.add('active');
-}
-
-function buildWhatsappUrl(profile){
-  var a=answers;
-  var msg='Hola Lucho, he hecho el test de inversor y mi perfil es '+profile+'. Me gustaría reservar mi consultoría gratuita.\n\n📋 Mis respuestas:\n';
-  msg+='• Horizonte: '+(lH[a.q1]||'-')+'\n';
-  msg+='• Ante caída del 15%: '+(lR[a.q2]||'-')+'\n';
-  msg+='• Ahorro mensual: '+(lA[a.q3]||'-')+'\n';
-  msg+='• Prioridad: '+(lP[a.q4]||'-')+'\n';
-  msg+='• Experiencia: '+(lE[a.q5]||'-')+'\n';
-  msg+='• Capital disponible: '+(lC[a.q6]||'-')+'\n';
-  if(a.q7) msg+='• Enfoque de inversión: '+(lI[a.q7]||'-')+'\n';
-  return 'https://wa.me/34646604591?text='+encodeURIComponent(msg);
-}
-
-function buildCards(profile){
-  var a=answers, el=document.getElementById('cards-'+profile);
-  if(!el) return;
-  el.innerHTML=[{l:'Horizonte',v:lH[a.q1]||'-'},{l:'Ante una caída',v:lR[a.q2]||'-'},{l:'Ahorro mensual',v:lA[a.q3]||'-'},{l:'Capital disponible',v:lC[a.q6]||'-'}]
-    .map(function(d){return'<div class="result-card"><div class="result-card-label">'+d.l+'</div><div class="result-card-value">'+d.v+'</div></div>';}).join('');
-}
-
-function buildInsight(profile){
-  var a=answers, lines=[];
-  if(profile==='conservador'){
-    if(a.q6==='C'||a.q6==='D') lines.push('<p>Tienes <strong>'+lC[a.q6].toLowerCase()+'</strong> disponibles. Con tu horizonte corto, el objetivo no es multiplicarlo — es que no pierda valor mientras decides qué hacer con él. Hay herramientas para eso.</p>');
-    if(a.q3==='B'||a.q3==='C') lines.push('<p>Tienes capacidad de ahorro mensual. Aunque ahora no sea el momento de asumir riesgo, esa constancia es un activo — y en la consultoría vemos cómo estructurarla bien.</p>');
-  }
-  if(profile==='moderado'){
-    if(a.q1==='C'&&a.q3==='A') lines.push('<p>Tu horizonte es largo pero tu capacidad de ahorro es baja ahora mismo. Eso tiene solución — en la consultoría vemos si hay margen real para empezar, aunque sea con poco, y qué impacto tiene en el largo plazo.</p>');
-    if(a.q6==='C'||a.q6==='D') lines.push('<p>Tienes <strong>'+lC[a.q6].toLowerCase()+'</strong> disponibles. Con tu horizonte, ese capital puede trabajar de forma inteligente — sin exponerte a más riesgo del que tiene sentido para ti ahora.</p>');
-  }
-  if(profile==='dinamico'){
-    if(a.q6==='C'||a.q6==='D') lines.push('<p>Combinas <strong>'+lC[a.q6].toLowerCase()+'</strong> de capital inicial con aportación mensual y horizonte largo. Esa combinación es la más potente que existe en ahorro a largo plazo — el interés compuesto actúa sobre una base que crece cada mes.</p>');
-    if(a.q7==='C') lines.push('<p>Buscas <strong>ingresos pasivos y revalorización</strong>. Hay activos que combinan ambas cosas. En la consultoría te explico cuáles encajan con tu situación real.</p>');
-    if(a.q2==='A') lines.push('<p>Respondiste que sacarías el dinero si cae un 15%. Tiene sentido como reacción — pero con tu horizonte, esa caída no es una pérdida, es una compra más barata. En la consultoría trabajamos eso con números reales para que lo veas claro.</p>');
-  }
-  return lines.join('');
-}
-
-function updateProgress(step){document.getElementById('progressFill').style.width=Math.round((step/totalVisible)*100)+'%';}
-
-function selectOption(btn,qId,val){
-  btn.parentElement.querySelectorAll('.option-btn').forEach(function(o){o.classList.remove('selected');});
-  btn.classList.add('selected'); answers[qId]=val;
-  var n=document.getElementById('next'+qId.replace('q',''));
-  if(n) n.classList.add('visible');
-}
-
-function goNext(current){
-  document.getElementById('q'+current).classList.remove('active');
-  updateProgress(current);
-  if(current===6){
-    if(answers.q6==='C'||answers.q6==='D'){totalVisible=7;document.getElementById('q7').classList.add('active');}
-    else{totalVisible=6;showResult();}
-  } else { document.getElementById('q'+(current+1)).classList.add('active'); }
-}
-
-function calcProfile(){
-  var a=answers;
-  if(a.q1==='C' && (a.q3==='B'||a.q3==='C')) return 'dinamico';
-  if(a.q1==='C' && a.q3==='A') return 'moderado';
-  if(a.q1==='A') return 'conservador';
-  if(a.q1==='B'){
-    var dinamico=0;
-    if(a.q3==='C') dinamico++;
-    if(a.q2==='C') dinamico++;
-    if(a.q5==='C') dinamico++;
-    if(a.q6==='C'||a.q6==='D') dinamico++;
-    if(a.q4==='D') dinamico++;
-    if(dinamico>=3) return 'dinamico';
-    var conservador=0;
-    if(a.q2==='A') conservador++;
-    if(a.q3==='A') conservador++;
-    if(a.q4==='A') conservador++;
-    if(a.q5==='A') conservador++;
-    if(conservador>=3) return 'conservador';
-    return 'moderado';
-  }
-  return 'moderado';
-}
-
-function showResult(){
-  var q7=document.getElementById('q7'); if(q7) q7.classList.remove('active');
-  updateProgress(totalVisible);
-  var profile=calcProfile();
-  buildCards(profile);
-  var insightEl=document.getElementById('insight-'+profile);
-  if(insightEl) insightEl.innerHTML=buildInsight(profile);
-  var resultEl=document.getElementById('result-'+profile);
-  resultEl.classList.add('active');
-  setTimeout(function(){resultEl.scrollIntoView({behavior:'smooth',block:'start'});},100);
-}
-
-function fmtInputLive(input){
-  var raw=input.value.replace(/\./g,'').replace(/[^0-9]/g,'');
-  var num=parseInt(raw,10);
-  if(!isNaN(num)&&num>0){input.value=num.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.');input.setAttribute('data-raw',num);}
-  else{input.value=raw===''?'':raw;input.setAttribute('data-raw','0');}
-}
-function getRaw(id){
-  var el=document.getElementById(id);if(!el)return 0;
-  var raw=el.getAttribute('data-raw');if(raw)return parseFloat(raw)||0;
-  return parseFloat(el.value.replace(/\./g,'').replace(',','.'))||0;
-}
-function fmt(n){return Math.round(n).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+'€';}
-function getRentabilidad(anios){
-  if(anios<=5)return{tasa:0.05,label:'5% anual',nota:'Con un plazo de '+anios+(anios==1?' año':' años')+', usamos una rentabilidad del 5% anual — más conservadora y realista para horizontes cortos.'};
-  return{tasa:0.08,label:'8% anual',nota:null};
-}
-function updateSlider(){
-  var v=document.getElementById('sim-anios').value;
-  var txt=v+(v==1?' año':' años');
-  document.getElementById('sim-anios-label').textContent=txt;
-  document.getElementById('sim-anios-display').textContent=txt;
-}
-function calcular(){
-  var edad=parseFloat(document.getElementById('sim-edad').value)||0;
-  var capital=getRaw('sim-capital');
-  var mensual=getRaw('sim-mensual');
-  var pasado=parseFloat(document.getElementById('sim-pasado').value)||0;
-  var anios=parseFloat(document.getElementById('sim-anios').value)||10;
-  if(capital===0&&mensual===0){document.getElementById('sim-result').classList.remove('visible');return;}
-  var inf=0.035,rentObj=getRentabilidad(anios),rent=rentObj.tasa;
-  var rMes=rent/12,infMes=inf/12,n=Math.round(anios*12);
-  var notaEl=document.getElementById('sim-rent-nota');
-  if(rentObj.nota){notaEl.textContent=rentObj.nota;notaEl.style.display='block';}else{notaEl.style.display='none';}
-  document.getElementById('card-rent-lbl').textContent='Invirtiendo al '+rentObj.label;
-  var totalAportado=capital+(mensual*n);
-  var valorInflacion=capital*Math.pow(1-inf,anios);
-  for(var i=1;i<=n;i++){valorInflacion+=mensual*Math.pow(1-infMes,n-i);}
-  var valorInversion=capital*Math.pow(1+rent,anios);
-  if(mensual>0&&n>0){valorInversion+=mensual*((Math.pow(1+rMes,n)-1)/rMes);}
-  var diferencia=valorInversion-valorInflacion;
-  var histEl=document.getElementById('sim-historica');
-  if(pasado>0&&capital>0){
-    var perdida=capital-capital*Math.pow(1-inf,pasado);
-    document.getElementById('hist-value').textContent=fmt(perdida);
-    document.getElementById('hist-sub').textContent='de poder adquisitivo perdido en los últimos '+pasado+(pasado==1?' año':' años')+' con '+fmt(capital)+' parados.';
-    histEl.style.display='block';
-  }else{histEl.style.display='none';}
-  document.getElementById('card-aportado').textContent=fmt(totalAportado);
-  document.getElementById('card-inflacion').textContent=fmt(valorInflacion);
-  document.getElementById('card-inversion').textContent=fmt(valorInversion);
-  document.getElementById('sim-diff-number').textContent='+'+fmt(diferencia);
-  var edadFutura=edad>0?Math.round(edad+anios):0;
-  document.getElementById('sim-diff-label').textContent=edadFutura>0?'Para cuando tengas '+edadFutura+' años':'En '+anios+(anios==1?' año':' años');
-  var highlight='',body='';
-  if(edad>0&&edad<40){highlight='Tienes '+edad+' años. El tiempo es tu activo más valioso — y ahora mismo lo estás desperdiciando.';body='Con '+anios+' años por delante, el interés compuesto trabaja de forma exponencial. Cada año que pasa sin invertir no solo es un año perdido — es un año menos de crecimiento acumulado.';}
-  else if(edad>=40&&edad<55){highlight='Con '+edad+' años todavía tienes tiempo, pero cada año que esperas te cuesta más de lo que crees.';body='La diferencia entre empezar hoy y esperar 5 años más puede representar un patrimonio muy diferente para cuando te jubiles. El mejor momento fue hace años. El segundo mejor momento es ahora.';}
-  else if(edad>=55){highlight='Con '+edad+' años, la prioridad cambia: proteger lo que tienes y hacerlo trabajar de forma inteligente.';body='No se trata de asumir riesgos innecesarios — se trata de encontrar estrategias adaptadas a este momento. Te las explico en la consultoría.';}
-  else{highlight='La diferencia es '+fmt(diferencia)+'. Eso es lo que separa tener un plan de no tenerlo.';body='En la consultoría revisamos tu situación concreta y diseñamos una estrategia adaptada a ti. Sin ataduras a ningún banco.';}
-  document.getElementById('sim-msg-highlight').innerHTML=highlight.replace(/\d[\d\.]*[€%]?/g,function(m){return'<em>'+m+'</em>';});
-  document.getElementById('sim-msg-body').textContent=body;
-  var waMsg='Hola Lucho, acabo de hacer la simulación y quiero entender qué opciones tengo para poner mi dinero a trabajar.\n\n📊 Mi simulación:\n';
-  if(edad>0)waMsg+='• Edad: '+edad+' años\n';
-  waMsg+='• Capital: '+fmt(capital)+'\n';
-  if(mensual>0)waMsg+='• Aportación mensual: '+fmt(mensual)+'\n';
-  if(pasado>0)waMsg+='• Años sin invertir: '+pasado+'\n';
-  waMsg+='• Proyección: '+anios+' años\n• Sin invertir tendría: '+fmt(valorInflacion)+'\n• Invirtiendo al '+rentObj.label+': '+fmt(valorInversion)+'\n• Diferencia: +'+fmt(diferencia);
-  document.getElementById('sim-cta-btn').href='https://wa.me/34646604591?text='+encodeURIComponent(waMsg);
-  buildGrafico(capital,mensual,anios,rent);
-  document.getElementById('sim-result').classList.add('visible');
-}
-function toggleTabla(){
-  var tabla=document.getElementById('sim-tabla'),icon=document.getElementById('sim-desglose-icon');
-  if(tabla.classList.contains('visible')){tabla.classList.remove('visible');icon.textContent='+';}
-  else{tabla.classList.add('visible');icon.textContent='×';}
-}
-function buildGrafico(capital,mensual,anios,rent){
-  var canvas=document.getElementById('sim-grafico-canvas'),tbody=document.getElementById('sim-tabla-body');
-  var rMes=rent/12,datos=[],capitalAcum=capital;
-  for(var y=1;y<=anios;y++){
-    capitalAcum=capitalAcum*(1+rent);
-    if(mensual>0){capitalAcum+=mensual*((Math.pow(1+rMes,12)-1)/rMes);}
-    var aportado=capital+(mensual*12*y);
-    datos.push({anio:y,capitalAportado:aportado,intereses:Math.max(0,capitalAcum-aportado),total:capitalAcum});
-  }
-  var step=anios>20?Math.ceil(anios/20):1,datosFiltrados=[];
-  for(var i=step-1;i<datos.length;i+=step){datosFiltrados.push(datos[i]);if(datosFiltrados.length>=20)break;}
-  var maxVal=Math.max.apply(null,datosFiltrados.map(function(d){return d.total;}));
-  canvas.innerHTML='';
-  datosFiltrados.forEach(function(d){
-    var hCap=Math.round((d.capitalAportado/maxVal)*150),hInt=Math.round((d.intereses/maxVal)*150);
-    var wrap=document.createElement('div');wrap.className='sim-barra-wrap';wrap.title='Año '+d.anio+': '+fmt(d.total);
-    var stack=document.createElement('div');stack.className='sim-barra-stack';stack.style.height=(hCap+hInt)+'px';
-    var bInt=document.createElement('div');bInt.className='sim-barra-intereses';bInt.style.height=hInt+'px';
-    var bCap=document.createElement('div');bCap.className='sim-barra-capital';bCap.style.height=hCap+'px';
-    stack.appendChild(bInt);stack.appendChild(bCap);
-    var lbl=document.createElement('div');lbl.className='sim-barra-label';lbl.textContent='A'+d.anio;
-    wrap.appendChild(stack);wrap.appendChild(lbl);canvas.appendChild(wrap);
-  });
-  tbody.innerHTML='';
-  var capT=capital,intAcumT=0;
-  for(var y2=1;y2<=anios;y2++){
-    var capAnt=capT;capT=capT*(1+rent);
-    if(mensual>0){capT+=mensual*((Math.pow(1+rMes,12)-1)/rMes);}
-    var intA=capT-capAnt-(mensual*12);intAcumT+=Math.max(0,intA);
-    var tr=document.createElement('tr');
-    tr.innerHTML='<td>Año '+y2+'</td><td class="dorado">'+fmt(Math.max(0,intA))+'</td><td>'+fmt(intAcumT)+'</td><td class="blanco">'+fmt(capT)+'</td>';
-    tbody.appendChild(tr);
-  }
-  var valorInflFinal=capital*Math.pow(1-0.035,anios);
-  if(mensual>0){for(var ii=1;ii<=anios*12;ii++){valorInflFinal+=mensual*Math.pow(1-0.035/12,anios*12-ii);}}
-  var pct=valorInflFinal/maxVal,btm=pct*150;
-  var old=canvas.querySelector('.sim-linea-inflacion');if(old)old.remove();
-  var linea=document.createElement('div');linea.className='sim-linea-inflacion';linea.style.bottom=(btm+24)+'px';
-  canvas.appendChild(linea);
-  var badge=document.getElementById('sim-badge-inflacion'),badgeVal=document.getElementById('sim-badge-inflacion-value');
-  if(badge&&badgeVal){badge.style.display='block';badgeVal.textContent=fmt(valorInflFinal);}
-  document.getElementById('sim-grafico-wrap').style.display='block';
-  document.getElementById('sim-desglose-toggle').style.display='flex';
-}
-
-(function() {
-  function checkAncla() {
-    if (window.location.hash === '#lucho-simulador') {
-      var card = document.getElementById('sim-toggle-card');
-      var panel = document.getElementById('sim-panel');
-      if (card && panel && !panel.classList.contains('open')) {
-        panel.classList.add('open'); card.classList.add('open'); updateSlider();
-        setTimeout(function() { card.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 200);
-      }
-    }
-  }
-  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', checkAncla); }
-  else { setTimeout(checkAncla, 100); }
-  window.addEventListener('hashchange', checkAncla);
-})();
-</script>
 
 <script src="/assets/cookie-consent.js"></script>
 </body>
