@@ -44,7 +44,7 @@
 }
 
 .test-hero { padding: 2rem 0 0; border-bottom: 1px solid #1b2027; }
-.test-hero-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; }
+.test-hero-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
 .test-hero-text { flex: 1 1 55%; padding-bottom: 3rem; }
 .test-hero-photo { flex: 0 0 35%; display: flex; align-items: flex-end; justify-content: flex-end; position: relative; }
 .test-hero-photo img { width: 100%; max-width: 280px; height: auto; object-fit: contain; display: block; mask-image: linear-gradient(to bottom, black 55%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%); filter: drop-shadow(0 0 30px rgba(212,175,55,0.06)); }
@@ -69,9 +69,9 @@
 .question-context { font-size: 0.95rem; color: #8a8f98; margin-bottom: 1.75rem; line-height: 1.55; }
 
 .options { display: flex; flex-direction: column; gap: 0.65rem; }
-.option-btn { background: #0c1017; border: 1px solid #1b2027; border-radius: 9px; padding: 1.05rem 1.3rem; color: #f5f5f5; font-size: 1rem; text-align: left; cursor: pointer; transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.15s; line-height: 1.5; font-family: 'Inter', sans-serif; font-weight: 600; white-space: normal; word-break: break-word; overflow-wrap: break-word; }
-.option-btn:hover { background: #05070a; color: #29B6F6; border-color: #29B6F6; transform: translateX(3px); }
-.option-btn.selected { background: rgba(41,182,246,0.08); color: #29B6F6; border-color: #29B6F6; font-weight: 700; }
+.option-btn { background: rgba(41,182,246,0.1); border: 1px solid rgba(41,182,246,0.4); border-radius: 9px; padding: 1.05rem 1.3rem; color: #f5f5f5; font-size: 1rem; text-align: left; cursor: pointer; transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.15s; line-height: 1.5; font-family: 'Inter', sans-serif; font-weight: 600; white-space: normal; word-break: break-word; overflow-wrap: break-word; }
+.option-btn:hover { background: #29B6F6; color: #05070a; border-color: #29B6F6; transform: translateX(3px); }
+.option-btn.selected { background: #29B6F6; color: #05070a; border-color: #29B6F6; font-weight: 700; }
 
 .nav-row { display: flex; justify-content: flex-end; margin-top: 1.75rem; }
 .btn-next { background: #29B6F6; color: #05070a; border: none; border-radius: 7px; padding: 0.9rem 2rem; font-size: 1rem; font-weight: 700; cursor: pointer; display: none; font-family: 'Inter', sans-serif; letter-spacing: 0.04em; transition: background 0.2s; }
@@ -98,12 +98,12 @@
 .result-insight-wrap p { font-size: 1rem; color: #888; line-height: 1.75; }
 .result-insight-wrap strong { color: #c9a84c; font-weight: 600; }
 
-.cta-block { background: #c9a84c; border-radius: 14px; padding: 2.5rem 2rem; text-align: center; }
-.cta-title { font-size: 1.55rem; font-weight: 800; color: #05070a; margin-bottom: 0.4rem; line-height: 1.2; }
-.cta-sub { font-size: 0.95rem; color: #4a3800; margin-bottom: 1.6rem; line-height: 1.6; }
+.cta-block { background: #0c1017; border: 1px solid #29B6F6; border-radius: 14px; padding: 2.5rem 2rem; text-align: center; margin: 2rem 0 4rem; }
+.cta-title { font-size: 1.55rem; font-weight: 800; color: #f5f5f5; margin-bottom: 0.4rem; line-height: 1.2; }
+.cta-sub { font-size: 0.95rem; color: #8a8f98; margin-bottom: 1.6rem; line-height: 1.6; }
 .cta-btn { display: inline-block; background: #05070a; color: #c9a84c; border: none; border-radius: 8px; padding: 1.1rem 2.5rem; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; font-family: 'Inter', sans-serif; transition: background 0.2s, transform 0.1s; }
 .cta-btn:hover { background: #181818; transform: translateY(-1px); }
-.cta-guarantee { font-size: 0.82rem; color: #7a6000; margin-top: 1rem; }
+.cta-guarantee { font-size: 0.82rem; color: #8a8f98; margin-top: 1rem; }
 
 .test-content-section { padding: 4rem 0; border-bottom: 1px solid #1b2027; }
 .test-h2 { font-size: 2rem; font-weight: 900; letter-spacing: -0.02em; color: #f5f5f5; margin-bottom: 1.25rem; line-height: 1.1; }

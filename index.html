@@ -292,10 +292,9 @@ html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 10
 .hero-title em { color: var(--gold); }
 .hero-title em { position:relative; display:inline-block; }
 .hero-title em::after {
-  content:''; position:absolute; left:0; right:0; bottom:-0.12em; height:0.09em;
-  background: var(--gold); border-radius:2px;
-  transform: scaleY(0.8) rotate(-0.4deg); transform-origin:left;
-  opacity:0.85;
+  content:''; position:absolute; left:-1%; right:-1%; bottom:-0.18em; height:0.22em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M2 7 C40 3 70 9 110 6 C150 3 190 10 230 5 C260 2 285 8 298 6' stroke='%23C9A84C' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-size:100% 100%;
 }
 
 /* CTA de tarjetas: mantener dorado (es "resultado/acción financiera"), o celeste? -> celeste acción */
@@ -374,7 +373,7 @@ html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 10
           class="hero-foto"
         />
         <div class="hero-foto-fade"></div>
-        <div class="hero-handwrite">Tu dinero necesita <span class="hw-plan">un plan</span>, no suerte.<svg class="hw-arrow" width="46" height="34" viewBox="0 0 46 34" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M44 3 C30 6 14 12 6 26"/><path d="M4 16 L5 27 L15 24"/></svg></div>
+        <div class="hero-handwrite">Tu dinero<br>necesita<br><span class="hw-plan">un plan.</span><br>no suerte.<svg class="hw-arrow" width="46" height="34" viewBox="0 0 46 34" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M44 3 C30 6 14 12 6 26"/><path d="M4 16 L5 27 L15 24"/></svg></div>
       </div>
 
     </div>
