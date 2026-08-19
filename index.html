@@ -118,6 +118,8 @@ html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 10
   height: auto;
   max-height: 540px;
   object-fit: contain;
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 98%);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 98%);
   object-position: top center;
   display: block;
   position: relative;
@@ -194,18 +196,27 @@ html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 10
   }
 
   .hero-foto {
-    width: 100%;
+    width: 78%;
     height: auto;
-    max-height: 380px;
+    max-height: 360px;
     object-fit: contain;
     object-position: top center;
     margin: 24px auto 0;
     display: block;
     position: relative;
+    -webkit-mask-image: linear-gradient(to bottom, black 62%, transparent 98%);
+    mask-image: linear-gradient(to bottom, black 62%, transparent 98%);
   }
 
-  .hero-foto-fade { height: 20%; }
-  .hero-foto-glow { display: none; }
+  .hero-right .hero-foto-glow {
+    display: block;
+    top: 6%; left: 50%; width: 78%; height: 55%;
+    background: radial-gradient(ellipse at center, rgba(41,182,246,0.45) 0%, rgba(41,182,246,0.15) 45%, transparent 72%);
+  }
+  .hero-right .hero-handwrite {
+    top: 42%; right: 2%; font-size: 1.25rem; max-width: 108px;
+  }
+  .hero-right .hero-handwrite .hw-arrow { width: 30px; height: 22px; margin-left: 0.8rem; }
 
   .hero-title {
     font-size: 1.75rem; letter-spacing: -0.02em;
@@ -259,16 +270,16 @@ html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 10
 
 /* glow celeste detrás de la foto */
 .hero-foto-glow {
-  position:absolute; top:20%; left:36%; transform:translateX(-50%);
-  width:70%; height:65%;
-  background: radial-gradient(ellipse at center, rgba(41,182,246,0.45) 0%, rgba(41,182,246,0.18) 40%, transparent 70%);
-  filter: blur(40px); z-index:0; pointer-events:none;
+  position:absolute; top:12%; left:36%; transform:translateX(-50%);
+  width:85%; height:70%;
+  background: radial-gradient(ellipse at center, rgba(41,182,246,0.6) 0%, rgba(41,182,246,0.28) 38%, transparent 68%);
+  filter: blur(45px); z-index:0; pointer-events:none;
 }
 .hero-foto { position:relative; z-index:1; }
 
 /* mano-escrito estilo boceto */
 .hero-handwrite {
-  position:absolute; z-index:3; top:20%; right:-2%;
+  position:absolute; z-index:3; top:6%; right:-2%;
   font-family:'Caveat',cursive; font-size:1.75rem; font-weight:700;
   color:#f5f5f5; line-height:1.15; text-align:left; max-width:160px;
   transform:rotate(-4deg); text-shadow:0 2px 14px rgba(0,0,0,0.9);
