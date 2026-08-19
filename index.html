@@ -137,11 +137,6 @@ html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 10
 
 .hero-foto-glow {
   position: absolute;
-  top: 20%; left: 50%;
-  transform: translateX(-50%);
-  width: 320px; height: 320px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(212,175,55,0.07) 0%, transparent 70%);
   z-index: 0;
   pointer-events: none;
 }
@@ -272,9 +267,12 @@ html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 10
 /* glow celeste detrás de la foto */
 .hero-foto-glow {
   position:absolute; top:12%; left:36%; transform:translateX(-50%);
-  width:85%; height:70%;
-  background: radial-gradient(ellipse at center, rgba(41,182,246,0.6) 0%, rgba(41,182,246,0.28) 38%, transparent 68%);
-  filter: blur(45px); z-index:0; pointer-events:none;
+/* glow celeste detrás de la foto */
+.hero-foto-glow {
+  position:absolute; top:8%; left:50%; transform:translateX(-50%);
+  width:65%; height:60%;
+  background: radial-gradient(ellipse at center, rgba(41,182,246,0.55) 0%, rgba(41,182,246,0.15) 45%, transparent 70%);
+  filter: blur(55px); z-index:0; pointer-events:none;
 }
 .hero-foto { position:relative; z-index:1; }
 

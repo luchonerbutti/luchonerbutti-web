@@ -61,7 +61,7 @@
     padding: 0.7rem 0.9rem !important; color: #f5f5f5 !important; font-size: 1.02rem !important; font-family: inherit !important;
     transition: border-color 0.2s; box-shadow: none !important; -webkit-appearance: none; appearance: none;
   }
-  .field input:focus { outline: none !important; border-color: #c9a84c !important; box-shadow: none !important; }
+  .field input:focus { outline: none !important; border-color: #29B6F6 !important; box-shadow: none !important; }
   .input-group { position: relative; }
   .input-suffix { position: absolute; right: 0.9rem; top: 50%; transform: translateY(-50%); color: #999; font-size: 0.9rem; pointer-events: none; }
 
@@ -71,7 +71,7 @@
   .rate-btn:hover:not(.active) { border-color: #8a8f98 !important; color: #d8d8d8 !important; background: #05070a !important; }
 
   .toggle-row { display: flex; align-items: center; gap: 0.6rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #222; }
-  .toggle-row input[type="checkbox"] { width: 18px; height: 18px; accent-color: #c9a84c; cursor: pointer; }
+  .toggle-row input[type="checkbox"] { width: 18px; height: 18px; accent-color: #29B6F6; cursor: pointer; }
   .toggle-row label { font-size: 0.94rem; color: #d8d8d8; cursor: pointer; }
 
   .btn-calc {
@@ -729,11 +729,11 @@ function dibujarResumenVisual(plazoMeses, ahorroArr, aportadoAcumulado, deudaBas
   barraWrap.innerHTML = `
     <div class="barra-track">
       <div class="barra-seg" style="width:${pctAportado}%; background:#8a6d1f;">${pctAportado > 18 ? fmtEUR(aportado) : ''}</div>
-      <div class="barra-seg" style="width:${pctRendimiento}%; background:#c9a84c;">${pctRendimiento > 18 ? fmtEUR(rendimiento) : ''}</div>
+      <div class="barra-seg" style="width:${pctRendimiento}%; background:#29B6F6;">${pctRendimiento > 18 ? fmtEUR(rendimiento) : ''}</div>
     </div>
     <div class="barra-leyenda">
       <span><span class="dot" style="background:#8a6d1f;"></span> De tu bolsillo (${pctAportado.toFixed(0)}%)</span>
-      <span><span class="dot" style="background:#c9a84c;"></span> Rendimiento de la inversión (${pctRendimiento.toFixed(0)}%)</span>
+      <span><span class="dot" style="background:#29B6F6;"></span> Rendimiento de la inversión (${pctRendimiento.toFixed(0)}%)</span>
     </div>
   `;
 
