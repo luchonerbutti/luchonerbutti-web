@@ -28,26 +28,26 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   .simh-outer {
     font-family: 'Inter', sans-serif;
-    background: #0a0a0a;
+    background: #05070a;
     color: #f5f5f5;
     padding: 2rem 1rem;
   }
   .simh-outer, .simh-outer * { box-sizing: border-box; }
   .wrapper { width: 100%; max-width: 920px; margin: 0 auto; }
 
-  .header-block { margin-bottom: 2rem; border-bottom: 1px solid #141414; padding-bottom: 0; }
+  .header-block { margin-bottom: 2rem; border-bottom: 1px solid #1b2027; padding-bottom: 0; }
   .header-hero-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; }
   .header-hero-text { flex: 1 1 55%; padding-bottom: 1.5rem; }
   .header-hero-photo { flex: 0 0 35%; display: flex; align-items: flex-end; justify-content: flex-end; }
   .header-hero-photo img { width: 100%; max-width: 300px; height: auto; object-fit: contain; display: block; mask-image: linear-gradient(to bottom, black 55%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%); }
-  .header-eyebrow { font-size: 12px; color: #666; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }
-  .header-tag { display: inline-block; background: #d4af37; color: #0a0a0a; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 6px; margin-bottom: 1rem; }
+  .header-eyebrow { font-size: 12px; color: #8a8f98; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }
+  .header-tag { display: inline-block; background: #c9a84c; color: #05070a; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 6px; margin-bottom: 1rem; }
   .header-title { font-size: 3rem; font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; color: #f5f5f5; margin-bottom: 1rem; text-transform: uppercase; }
-  .header-title em { font-style: normal; color: #d4af37; }
+  .header-title em { font-style: normal; color: #c9a84c; }
   .header-sub { font-size: 1.1rem; color: #888; line-height: 1.6; max-width: 560px; }
 
   .panel { background: #111111; border: 1px solid #2a2a2a; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
-  .panel-title { font-size: 12px; color: #d4af37; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; font-weight: 600; }
+  .panel-title { font-size: 12px; color: #c9a84c; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; font-weight: 600; }
 
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   @media (max-width: 720px) { .grid-2 { grid-template-columns: 1fr; } }
@@ -57,32 +57,32 @@
   .field label { display: block; font-size: 0.92rem; color: #d8d8d8; margin-bottom: 0.4rem; }
   .field .hint { font-size: 0.82rem; color: #999; margin-top: 0.3rem; line-height: 1.4; }
   .field input {
-    width: 100% !important; background: #0a0a0a !important; border: 1px solid #2a2a2a !important; border-radius: 8px !important;
+    width: 100% !important; background: #05070a !important; border: 1px solid #2a2a2a !important; border-radius: 8px !important;
     padding: 0.7rem 0.9rem !important; color: #f5f5f5 !important; font-size: 1.02rem !important; font-family: inherit !important;
     transition: border-color 0.2s; box-shadow: none !important; -webkit-appearance: none; appearance: none;
   }
-  .field input:focus { outline: none !important; border-color: #d4af37 !important; box-shadow: none !important; }
+  .field input:focus { outline: none !important; border-color: #c9a84c !important; box-shadow: none !important; }
   .input-group { position: relative; }
   .input-suffix { position: absolute; right: 0.9rem; top: 50%; transform: translateY(-50%); color: #999; font-size: 0.9rem; pointer-events: none; }
 
   .rate-toggle { display: flex; gap: 0.6rem; }
-  .rate-btn { flex: 1; background: #0a0a0a !important; border: 1px solid #2a2a2a !important; border-radius: 8px !important; padding: 0.65rem !important; color: #a8a8a8 !important; font-size: 0.95rem !important; font-weight: 600 !important; cursor: pointer; transition: all 0.2s; box-shadow: none !important; text-transform: none !important; letter-spacing: normal !important; }
-  .rate-btn.active { background: #1a1800 !important; border-color: #d4af37 !important; color: #d4af37 !important; }
-  .rate-btn:hover:not(.active) { border-color: #444 !important; color: #d8d8d8 !important; background: #0a0a0a !important; }
+  .rate-btn { flex: 1; background: #05070a !important; border: 1px solid #2a2a2a !important; border-radius: 8px !important; padding: 0.65rem !important; color: #a8a8a8 !important; font-size: 0.95rem !important; font-weight: 600 !important; cursor: pointer; transition: all 0.2s; box-shadow: none !important; text-transform: none !important; letter-spacing: normal !important; }
+  .rate-btn.active { background: #1a1800 !important; border-color: #c9a84c !important; color: #c9a84c !important; }
+  .rate-btn:hover:not(.active) { border-color: #8a8f98 !important; color: #d8d8d8 !important; background: #05070a !important; }
 
   .toggle-row { display: flex; align-items: center; gap: 0.6rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #222; }
-  .toggle-row input[type="checkbox"] { width: 18px; height: 18px; accent-color: #d4af37; cursor: pointer; }
+  .toggle-row input[type="checkbox"] { width: 18px; height: 18px; accent-color: #c9a84c; cursor: pointer; }
   .toggle-row label { font-size: 0.94rem; color: #d8d8d8; cursor: pointer; }
 
   .btn-calc {
-    display: block !important; width: 100% !important; background: #d4af37 !important; color: #0a0a0a !important; border: none !important; border-radius: 8px !important;
+    display: block !important; width: 100% !important; background: #c9a84c !important; color: #05070a !important; border: none !important; border-radius: 8px !important;
     padding: 0.95rem !important; font-size: 1rem !important; font-weight: 700 !important; cursor: pointer; margin-top: 0.5rem;
     transition: background 0.2s; box-shadow: none !important; text-transform: none !important; letter-spacing: normal !important;
   }
   .btn-calc:hover { background: #e6c44a !important; }
 
   .btn-add {
-    display: block !important; width: 100% !important; background: transparent !important; color: #d4af37 !important; border: 1px dashed #d4af37 !important; border-radius: 8px !important;
+    display: block !important; width: 100% !important; background: transparent !important; color: #c9a84c !important; border: 1px dashed #c9a84c !important; border-radius: 8px !important;
     padding: 0.7rem !important; font-size: 0.88rem !important; font-weight: 600 !important; cursor: pointer; margin-top: 0.5rem;
     transition: all 0.2s; box-shadow: none !important; text-transform: none !important; letter-spacing: normal !important;
   }
@@ -92,7 +92,7 @@
   @media (max-width: 620px) { .aportacion-row { grid-template-columns: 1fr 1fr; grid-template-areas: "anio mes" "importe importe" "borrar borrar"; } }
   .aportacion-row .field { margin-bottom: 0; }
   .aportacion-row select {
-    width: 100% !important; background: #0a0a0a !important; border: 1px solid #2a2a2a !important; border-radius: 8px !important;
+    width: 100% !important; background: #05070a !important; border: 1px solid #2a2a2a !important; border-radius: 8px !important;
     padding: 0.7rem 0.9rem !important; color: #f5f5f5 !important; font-size: 1.02rem !important; font-family: inherit !important;
     box-shadow: none !important; -webkit-appearance: none; appearance: none;
   }
@@ -109,18 +109,18 @@
 
   .crossover-block { background: #0f0f0a; border: 1px solid #2a2500; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; text-align: center; }
   .crossover-label { font-size: 0.88rem; color: #a8a8a8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
-  .crossover-value { font-size: 1.9rem; font-weight: 700; color: #d4af37; margin-bottom: 0.4rem; }
+  .crossover-value { font-size: 1.9rem; font-weight: 700; color: #c9a84c; margin-bottom: 0.4rem; }
   .crossover-sub { font-size: 0.94rem; color: #d8d8d8; }
 
-  .chart-container { background: #0a0a0a; border-radius: 8px; padding: 1rem 0.5rem 0.5rem; margin-bottom: 1.5rem; position: relative; }
+  .chart-container { background: #05070a; border-radius: 8px; padding: 1rem 0.5rem 0.5rem; margin-bottom: 1.5rem; position: relative; }
   svg { width: 100%; height: auto; display: block; }
   .chart-tooltip {
     position: absolute; display: none; pointer-events: none; z-index: 10;
-    background: #111111; border: 1px solid #d4af37; border-radius: 8px;
+    background: #111111; border: 1px solid #c9a84c; border-radius: 8px;
     padding: 0.7rem 0.9rem; font-size: 0.88rem; color: #f5f5f5; white-space: nowrap;
     box-shadow: 0 4px 16px rgba(0,0,0,0.5);
   }
-  .chart-tooltip .tt-mes { color: #d4af37; font-weight: 700; margin-bottom: 0.4rem; font-size: 0.82rem; }
+  .chart-tooltip .tt-mes { color: #c9a84c; font-weight: 700; margin-bottom: 0.4rem; font-size: 0.82rem; }
   .chart-tooltip .tt-row { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.2rem; }
   .chart-tooltip .tt-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
   .legend { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 0.75rem; font-size: 0.88rem; color: #d8d8d8; }
@@ -130,37 +130,37 @@
   .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
   @media (max-width: 620px) { .compare-grid { grid-template-columns: 1fr; } }
   .compare-card { background: #111111; border: 1px solid #2a2a2a; border-radius: 10px; padding: 1.25rem; }
-  .compare-card.win { border-color: #d4af37; background: #14140a; }
+  .compare-card.win { border-color: #c9a84c; background: #14140a; }
   .compare-card-title { font-size: 0.88rem; color: #a8a8a8; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
   .compare-card-value { font-size: 1.55rem; font-weight: 700; color: #f5f5f5; margin-bottom: 0.35rem; }
   .compare-card-detail { font-size: 0.88rem; color: #a8a8a8; line-height: 1.5; }
-  .compare-card.win .compare-card-value { color: #d4af37; }
+  .compare-card.win .compare-card-value { color: #c9a84c; }
 
-  .disclaimer { background: #111111; border-left: 3px solid #d4af37; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; font-size: 0.92rem; color: #aaaaaa; line-height: 1.6; margin-bottom: 1.5rem; }
-  .disclaimer strong { color: #d4af37; }
+  .disclaimer { background: #111111; border-left: 3px solid #c9a84c; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; font-size: 0.92rem; color: #aaaaaa; line-height: 1.6; margin-bottom: 1.5rem; }
+  .disclaimer strong { color: #c9a84c; }
 
   .resumen-titulo { font-size: 1.1rem; font-weight: 700; color: #f5f5f5; margin-bottom: 0.3rem; }
   .resumen-sub { font-size: 0.92rem; color: #a8a8a8; margin-bottom: 1.5rem; }
 
   .barra-wrap { margin-bottom: 1.75rem; }
-  .barra-track { width: 100%; height: 40px; border-radius: 8px; overflow: hidden; display: flex; background: #0a0a0a; border: 1px solid #2a2a2a; }
-  .barra-seg { height: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.82rem; font-weight: 700; color: #0a0a0a; white-space: nowrap; overflow: hidden; }
+  .barra-track { width: 100%; height: 40px; border-radius: 8px; overflow: hidden; display: flex; background: #05070a; border: 1px solid #2a2a2a; }
+  .barra-seg { height: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.82rem; font-weight: 700; color: #05070a; white-space: nowrap; overflow: hidden; }
   .barra-leyenda { display: flex; justify-content: space-between; margin-top: 0.6rem; font-size: 0.85rem; color: #aaaaaa; }
   .barra-leyenda span { display: flex; align-items: center; gap: 0.4rem; }
   .barra-leyenda .dot { width: 9px; height: 9px; border-radius: 2px; }
 
   .resumen-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
   @media (max-width: 780px) { .resumen-stats { grid-template-columns: 1fr 1fr; } }
-  .resumen-stat { background: #0a0a0a; border: 1px solid #2a2a2a; border-radius: 10px; padding: 1.1rem 1rem; text-align: center; }
+  .resumen-stat { background: #05070a; border: 1px solid #2a2a2a; border-radius: 10px; padding: 1.1rem 1rem; text-align: center; }
   .resumen-stat-label { font-size: 0.8rem; color: #a8a8a8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; line-height: 1.3; min-height: 2.1em; }
-  .resumen-stat-value { font-size: 1.35rem; font-weight: 700; color: #d4af37; }
+  .resumen-stat-value { font-size: 1.35rem; font-weight: 700; color: #c9a84c; }
 
-  .cta-block { background: #d4af37; border-radius: 12px; padding: 1.75rem; text-align: center; }
-  .cta-title { font-size: 1.15rem; font-weight: 700; color: #0a0a0a; margin-bottom: 0.5rem; }
+  .cta-block { background: #c9a84c; border-radius: 12px; padding: 1.75rem; text-align: center; }
+  .cta-title { font-size: 1.15rem; font-weight: 700; color: #05070a; margin-bottom: 0.5rem; }
   .cta-sub { font-size: 0.95rem; color: #2a2000; margin-bottom: 1.25rem; line-height: 1.55; max-width: 480px; margin-left: auto; margin-right: auto; }
-  .cta-btn { display: inline-block !important; background: #0a0a0a !important; color: #d4af37 !important; border: none !important; border-radius: 8px !important; padding: 0.9rem 2.25rem !important; font-size: 1rem !important; font-weight: 700 !important; letter-spacing: 0.04em; cursor: pointer; text-decoration: none !important; transition: background 0.2s; box-shadow: none !important; text-transform: none; }
-  .cta-btn:hover { background: #1a1a1a !important; color: #d4af37 !important; }
-  .cta-btn:visited { color: #d4af37 !important; }
+  .cta-btn { display: inline-block !important; background: #05070a !important; color: #c9a84c !important; border: none !important; border-radius: 8px !important; padding: 0.9rem 2.25rem !important; font-size: 1rem !important; font-weight: 700 !important; letter-spacing: 0.04em; cursor: pointer; text-decoration: none !important; transition: background 0.2s; box-shadow: none !important; text-transform: none; }
+  .cta-btn:hover { background: #1b2027 !important; color: #c9a84c !important; }
+  .cta-btn:visited { color: #c9a84c !important; }
   /* AJUSTES MÓVIL */
   @media (max-width: 600px) {
     .simh-outer { padding: 1.5rem 0.9rem; }
@@ -210,6 +210,18 @@
 
     .chart-tooltip { font-size: 0.78rem; padding: 0.55rem 0.7rem; max-width: 180px; white-space: normal; }
   }
+
+/* ===== Identidad visual override ===== */
+:root{--sky:#29B6F6;--gold:#C9A84C;}
+.cta-btn{background:var(--sky)!important;color:#05070a!important;box-shadow:0 8px 30px -8px rgba(41,182,246,0.5);}
+.cta-btn:hover{background:#4fc3f7!important;}
+.btn-calc{background:var(--sky)!important;color:#05070a!important;}
+.header-eyebrow{color:var(--sky)!important;}
+.header-title em{color:var(--gold)!important;}
+.header-hero-photo{position:relative;}
+.header-hero-photo::before{content:'';position:absolute;top:8%;left:50%;transform:translateX(-50%);width:80%;height:70%;background:radial-gradient(ellipse at center,rgba(41,182,246,0.4) 0%,transparent 68%);filter:blur(40px);z-index:0;pointer-events:none;}
+.header-hero-photo img{position:relative;z-index:1;}
+
 </style>
 </head>
 <body>
@@ -276,7 +288,7 @@
       <div class="field" id="campoTinVariable" style="display:none;">
         <label>TIN resultante (Euríbor + diferencial)</label>
         <div class="input-group">
-          <input type="text" id="tinVariableDisplay" readonly style="color:#d4af37; font-weight:600;">
+          <input type="text" id="tinVariableDisplay" readonly style="color:#c9a84c; font-weight:600;">
           <span class="input-suffix">%</span>
         </div>
         <div class="hint">Se asume constante durante toda la simulación — el Euríbor real varía con cada revisión.</div>
@@ -293,7 +305,7 @@
       <div class="field">
         <label>Cuota mensual</label>
         <div class="input-group">
-          <input type="text" id="cuotaMensual" readonly style="color:#d4af37; font-weight:600;">
+          <input type="text" id="cuotaMensual" readonly style="color:#c9a84c; font-weight:600;">
           <span class="input-suffix">€/mes</span>
         </div>
         <div class="hint">Calculada automáticamente (sistema francés)</div>
@@ -717,11 +729,11 @@ function dibujarResumenVisual(plazoMeses, ahorroArr, aportadoAcumulado, deudaBas
   barraWrap.innerHTML = `
     <div class="barra-track">
       <div class="barra-seg" style="width:${pctAportado}%; background:#8a6d1f;">${pctAportado > 18 ? fmtEUR(aportado) : ''}</div>
-      <div class="barra-seg" style="width:${pctRendimiento}%; background:#d4af37;">${pctRendimiento > 18 ? fmtEUR(rendimiento) : ''}</div>
+      <div class="barra-seg" style="width:${pctRendimiento}%; background:#c9a84c;">${pctRendimiento > 18 ? fmtEUR(rendimiento) : ''}</div>
     </div>
     <div class="barra-leyenda">
       <span><span class="dot" style="background:#8a6d1f;"></span> De tu bolsillo (${pctAportado.toFixed(0)}%)</span>
-      <span><span class="dot" style="background:#d4af37;"></span> Rendimiento de la inversión (${pctRendimiento.toFixed(0)}%)</span>
+      <span><span class="dot" style="background:#c9a84c;"></span> Rendimiento de la inversión (${pctRendimiento.toFixed(0)}%)</span>
     </div>
   `;
 
@@ -783,8 +795,8 @@ function dibujarGrafico(deudaBase, ahorro, deudaAmort, plazoMeses, crossMonth, a
   for (let f = 0; f <= 4; f++) {
     const val = (maxVal / 4) * f;
     const yy = y(val);
-    svgContent += `<line x1="${padL}" y1="${yy}" x2="${padL + plotW}" y2="${yy}" stroke="#1a1a1a" stroke-width="1"/>`;
-    svgContent += `<text x="${padL - 8}" y="${yy + 4}" text-anchor="end" font-size="10" fill="#666">${Math.round(val / 1000)}k</text>`;
+    svgContent += `<line x1="${padL}" y1="${yy}" x2="${padL + plotW}" y2="${yy}" stroke="#1b2027" stroke-width="1"/>`;
+    svgContent += `<text x="${padL - 8}" y="${yy + 4}" text-anchor="end" font-size="10" fill="#8a8f98">${Math.round(val / 1000)}k</text>`;
   }
 
   // etiquetas eje X (años)
@@ -792,7 +804,7 @@ function dibujarGrafico(deudaBase, ahorro, deudaAmort, plazoMeses, crossMonth, a
   const stepAnios = Math.max(1, Math.ceil(anios / 8));
   for (let a = 0; a <= anios; a += stepAnios) {
     const m = Math.min(a * 12, plazoMeses);
-    svgContent += `<text x="${x(m)}" y="${padT + plotH + 20}" text-anchor="middle" font-size="10" fill="#666">${a}a</text>`;
+    svgContent += `<text x="${x(m)}" y="${padT + plotH + 20}" text-anchor="middle" font-size="10" fill="#8a8f98">${a}a</text>`;
   }
 
   // linea deuda amortizada (si aplica) - dibujada primero, en celeste discontinua
@@ -804,12 +816,12 @@ function dibujarGrafico(deudaBase, ahorro, deudaAmort, plazoMeses, crossMonth, a
   svgContent += `<path d="${pathFrom(deudaBase)}" fill="none" stroke="#c8544a" stroke-width="4" stroke-linecap="round"/>`;
 
   // linea ahorro
-  svgContent += `<path d="${pathFrom(ahorro)}" fill="none" stroke="#d4af37" stroke-width="4" stroke-linecap="round"/>`;
+  svgContent += `<path d="${pathFrom(ahorro)}" fill="none" stroke="#c9a84c" stroke-width="4" stroke-linecap="round"/>`;
 
   // punto de cruce
   if (crossMonth !== null) {
-    svgContent += `<circle cx="${x(crossMonth)}" cy="${y(ahorro[crossMonth])}" r="5" fill="#f5f5f5" stroke="#d4af37" stroke-width="2"/>`;
-    svgContent += `<line x1="${x(crossMonth)}" y1="${padT}" x2="${x(crossMonth)}" y2="${padT + plotH}" stroke="#d4af37" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>`;
+    svgContent += `<circle cx="${x(crossMonth)}" cy="${y(ahorro[crossMonth])}" r="5" fill="#f5f5f5" stroke="#c9a84c" stroke-width="2"/>`;
+    svgContent += `<line x1="${x(crossMonth)}" y1="${padT}" x2="${x(crossMonth)}" y2="${padT + plotH}" stroke="#c9a84c" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>`;
   }
 
   // capa de hover: grupo vacio que se rellena al mover el raton, y un rect transparente que capta los eventos
@@ -821,7 +833,7 @@ function dibujarGrafico(deudaBase, ahorro, deudaAmort, plazoMeses, crossMonth, a
   // leyenda
   let legendHtml = `
     <div class="legend-item"><span class="legend-dot" style="background:#c8544a;"></span> Deuda si no haces nada</div>
-    <div class="legend-item"><span class="legend-dot" style="background:#d4af37;"></span> Ahorro si inviertes esos ${fmtEUR(aportacion)}/mes</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#c9a84c;"></span> Ahorro si inviertes esos ${fmtEUR(aportacion)}/mes</div>
   `;
   if (deudaAmort) {
     legendHtml += `<div class="legend-item"><span class="legend-dot" style="background:#74acdf;"></span> Deuda con tus aportaciones manuales al banco</div>`;
@@ -852,10 +864,10 @@ function onChartHover(evt) {
 
   const hoverLayer = document.getElementById('hoverLayer');
   let hoverSvg = `<line x1="${x(m)}" y1="${padT}" x2="${x(m)}" y2="${padT + plotH}" stroke="#f5f5f5" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>`;
-  hoverSvg += `<circle cx="${x(m)}" cy="${y(deudaBase[m])}" r="5" fill="#c8544a" stroke="#0a0a0a" stroke-width="2"/>`;
-  hoverSvg += `<circle cx="${x(m)}" cy="${y(ahorro[m])}" r="5" fill="#d4af37" stroke="#0a0a0a" stroke-width="2"/>`;
+  hoverSvg += `<circle cx="${x(m)}" cy="${y(deudaBase[m])}" r="5" fill="#c8544a" stroke="#05070a" stroke-width="2"/>`;
+  hoverSvg += `<circle cx="${x(m)}" cy="${y(ahorro[m])}" r="5" fill="#c9a84c" stroke="#05070a" stroke-width="2"/>`;
   if (deudaAmort) {
-    hoverSvg += `<circle cx="${x(m)}" cy="${y(deudaAmort.arr[m])}" r="5" fill="#74acdf" stroke="#0a0a0a" stroke-width="2"/>`;
+    hoverSvg += `<circle cx="${x(m)}" cy="${y(deudaAmort.arr[m])}" r="5" fill="#74acdf" stroke="#05070a" stroke-width="2"/>`;
   }
   hoverLayer.innerHTML = hoverSvg;
 
@@ -865,7 +877,7 @@ function onChartHover(evt) {
 
   let tooltipHtml = `<div class="tt-mes">${etiquetaMes}</div>`;
   tooltipHtml += `<div class="tt-row"><span class="tt-dot" style="background:#c8544a;"></span> Deuda: ${fmtEUR(deudaBase[m])}</div>`;
-  tooltipHtml += `<div class="tt-row"><span class="tt-dot" style="background:#d4af37;"></span> Ahorro: ${fmtEUR(ahorro[m])}</div>`;
+  tooltipHtml += `<div class="tt-row"><span class="tt-dot" style="background:#c9a84c;"></span> Ahorro: ${fmtEUR(ahorro[m])}</div>`;
   if (deudaAmort) {
     tooltipHtml += `<div class="tt-row"><span class="tt-dot" style="background:#74acdf;"></span> Deuda con amortización: ${fmtEUR(deudaAmort.arr[m])}</div>`;
   }
