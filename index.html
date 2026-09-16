@@ -300,27 +300,27 @@ html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 10
 /* iconos credibilidad a celeste */
 .hero-cred-icon { color: var(--sky); }
 
-/* anillo giratorio de las tarjetas de herramientas */
-@property --angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
-@keyframes herr-ring-spin { to { --angle: 360deg; } }
+/* anillo giratorio de las tarjetas de herramientas (transform-only: evita el bug de repintado de @property + conic-gradient animado) */
+@keyframes herr-ring-spin { to { transform: rotate(360deg); } }
 
 #lucho-herramientas { font-family: 'Inter', sans-serif; background: #05070a; color: #f5f5f5; padding: 4rem 2rem; display: flex; justify-content: center; border-top: 1px solid #1b2027; }
 .herr-wrap { width: 100%; max-width: 1100px; }
 .herr-head { margin-bottom: 2.5rem; }
-.herr-eyebrow { font-size: 12px; color: #8a8f98; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; }
+.herr-eyebrow { font-size: 15px; color: #8a8f98; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 800; margin-bottom: 0.85rem; }
 .herr-title { font-size: 2.25rem; font-weight: 600; line-height: 1.1; color: #f5f5f5; letter-spacing: -0.02em; }
 .herr-title em { font-style: normal; color: #c9a84c; }
 .herr-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-.herr-card-ring { position: relative; display: block; border-radius: 15px; padding: 1.5px; text-decoration: none; background: conic-gradient(from var(--angle), transparent 0deg, rgba(41,182,246,0.85) 50deg, transparent 130deg, transparent 360deg); animation: herr-ring-spin 6s linear infinite; }
-.herr-card-ring:hover { animation-duration: 2.2s; }
-.herr-card { display: flex; flex-direction: column; height: 100%; background: linear-gradient(160deg, #10151d 0%, #0a0e14 100%); border-radius: 13.5px; padding: 1.75rem 1.5rem; position: relative; overflow: hidden; box-shadow: 0 4px 24px -8px rgba(0,0,0,0.55); transition: background 0.25s ease; }
+.herr-card-ring { position: relative; display: flex; border-radius: 15px; padding: 1.5px; text-decoration: none; overflow: hidden; isolation: isolate; }
+.herr-card-ring::before { content: ''; position: absolute; inset: -60%; background: conic-gradient(from 0deg, transparent 0deg, rgba(41,182,246,0.9) 45deg, transparent 110deg, transparent 360deg); animation: herr-ring-spin 6s linear infinite; z-index: 0; }
+.herr-card-ring:hover::before { animation-duration: 2.2s; }
+.herr-card { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; background: linear-gradient(160deg, #10151d 0%, #0a0e14 100%); border-radius: 13.5px; padding: 1.4rem 1.35rem; overflow: hidden; box-shadow: 0 4px 24px -8px rgba(0,0,0,0.55); transition: background 0.25s ease; }
 .herr-card-ring:hover .herr-card { background: linear-gradient(160deg, #131924 0%, #0c1017 100%); }
-.herr-card-icon { width: 38px; height: 38px; border-radius: 9px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: var(--sky); background: rgba(41,182,246,0.1); border: 1px solid rgba(41,182,246,0.25); transition: transform 0.25s ease, background 0.25s ease; flex-shrink: 0; }
+.herr-card-icon { width: 34px; height: 34px; border-radius: 9px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.75rem; color: var(--sky); background: rgba(41,182,246,0.1); border: 1px solid rgba(41,182,246,0.25); transition: transform 0.25s ease, background 0.25s ease; flex-shrink: 0; }
 .herr-card-ring:hover .herr-card-icon { transform: scale(1.08) rotate(-4deg); background: rgba(41,182,246,0.18); }
-.herr-card-tag { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 10.5px; color: var(--sky); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 800; margin-bottom: 1rem; }
+.herr-card-tag { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 12.5px; color: var(--sky); letter-spacing: 0.09em; text-transform: uppercase; font-weight: 800; margin-bottom: 0.65rem; }
 .herr-card-tag-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--sky); flex-shrink: 0; }
-.herr-card-title { font-size: 1.35rem; font-weight: 600; color: #f5f5f5; letter-spacing: -0.01em; line-height: 1.2; margin-bottom: 0.5rem; min-height: 3.24rem; display: flex; align-items: flex-start; }
-.herr-card-desc { font-size: 0.9rem; color: #8a8f98; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
+.herr-card-title { font-size: 1.35rem; font-weight: 600; color: #f5f5f5; letter-spacing: -0.01em; line-height: 1.2; margin-bottom: 0.5rem; display: flex; align-items: flex-start; }
+.herr-card-desc { font-size: 0.9rem; color: #8a8f98; line-height: 1.6; margin-bottom: 1rem; flex-grow: 1; }
 .herr-card-cta { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 800; color: #05070a; letter-spacing: 0.03em; background: var(--sky); padding: 0.65rem 1.1rem; border-radius: 8px; width: fit-content; box-shadow: 0 4px 16px -4px rgba(41,182,246,0.5); }
 .herr-card-cta-arrow { transition: transform 0.2s; }
 .herr-card-ring:hover .herr-card-cta-arrow { transform: translateX(3px); }
@@ -337,7 +337,7 @@ html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 10
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .herr-card-ring { animation: none; }
+  .herr-card-ring::before { animation: none; }
 }
 </style>
 </head>
