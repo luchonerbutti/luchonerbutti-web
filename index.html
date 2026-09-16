@@ -34,7 +34,6 @@
   --muted:#8A8F98; --line:#1B2027;
 }
 
-<style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 100%; }
 
@@ -300,8 +299,14 @@ html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 10
 /* iconos credibilidad a celeste */
 .hero-cred-icon { color: var(--sky); }
 
-/* anillo giratorio de las tarjetas de herramientas (transform-only: evita el bug de repintado de @property + conic-gradient animado) */
-@keyframes herr-ring-spin { to { transform: rotate(360deg); } }
+/* pulso de las tarjetas de herramientas: solo box-shadow/border-color, sin overflow ni elementos sobredimensionados */
+@keyframes herr-card-pulse {
+  0%, 100% { box-shadow: 0 4px 24px -8px rgba(0,0,0,0.55); border-color: rgba(41,182,246,0.22); }
+  50% { box-shadow: 0 0 22px 1px rgba(41,182,246,0.22), 0 4px 24px -8px rgba(0,0,0,0.55); border-color: rgba(41,182,246,0.5); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .herr-card-ring { animation: none !important; }
+}
 
 #lucho-herramientas { font-family: 'Inter', sans-serif; background: #05070a; color: #f5f5f5; padding: 4rem 2rem; display: flex; justify-content: center; border-top: 1px solid #1b2027; }
 .herr-wrap { width: 100%; max-width: 1100px; }
@@ -310,11 +315,9 @@ html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 10
 .herr-title { font-size: 2.25rem; font-weight: 600; line-height: 1.1; color: #f5f5f5; letter-spacing: -0.02em; }
 .herr-title em { font-style: normal; color: #c9a84c; }
 .herr-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-.herr-card-ring { position: relative; display: flex; border-radius: 15px; padding: 1.5px; text-decoration: none; overflow: hidden; isolation: isolate; }
-.herr-card-ring::before { content: ''; position: absolute; inset: -60%; background: conic-gradient(from 0deg, transparent 0deg, rgba(41,182,246,0.9) 45deg, transparent 110deg, transparent 360deg); animation: herr-ring-spin 6s linear infinite; z-index: 0; }
-.herr-card-ring:hover::before { animation-duration: 2.2s; }
-.herr-card { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; background: linear-gradient(160deg, #10151d 0%, #0a0e14 100%); border-radius: 13.5px; padding: 1.4rem 1.35rem; overflow: hidden; box-shadow: 0 4px 24px -8px rgba(0,0,0,0.55); transition: background 0.25s ease; }
-.herr-card-ring:hover .herr-card { background: linear-gradient(160deg, #131924 0%, #0c1017 100%); }
+.herr-card-ring { position: relative; display: flex; border-radius: 14px; border: 1.5px solid rgba(41,182,246,0.22); text-decoration: none; background: linear-gradient(160deg, #10151d 0%, #0a0e14 100%); box-shadow: 0 4px 24px -8px rgba(0,0,0,0.55); animation: herr-card-pulse 3.5s ease-in-out infinite; transition: background 0.25s ease; }
+.herr-card-ring:hover { animation-duration: 1.4s; background: linear-gradient(160deg, #131924 0%, #0c1017 100%); }
+.herr-card { position: relative; flex: 1; display: flex; flex-direction: column; padding: 1.4rem 1.35rem; overflow: hidden; }
 .herr-card-icon { width: 34px; height: 34px; border-radius: 9px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.75rem; color: var(--sky); background: rgba(41,182,246,0.1); border: 1px solid rgba(41,182,246,0.25); transition: transform 0.25s ease, background 0.25s ease; flex-shrink: 0; }
 .herr-card-ring:hover .herr-card-icon { transform: scale(1.08) rotate(-4deg); background: rgba(41,182,246,0.18); }
 .herr-card-tag { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 12.5px; color: var(--sky); letter-spacing: 0.09em; text-transform: uppercase; font-weight: 800; margin-bottom: 0.65rem; }
@@ -336,9 +339,6 @@ html, body { background: #05070a; overflow-x: hidden; width: 100%; max-width: 10
   .footer-disclaimer { text-align: left; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .herr-card-ring::before { animation: none; }
-}
 </style>
 </head>
 <body>
