@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="/assets/favicon-180x180.png">
 
 <link rel="stylesheet" href="/assets/shared.css">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style>* { box-sizing: border-box; margin: 0; padding: 0; }html, body { background: #05070a; overflow-x: hidden; }#calc-page {  font-family: 'Inter', sans-serif;  background: #05070a;  color: #f5f5f5;  width: 100%;}.calc-wrap { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 2rem; }.calc-hero { padding: 4rem 0 3rem; border-bottom: 1px solid #1b2027; }.calc-hero-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; }.calc-hero-text { flex: 1 1 55%; padding-bottom: 1rem; }.calc-hero-photo { flex: 0 0 35%; display: flex; align-items: flex-end; justify-content: flex-end; }.calc-hero-photo img { width: 100%; max-width: 300px; height: auto; object-fit: contain; display: block; mask-image: linear-gradient(to bottom, black 55%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%); }.calc-hero-eyebrow { font-size: 12px; color: #8a8f98; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }.calc-hero-h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; color: #f5f5f5; margin-bottom: 1rem; text-transform: uppercase; }.calc-hero-h1 em { font-style: normal; color: #c9a84c; }.calc-hero-sub { font-size: 1.1rem; color: #8a8f98; line-height: 1.7; max-width: 580px; margin-bottom: 1.5rem; }.calc-hero-sub strong { color: #c8c8c8; font-weight: 600; }.calc-hero-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }.calc-hero-meta-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: #8a8f98; letter-spacing: 0.05em; }.calc-hero-meta-dot { width: 5px; height: 5px; border-radius: 50%; background: #c9a84c; flex-shrink: 0; }.calc-tool-section { padding: 3.5rem 0; border-bottom: 1px solid #1b2027; }.calc-tool-label { font-size: 11px; color: #29B6F6; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; }.calc-tool-title { font-size: 2rem; font-weight: 900; letter-spacing: -0.02em; color: #f5f5f5; margin-bottom: 2.5rem; text-transform: uppercase; }.calc-tool-title em { font-style: normal; color: #c9a84c; }.sim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; }.sim-grid.one { grid-template-columns: 1fr; }.sim-section { margin-bottom: 0.85rem; }.sim-section-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }.sim-section-num { width: 26px; height: 26px; border-radius: 50%; background: #29B6F6; color: #05070a; font-size: 12px; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }.sim-section-title { font-size: 14px; color: #777; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; }.sim-field { background: #1b2027; border: 1px solid #1b2027; border-radius: 10px; padding: 1.2rem 1.3rem; transition: border-color 0.2s; }.sim-field:focus-within { border-color: #29B6F6; }.sim-field label { display: block; font-size: 12px; color: #8a8f98; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.4rem; }.sim-field input { background: none; border: none; outline: none; color: #f5f5f5; font-size: 1.75rem; font-weight: 800; width: 100%; font-family: 'Inter', sans-serif; letter-spacing: -0.02em; }.sim-field input::placeholder { color: #222; font-weight: 500; font-size: 1.3rem; }.sim-field .unit { font-size: 0.9rem; color: #8a8f98; margin-top: 0.25rem; }.sim-divider { height: 1px; background: #1b2027; margin: 1rem 0; }.sim-slider-wrap { background: #1b2027; border: 1px solid #1b2027; border-radius: 10px; padding: 1.3rem; margin-top: 0.65rem; margin-bottom: 2rem; }.sim-slider-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 1rem; }.sim-slider-head .lbl { font-size: 11px; color: #8a8f98; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; }.sim-slider-head .val { font-size: 2rem; font-weight: 900; color: #29B6F6; letter-spacing: -0.02em; white-space: nowrap; }.sim-slider { -webkit-appearance: none; width: 100%; height: 2px; background: #222; outline: none; border-radius: 2px; }.sim-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #29B6F6; cursor: pointer; border: 3px solid #05070a; box-shadow: 0 0 0 4px rgba(41,182,246,0.15); }.sim-rent-nota { display: none; background: #0c0c00; border-left: 2px solid #c9a84c; border-radius: 0 8px 8px 0; padding: 0.75rem 1rem; font-size: 0.9rem; color: #c9a84c; line-height: 1.6; margin-bottom: 1.5rem; }.sim-result { display: none; }.sim-result.visible { display: block; animation: fadeIn 0.4s ease; }.sim-historica { display: none; background: #0a0a00; border: 1px solid #2a2000; border-radius: 10px; padding: 1.25rem 1.4rem; margin-bottom: 1.5rem; }.sim-historica-label { font-size: 12px; color: #b8920a; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.4rem; }.sim-historica-value { font-size: 2.5rem; font-weight: 900; color: #c9a84c; letter-spacing: -0.02em; margin-bottom: 0.25rem; }.sim-historica-sub { font-size: 1rem; color: #8a6a20; line-height: 1.5; }.sim-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.55rem; margin-bottom: 1rem; }.sim-card { background: #1b2027; border: 1px solid #1b2027; border-radius: 10px; padding: 1.3rem 1rem; text-align: center; }.sim-card.win { background: #0c0c00; border-color: #c9a84c; }.sim-card-lbl { font-size: 12px; color: #888; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.65rem; line-height: 1.4; }.sim-card.win .sim-card-lbl { color: #b8920a; }.sim-card-val { font-size: 1.65rem; font-weight: 900; color: #e8e8e8; letter-spacing: -0.03em; line-height: 1; }.sim-card.win .sim-card-val { color: #c9a84c; font-size: 1.75rem; }.sim-card-sub { font-size: 0.85rem; color: #8a8f98; margin-top: 0.45rem; line-height: 1.35; }.sim-card.win .sim-card-sub { color: #7a5a10; }.sim-diff { background: #c9a84c; border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }.sim-diff-eyebrow { font-size: 12px; color: #3a2a00; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.35rem; }.sim-diff-label { font-size: 1.05rem; font-weight: 700; color: #05070a; line-height: 1.3; }.sim-diff-number { font-size: 3rem; font-weight: 900; color: #05070a; white-space: nowrap; letter-spacing: -0.04em; flex-shrink: 0; }.sim-msg-wrap { margin-bottom: 2rem; }.sim-msg-highlight { font-size: 1.25rem; font-weight: 800; color: #f5f5f5; line-height: 1.4; margin-bottom: 0.6rem; }.sim-msg-highlight em { font-style: normal; color: #c9a84c; }.sim-msg-body { font-size: 1rem; color: #8a8f98; line-height: 1.8; }.sim-persuasion { margin-bottom: 2rem; }.sim-persuasion-main { font-size: 1.2rem; font-weight: 800; color: #f5f5f5; line-height: 1.4; margin-bottom: 0.5rem; }.sim-persuasion-sub { font-size: 0.95rem; color: #8a8f98; line-height: 1.8; }.sim-grafico-wrap { margin-bottom: 1.25rem; }.sim-grafico-titulo { font-size: 11px; color: #888; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }.sim-grafico-leyenda { display: flex; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap; }.sim-leyenda-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #888; }.sim-leyenda-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }.sim-grafico-canvas-wrap { position: relative; height: 180px; display: flex; align-items: flex-end; gap: 4px; padding-bottom: 24px; border-bottom: 1px solid #1b2027; }.sim-barra-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; position: relative; }.sim-barra-stack { width: 100%; display: flex; flex-direction: column; justify-content: flex-end; border-radius: 3px 3px 0 0; overflow: hidden; }.sim-barra-stack:hover { opacity: 0.85; }.sim-barra-intereses { background: #29B6F6; width: 100%; }.sim-barra-capital { background: #2a2a2a; width: 100%; }.sim-barra-label { position: absolute; bottom: -20px; font-size: 8px; color: #8a8f98; white-space: nowrap; }.sim-badge-inflacion { display: none; background: rgba(140,20,20,0.9); border: 1px solid #ff4444; border-radius: 7px; padding: 0.5rem 0.9rem; margin-bottom: 0.75rem; width: fit-content; }.sim-badge-inflacion-label { font-size: 9px; color: rgba(255,200,200,0.8); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.15rem; }.sim-badge-inflacion-value { font-size: 1rem; font-weight: 900; color: #fff; letter-spacing: -0.02em; line-height: 1; }.sim-linea-inflacion { position: absolute; left: 0; right: 0; border-top: 2px dashed #ff4444; pointer-events: none; z-index: 2; }.sim-desglose-toggle { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; user-select: none; padding: 0.85rem 0; border-top: 1px solid #1b2027; border-bottom: 1px solid #1b2027; margin-bottom: 1.25rem; }.sim-desglose-toggle-icon { width: 20px; height: 20px; border-radius: 50%; background: #1b2027; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #29B6F6; flex-shrink: 0; transition: background 0.2s; }.sim-desglose-toggle:hover .sim-desglose-toggle-icon { background: #c9a84c; color: #05070a; }.sim-desglose-toggle-label { font-size: 12px; color: #888; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; }.sim-tabla { display: none; width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }.sim-tabla.visible { display: table; }.sim-tabla th { font-size: 10px; color: #8a8f98; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; padding: 0.5rem 0.75rem; text-align: right; border-bottom: 1px solid #1b2027; }.sim-tabla th:first-child { text-align: left; }.sim-tabla td { font-size: 0.88rem; color: #888; padding: 0.65rem 0.75rem; text-align: right; border-bottom: 1px solid #111; }.sim-tabla td:first-child { text-align: left; color: #8a8f98; }.sim-tabla td.dorado { color: #c9a84c; font-weight: 700; }.sim-tabla td.blanco { color: #f5f5f5; font-weight: 700; }.sim-tabla tr:last-child td { border-bottom: none; }.sim-disclaimer { font-size: 0.75rem; color: #222; line-height: 1.6; text-align: center; margin-top: 1rem; }@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }.calc-cta-mid { background: #111; border: 1px solid #c9a84c; border-radius: 14px; padding: 2rem; text-align: center; margin-top: 2.5rem; }.calc-cta-mid-eyebrow { font-size: 11px; color: #c9a84c; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; }.calc-cta-mid-title { font-size: 1.4rem; font-weight: 900; color: #f5f5f5; margin-bottom: 0.4rem; line-height: 1.2; letter-spacing: -0.01em; }.calc-cta-mid-sub { font-size: 0.92rem; color: #8a8f98; margin-bottom: 1.4rem; line-height: 1.6; }.calc-cta-mid-btn { display: inline-block; background: #c9a84c; color: #05070a; border: none; border-radius: 8px; padding: 1rem 2.5rem; font-size: 0.88rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; font-family: 'Inter', sans-serif; transition: background 0.2s, transform 0.1s; }.calc-cta-mid-btn:hover { background: #e6c44a; transform: translateY(-1px); }.calc-content-section { padding: 4rem 0; border-bottom: 1px solid #1b2027; }.calc-h2 { font-size: 2rem; font-weight: 900; letter-spacing: -0.02em; color: #f5f5f5; margin-bottom: 1.25rem; line-height: 1.1; }.calc-h2 em { font-style: normal; color: #c9a84c; }.calc-lead { font-size: 1.1rem; color: #888; line-height: 1.8; margin-bottom: 1.5rem; max-width: 780px; }.calc-lead strong { color: #c8c8c8; font-weight: 600; }.calc-p { font-size: 1rem; color: #8a8f98; line-height: 1.85; margin-bottom: 1.25rem; max-width: 780px; }.calc-p strong { color: #aaa; font-weight: 600; }.calc-ejemplo { background: #0f0f0a; border: 1px solid #1e1e1e; border-left: 3px solid #c9a84c; border-radius: 0 12px 12px 0; padding: 1.75rem 2rem; margin: 2rem 0; }.calc-ejemplo-title { font-size: 13px; color: #c9a84c; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 1.25rem; }.calc-ejemplo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }.calc-ejemplo-label { font-size: 11px; color: #8a8f98; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.3rem; }.calc-ejemplo-value { font-size: 1.5rem; font-weight: 900; color: #f5f5f5; letter-spacing: -0.02em; }.calc-ejemplo-value.dorado { color: #c9a84c; }.calc-ejemplo-nota { font-size: 0.88rem; color: #8a8f98; margin-top: 1.25rem; line-height: 1.6; font-style: italic; }.calc-formula { background: #111; border: 1px solid #1e1e1e; border-radius: 10px; padding: 1.5rem 2rem; margin: 1.5rem 0; font-family: monospace; font-size: 1rem; color: #29B6F6; line-height: 1.8; }.calc-faq { padding: 4rem 0; }.calc-faq-title { font-size: 2rem; font-weight: 900; letter-spacing: -0.02em; color: #f5f5f5; margin-bottom: 2.5rem; }.calc-faq-item { border-bottom: 1px solid #1b2027; padding: 1.5rem 0; cursor: pointer; }.calc-faq-item:first-of-type { border-top: 1px solid #1b2027; }.calc-faq-q { font-size: 1.05rem; font-weight: 700; color: #f5f5f5; display: flex; justify-content: space-between; align-items: center; gap: 1rem; user-select: none; }.calc-faq-q-icon { color: #c9a84c; font-size: 1.25rem; flex-shrink: 0; transition: transform 0.25s; }.calc-faq-item.open .calc-faq-q-icon { transform: rotate(45deg); }.calc-faq-a { display: none; font-size: 0.95rem; color: #8a8f98; line-height: 1.8; margin-top: 1rem; max-width: 780px; }.calc-faq-a strong { color: #aaa; font-weight: 600; }.calc-faq-item.open .calc-faq-a { display: block; }.calc-cta-final { background: #0c1017; border: 1px solid #29B6F6; border-radius: 14px; padding: 3rem 2rem; text-align: center; margin: 2rem 0 4rem; }.calc-cta-final-eyebrow { font-size: 11px; color: #29B6F6; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; }.calc-cta-final-title { font-size: 1.75rem; font-weight: 900; color: #f5f5f5; margin-bottom: 0.5rem; line-height: 1.2; letter-spacing: -0.02em; }.calc-cta-final-sub { font-size: 0.95rem; color: #8a8f98; margin-bottom: 1.75rem; line-height: 1.65; }.calc-cta-final-btn { display: inline-block; background: #29B6F6; color: #05070a; border: none; border-radius: 9px; padding: 1.2rem 3rem; font-size: 0.92rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; font-family: 'Inter', sans-serif; transition: background 0.2s, transform 0.15s; }.calc-cta-final-btn:hover { background: #4fc3f7; transform: translateY(-2px); }.calc-cta-final-guarantee { font-size: 0.8rem; color: #8a8f98; margin-top: 1rem; }@media (max-width: 768px) {  .calc-hero { padding: 2.5rem 0 2rem; }  .calc-hero-inner { flex-direction: column-reverse; align-items: center; gap: 0; }  .calc-hero-photo { width: 55%; max-width: 200px; margin: 0 auto 1rem; justify-content: center; }  .calc-hero-photo img { max-width: 100%; }  .calc-hero-text { width: 100%; padding-bottom: 2rem; }  .calc-hero-h1 { font-size: 2.25rem; }  .calc-hero-sub { font-size: 1rem; }  .calc-tool-section { padding: 2.5rem 0; }  .calc-tool-title { font-size: 1.6rem; }  .sim-grid { grid-template-columns: 1fr !important; }  .sim-cards { grid-template-columns: 1fr; }  .sim-diff { flex-direction: column; text-align: center; }  .sim-diff-number { font-size: 2.5rem; }  .calc-h2 { font-size: 1.6rem; }  .calc-ejemplo-grid { grid-template-columns: 1fr; }  .calc-faq-title { font-size: 1.6rem; }  .calc-cta-final { padding: 2rem 1.25rem; }  .calc-cta-final-title { font-size: 1.4rem; }  .calc-cta-final-btn { font-size: 0.88rem; padding: 1rem 1.5rem; }  .calc-wrap { padding: 0 1.25rem; }}
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style>* { box-sizing: border-box; margin: 0; padding: 0; }html, body { background: #05070a; overflow-x: hidden; }#calc-page {  font-family: 'Inter', sans-serif;  background: #05070a;  color: #f5f5f5;  width: 100%;}.calc-wrap { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 2rem; }.calc-hero { padding: 4rem 0 3rem; border-bottom: 1px solid #1b2027; }.calc-hero-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; }.calc-hero-text { flex: 1 1 55%; padding-bottom: 1rem; }.calc-hero-photo { flex: 0 0 35%; display: flex; align-items: flex-end; justify-content: flex-end; }.calc-hero-photo img { width: 100%; max-width: 300px; height: auto; object-fit: contain; display: block; mask-image: linear-gradient(to bottom, black 55%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%); }.calc-hero-eyebrow { font-size: 12px; color: #8a8f98; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }.calc-hero-h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; color: #f5f5f5; margin-bottom: 1rem; text-transform: uppercase; }.calc-hero-h1 em { font-style: normal; color: #c9a84c; }.calc-hero-sub { font-size: 1.1rem; color: #8a8f98; line-height: 1.7; max-width: 580px; margin-bottom: 1.5rem; }.calc-hero-sub strong { color: #c8c8c8; font-weight: 600; }.calc-hero-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }.calc-hero-meta-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: #8a8f98; letter-spacing: 0.05em; }.calc-hero-meta-dot { width: 5px; height: 5px; border-radius: 50%; background: #c9a84c; flex-shrink: 0; }.calc-tool-section { padding: 3.5rem 0; border-bottom: 1px solid #1b2027; }.calc-tool-label { font-size: 11px; color: #29B6F6; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; }.calc-tool-title { font-size: 2rem; font-weight: 900; letter-spacing: -0.02em; color: #f5f5f5; margin-bottom: 2.5rem; text-transform: uppercase; }.calc-tool-title em { font-style: normal; color: #c9a84c; }.sim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }.sim-grid.one { grid-template-columns: 1fr; }.sim-section { margin-bottom: 1.5rem; }.sim-section-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }.sim-section-num { width: 26px; height: 26px; border-radius: 50%; background: #29B6F6; color: #05070a; font-size: 12px; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }.sim-section-title { font-size: 14px; color: #777; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; }.sim-field { background: #1b2027; border: 1px solid #1b2027; border-radius: 10px; padding: 1.2rem 1.3rem; transition: border-color 0.2s; }.sim-field:focus-within { border-color: #29B6F6; }.sim-field label { display: block; font-size: 12px; color: #8a8f98; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.4rem; }.sim-field input { background: none; border: none; outline: none; color: #f5f5f5; font-size: 1.75rem; font-weight: 800; width: 100%; font-family: 'Inter', sans-serif; letter-spacing: -0.02em; }.sim-field input::placeholder { color: #222; font-weight: 500; font-size: 1.3rem; }.sim-field .unit { font-size: 0.9rem; color: #8a8f98; margin-top: 0.25rem; }.sim-field select, .hip-select { -webkit-appearance: none; -moz-appearance: none; appearance: none; background: #1b2027 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='9'><path d='M1 1l6 6 6-6' stroke='%2329B6F6' stroke-width='2' fill='none' fill-rule='evenodd'/></svg>") right 0.2rem center/14px no-repeat; border: none; outline: none; color: #f5f5f5; font-size: 1.3rem; font-weight: 800; width: 100%; font-family: 'Inter', sans-serif; letter-spacing: -0.01em; padding-right: 1.5rem; cursor: pointer; }.sim-field select option { background: #1b2027; color: #f5f5f5; }.sim-divider { height: 1px; background: #1b2027; margin: 1.5rem 0; }.sim-slider-wrap { background: #1b2027; border: 1px solid #1b2027; border-radius: 10px; padding: 1.3rem; margin-top: 0.65rem; margin-bottom: 2rem; }.sim-slider-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 1rem; }.sim-slider-head .lbl { font-size: 11px; color: #8a8f98; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; }.sim-slider-head .val { font-size: 2rem; font-weight: 900; color: #29B6F6; letter-spacing: -0.02em; white-space: nowrap; }.sim-slider { -webkit-appearance: none; width: 100%; height: 2px; background: #222; outline: none; border-radius: 2px; }.sim-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #29B6F6; cursor: pointer; border: 3px solid #05070a; box-shadow: 0 0 0 4px rgba(41,182,246,0.15); }.sim-rent-nota { display: none; background: #0c0c00; border-left: 2px solid #c9a84c; border-radius: 0 8px 8px 0; padding: 0.75rem 1rem; font-size: 0.9rem; color: #c9a84c; line-height: 1.6; margin-bottom: 1.5rem; }.sim-result { display: none; }.sim-result.visible { display: block; animation: fadeIn 0.4s ease; }.sim-historica { display: none; background: #0a0a00; border: 1px solid #2a2000; border-radius: 10px; padding: 1.25rem 1.4rem; margin-bottom: 1.5rem; }.sim-historica-label { font-size: 12px; color: #b8920a; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.4rem; }.sim-historica-value { font-size: 2.5rem; font-weight: 900; color: #c9a84c; letter-spacing: -0.02em; margin-bottom: 0.25rem; }.sim-historica-sub { font-size: 1rem; color: #8a6a20; line-height: 1.5; }.sim-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.55rem; margin-bottom: 1rem; }.sim-card { background: #1b2027; border: 1px solid #1b2027; border-radius: 10px; padding: 1.3rem 1rem; text-align: center; }.sim-card.win { background: #0c0c00; border-color: #c9a84c; }.sim-card-lbl { font-size: 12px; color: #888; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.65rem; line-height: 1.4; }.sim-card.win .sim-card-lbl { color: #b8920a; }.sim-card-val { font-size: 1.65rem; font-weight: 900; color: #e8e8e8; letter-spacing: -0.03em; line-height: 1; }.sim-card.win .sim-card-val { color: #c9a84c; font-size: 1.75rem; }.sim-card-sub { font-size: 0.85rem; color: #8a8f98; margin-top: 0.45rem; line-height: 1.35; }.sim-card.win .sim-card-sub { color: #7a5a10; }.sim-diff { background: #c9a84c; border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }.sim-diff-eyebrow { font-size: 12px; color: #3a2a00; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.35rem; }.sim-diff-label { font-size: 1.05rem; font-weight: 700; color: #05070a; line-height: 1.3; }.sim-diff-number { font-size: 3rem; font-weight: 900; color: #05070a; white-space: nowrap; letter-spacing: -0.04em; flex-shrink: 0; }.sim-msg-wrap { margin-bottom: 2rem; }.sim-msg-highlight { font-size: 1.25rem; font-weight: 800; color: #f5f5f5; line-height: 1.4; margin-bottom: 0.6rem; }.sim-msg-highlight em { font-style: normal; color: #c9a84c; }.sim-msg-body { font-size: 1rem; color: #8a8f98; line-height: 1.8; }.sim-persuasion { margin-bottom: 2rem; }.sim-persuasion-main { font-size: 1.2rem; font-weight: 800; color: #f5f5f5; line-height: 1.4; margin-bottom: 0.5rem; }.sim-persuasion-sub { font-size: 0.95rem; color: #8a8f98; line-height: 1.8; }.sim-grafico-wrap { margin-bottom: 1.25rem; }.sim-grafico-titulo { font-size: 11px; color: #888; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; }.sim-grafico-leyenda { display: flex; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap; }.sim-leyenda-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #888; }.sim-leyenda-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }.sim-grafico-canvas-wrap { position: relative; height: 180px; display: flex; align-items: flex-end; gap: 4px; padding-bottom: 24px; border-bottom: 1px solid #1b2027; }.sim-barra-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; position: relative; }.sim-barra-stack { width: 100%; display: flex; flex-direction: column; justify-content: flex-end; border-radius: 3px 3px 0 0; overflow: hidden; }.sim-barra-stack:hover { opacity: 0.85; }.sim-barra-intereses { background: #29B6F6; width: 100%; }.sim-barra-capital { background: #2a2a2a; width: 100%; }.sim-barra-label { position: absolute; bottom: -20px; font-size: 8px; color: #8a8f98; white-space: nowrap; }.sim-badge-inflacion { display: none; background: rgba(140,20,20,0.9); border: 1px solid #ff4444; border-radius: 7px; padding: 0.5rem 0.9rem; margin-bottom: 0.75rem; width: fit-content; }.sim-badge-inflacion-label { font-size: 9px; color: rgba(255,200,200,0.8); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.15rem; }.sim-badge-inflacion-value { font-size: 1rem; font-weight: 900; color: #fff; letter-spacing: -0.02em; line-height: 1; }.sim-linea-inflacion { position: absolute; left: 0; right: 0; border-top: 2px dashed #ff4444; pointer-events: none; z-index: 2; }.sim-desglose-toggle { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; user-select: none; padding: 0.85rem 0; border-top: 1px solid #1b2027; border-bottom: 1px solid #1b2027; margin-bottom: 1.25rem; }.sim-desglose-toggle-icon { width: 20px; height: 20px; border-radius: 50%; background: #1b2027; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #29B6F6; flex-shrink: 0; transition: background 0.2s; }.sim-desglose-toggle:hover .sim-desglose-toggle-icon { background: #c9a84c; color: #05070a; }.sim-desglose-toggle-label { font-size: 12px; color: #888; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; }.sim-tabla { display: none; width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }.sim-tabla.visible { display: table; }.sim-tabla th { font-size: 10px; color: #8a8f98; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; padding: 0.5rem 0.75rem; text-align: right; border-bottom: 1px solid #1b2027; }.sim-tabla th:first-child { text-align: left; }.sim-tabla td { font-size: 0.88rem; color: #888; padding: 0.65rem 0.75rem; text-align: right; border-bottom: 1px solid #111; }.sim-tabla td:first-child { text-align: left; color: #8a8f98; }.sim-tabla td.dorado { color: #c9a84c; font-weight: 700; }.sim-tabla td.blanco { color: #f5f5f5; font-weight: 700; }.sim-tabla tr:last-child td { border-bottom: none; }.sim-disclaimer { font-size: 0.75rem; color: #222; line-height: 1.6; text-align: center; margin-top: 1rem; }@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }.calc-cta-mid { background: #111; border: 1px solid #c9a84c; border-radius: 14px; padding: 2rem; text-align: center; margin-top: 2.5rem; }.calc-cta-mid-eyebrow { font-size: 11px; color: #c9a84c; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; }.calc-cta-mid-title { font-size: 1.4rem; font-weight: 900; color: #f5f5f5; margin-bottom: 0.4rem; line-height: 1.2; letter-spacing: -0.01em; }.calc-cta-mid-sub { font-size: 0.92rem; color: #8a8f98; margin-bottom: 1.4rem; line-height: 1.6; }.calc-cta-mid-btn { display: inline-block; background: #c9a84c; color: #05070a; border: none; border-radius: 8px; padding: 1rem 2.5rem; font-size: 0.88rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; font-family: 'Inter', sans-serif; transition: background 0.2s, transform 0.1s; }.calc-cta-mid-btn:hover { background: #e6c44a; transform: translateY(-1px); }.calc-content-section { padding: 4rem 0; border-bottom: 1px solid #1b2027; }.calc-h2 { font-size: 2rem; font-weight: 900; letter-spacing: -0.02em; color: #f5f5f5; margin-bottom: 1.25rem; line-height: 1.1; }.calc-h2 em { font-style: normal; color: #c9a84c; }.calc-lead { font-size: 1.1rem; color: #888; line-height: 1.8; margin-bottom: 1.5rem; max-width: 780px; }.calc-lead strong { color: #c8c8c8; font-weight: 600; }.calc-p { font-size: 1rem; color: #8a8f98; line-height: 1.85; margin-bottom: 1.25rem; max-width: 780px; }.calc-p strong { color: #aaa; font-weight: 600; }.calc-ejemplo { background: #0f0f0a; border: 1px solid #1e1e1e; border-left: 3px solid #c9a84c; border-radius: 0 12px 12px 0; padding: 1.75rem 2rem; margin: 2rem 0; }.calc-ejemplo-title { font-size: 13px; color: #c9a84c; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 1.25rem; }.calc-ejemplo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }.calc-ejemplo-label { font-size: 11px; color: #8a8f98; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.3rem; }.calc-ejemplo-value { font-size: 1.5rem; font-weight: 900; color: #f5f5f5; letter-spacing: -0.02em; }.calc-ejemplo-value.dorado { color: #c9a84c; }.calc-ejemplo-nota { font-size: 0.88rem; color: #8a8f98; margin-top: 1.25rem; line-height: 1.6; font-style: italic; }.calc-formula { background: #111; border: 1px solid #1e1e1e; border-radius: 10px; padding: 1.5rem 2rem; margin: 1.5rem 0; font-family: monospace; font-size: 1rem; color: #29B6F6; line-height: 1.8; }.calc-faq { padding: 4rem 0; }.calc-faq-title { font-size: 2rem; font-weight: 900; letter-spacing: -0.02em; color: #f5f5f5; margin-bottom: 2.5rem; }.calc-faq-item { border-bottom: 1px solid #1b2027; padding: 1.5rem 0; cursor: pointer; }.calc-faq-item:first-of-type { border-top: 1px solid #1b2027; }.calc-faq-q { font-size: 1.05rem; font-weight: 700; color: #f5f5f5; display: flex; justify-content: space-between; align-items: center; gap: 1rem; user-select: none; }.calc-faq-q-icon { color: #c9a84c; font-size: 1.25rem; flex-shrink: 0; transition: transform 0.25s; }.calc-faq-item.open .calc-faq-q-icon { transform: rotate(45deg); }.calc-faq-a { display: none; font-size: 0.95rem; color: #8a8f98; line-height: 1.8; margin-top: 1rem; max-width: 780px; }.calc-faq-a strong { color: #aaa; font-weight: 600; }.calc-faq-item.open .calc-faq-a { display: block; }.calc-cta-final { background: #0c1017; border: 1px solid #29B6F6; border-radius: 14px; padding: 3rem 2rem; text-align: center; margin: 2rem 0 4rem; }.calc-cta-final-eyebrow { font-size: 11px; color: #29B6F6; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; }.calc-cta-final-title { font-size: 1.75rem; font-weight: 900; color: #f5f5f5; margin-bottom: 0.5rem; line-height: 1.2; letter-spacing: -0.02em; }.calc-cta-final-sub { font-size: 0.95rem; color: #8a8f98; margin-bottom: 1.75rem; line-height: 1.65; }.calc-cta-final-btn { display: inline-block; background: #29B6F6; color: #05070a; border: none; border-radius: 9px; padding: 1.2rem 3rem; font-size: 0.92rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; font-family: 'Inter', sans-serif; transition: background 0.2s, transform 0.15s; }.calc-cta-final-btn:hover { background: #4fc3f7; transform: translateY(-2px); }.calc-cta-final-guarantee { font-size: 0.8rem; color: #8a8f98; margin-top: 1rem; }@media (max-width: 768px) {  .calc-hero { padding: 2.5rem 0 2rem; }  .calc-hero-inner { flex-direction: column-reverse; align-items: center; gap: 0; }  .calc-hero-photo { width: 55%; max-width: 200px; margin: 0 auto 1rem; justify-content: center; }  .calc-hero-photo img { max-width: 100%; }  .calc-hero-text { width: 100%; padding-bottom: 2rem; }  .calc-hero-h1 { font-size: 2.25rem; }  .calc-hero-sub { font-size: 1rem; }  .calc-tool-section { padding: 2.5rem 0; }  .calc-tool-title { font-size: 1.6rem; }  .sim-grid { grid-template-columns: 1fr !important; }  .sim-cards { grid-template-columns: 1fr; }  .sim-diff { flex-direction: column; text-align: center; }  .sim-diff-number { font-size: 2.5rem; }  .calc-h2 { font-size: 1.6rem; }  .calc-ejemplo-grid { grid-template-columns: 1fr; }  .calc-faq-title { font-size: 1.6rem; }  .calc-cta-final { padding: 2rem 1.25rem; }  .calc-cta-final-title { font-size: 1.4rem; }  .calc-cta-final-btn { font-size: 0.88rem; padding: 1rem 1.5rem; }  .calc-wrap { padding: 0 1.25rem; }}
 /* ===== Identidad visual override ===== */
 :root{--sky:#29B6F6;--gold:#C9A84C;}
 .calc-hero-eyebrow,.calc-tool-label{color:var(--sky)!important;}
@@ -44,10 +44,17 @@
 .hip-seg button{flex:1;min-width:130px;background:#0c1017;border:1px solid #1b2027;color:#8a8f98;border-radius:10px;padding:.85rem 1rem;font-family:'Inter',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;transition:all .2s}
 .hip-seg button:hover{border-color:#29B6F6;color:#f5f5f5}
 .hip-seg button.on{background:#29B6F6;border-color:#29B6F6;color:#05070a}
+.hip-seg-label{font-size:12px;color:#8a8f98;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:.6rem;margin-top:1.1rem}
+.hip-microcopy{font-size:.82rem;color:#6a6f78;line-height:1.6;margin:.5rem 0 1.1rem}
+#hip-titular2-wrap,#hip-deudas2-wrap{margin-top:1.1rem;padding-top:1.1rem;border-top:1px dashed #1b2027}
+#hip-pagas2-wrap{margin-top:1.25rem}
 .hip-adv-toggle{display:flex;align-items:center;gap:.6rem;background:none;border:none;color:#29B6F6;font-family:'Inter',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;padding:1rem 0;margin-top:.5rem}
 .hip-adv-toggle .ic{width:22px;height:22px;border-radius:50%;background:#1b2027;display:flex;align-items:center;justify-content:center;font-size:13px;color:#29B6F6}
 .hip-adv{display:none}
 .hip-adv.open{display:block}
+.hip-tipo-panel{margin-top:.85rem}
+.hip-tipo-resultado{background:#0c1017;border:1px solid #1b2027;border-radius:10px;padding:.9rem 1.2rem;font-size:.92rem;color:#8a8f98;margin-top:.75rem;line-height:1.5}
+.hip-tipo-resultado b{color:#29B6F6;font-size:1.05rem}
 .hip-verdict{border-radius:14px;padding:2rem;margin-bottom:1.25rem;border:1px solid}
 .hip-verdict.ok{background:rgba(41,182,246,.07);border-color:#29B6F6}
 .hip-verdict.mid{background:rgba(201,168,76,.07);border-color:#c9a84c}
@@ -60,9 +67,11 @@
 .hip-verdict-title{font-size:1.35rem;font-weight:900;color:#f5f5f5;letter-spacing:-.01em}
 .hip-verdict-txt{font-size:.98rem;color:#a8adb5;line-height:1.65}
 .hip-verdict-txt b{color:#f5f5f5}
-.hip-big{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-bottom:1.25rem}
+.hip-big{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.65rem;margin-bottom:1.25rem}
 .hip-bigcard{background:linear-gradient(160deg,#0e1620,#0a0e14);border:1px solid #1b2027;border-radius:14px;padding:1.75rem;text-align:center}
 .hip-bigcard.hl{border-color:#29B6F6}
+.hip-bigcard.gold{border-color:#c9a84c}
+.hip-bigcard.gold .v{color:#c9a84c}
 .hip-bigcard .l{font-size:11px;color:#8a8f98;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:.6rem}
 .hip-bigcard .v{font-size:2.5rem;font-weight:900;letter-spacing:-.03em;line-height:1}
 .hip-bigcard.hl .v{color:#29B6F6}
@@ -74,7 +83,7 @@
 .hip-esccard .et{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#8a8f98;margin-bottom:.5rem}
 .hip-esccard.mid .et{color:#29B6F6}
 .hip-esccard .ev{font-size:1.3rem;font-weight:900;color:#e8e8e8}
-.hip-esccard .es{font-size:.75rem;color:#6a6f78;margin-top:.3rem}
+.hip-esccard .es{font-size:.75rem;color:#6a6f78;margin-top:.3rem;line-height:1.4}
 .hip-detalle{background:#0c1017;border:1px solid #1b2027;border-radius:12px;padding:1.5rem;margin-bottom:1.25rem}
 .hip-det-row{display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid #141a22;font-size:.92rem}
 .hip-det-row:last-child{border-bottom:none}
@@ -133,6 +142,39 @@
         <button class="on" onclick="hipSeg('resid','residente',this)">Resido en España</button>
         <button onclick="hipSeg('resid','no-residente',this)">No residente</button>
       </div>
+      <div class="sim-grid one" style="margin-top:.65rem">
+        <div class="sim-field">
+          <label>Comunidad autónoma de la vivienda</label>
+          <select id="hip-ccaa" onchange="HIP.ccaa=this.value;hipCalc()">
+            <option value="">Selecciona (uso una media orientativa)</option>
+            <option value="andalucia">Andalucía</option>
+            <option value="aragon">Aragón</option>
+            <option value="asturias">Asturias</option>
+            <option value="baleares">Illes Balears</option>
+            <option value="canarias">Canarias</option>
+            <option value="cantabria">Cantabria</option>
+            <option value="castilla-la-mancha">Castilla-La Mancha</option>
+            <option value="castilla-y-leon">Castilla y León</option>
+            <option value="cataluna">Cataluña</option>
+            <option value="ceuta">Ceuta</option>
+            <option value="madrid">Comunidad de Madrid</option>
+            <option value="valencia">Comunitat Valenciana</option>
+            <option value="extremadura">Extremadura</option>
+            <option value="galicia">Galicia</option>
+            <option value="rioja">La Rioja</option>
+            <option value="melilla">Melilla</option>
+            <option value="murcia">Región de Murcia</option>
+            <option value="navarra">Navarra</option>
+            <option value="pais-vasco">País Vasco</option>
+          </select>
+          <div class="unit">los impuestos de la compra varían mucho según dónde compres</div>
+        </div>
+      </div>
+      <div class="hip-seg" style="margin-top:.65rem">
+        <button class="on" onclick="hipSeg('regimen','segunda-mano',this)">Segunda mano</button>
+        <button onclick="hipSeg('regimen','obra-nueva',this)">Obra nueva</button>
+      </div>
+      <div class="hip-microcopy">La segunda mano paga ITP; la obra nueva paga IVA (10%) + AJD. Cambia bastante el importe de impuestos según cuál sea.</div>
     </div>
 
     <div class="sim-divider"></div>
@@ -140,16 +182,33 @@
     <div class="sim-section">
       <div class="sim-section-head"><div class="sim-section-num">2</div><div class="sim-section-title">Tus ingresos</div></div>
       <div class="hip-seg">
-        <button class="on" onclick="hipSeg('titulares',1,this)">1 titular</button>
-        <button onclick="hipSeg('titulares',2,this)">2 titulares</button>
+        <button class="on" onclick="hipTitSeg(1,this)">1 titular</button>
+        <button onclick="hipTitSeg(2,this)">2 titulares</button>
       </div>
       <div class="sim-grid">
-        <div class="sim-field"><label>Ingresos netos mensuales</label><input type="text" id="hip-ingresos" placeholder="2.200" inputmode="numeric" oninput="hipFmtLive(this);hipCalc()"><div class="unit">€ /mes · suma de titulares</div></div>
-        <div class="sim-field"><label>Número de pagas</label><select id="hip-pagas" onchange="hipCalc()"><option value="12">12 pagas</option><option value="14">14 pagas</option></select><div class="unit">al año</div></div>
+        <div class="sim-field"><label id="hip-lbl-ingresos1">Ingresos netos mensuales</label><input type="text" id="hip-ingresos1" placeholder="2.200" inputmode="numeric" oninput="hipFmtLive(this);hipCalc()"><div class="unit">€ /mes</div></div>
+        <div class="sim-field"><label id="hip-lbl-edad1">Tu edad</label><input type="number" id="hip-edad1" placeholder="35" min="18" max="70" oninput="hipCalc()"><div class="unit">años</div></div>
       </div>
-      <div class="sim-grid">
-        <div class="sim-field"><label>Tu edad</label><input type="number" id="hip-edad" placeholder="35" min="18" max="70" oninput="hipCalc()"><div class="unit">años · del titular de más edad</div></div>
-        <div class="sim-field"><label>Ahorro disponible</label><input type="text" id="hip-ahorro" placeholder="40.000" inputmode="numeric" oninput="hipFmtLive(this);hipCalc()"><div class="unit">€ · todo lo que tienes ahorrado</div></div>
+      <div class="sim-grid" id="hip-titular2-wrap" style="display:none">
+        <div class="sim-field"><label>Ingresos netos · titular 2</label><input type="text" id="hip-ingresos2" placeholder="1.400" inputmode="numeric" oninput="hipFmtLive(this);hipCalc()"><div class="unit">€ /mes</div></div>
+        <div class="sim-field"><label>Edad · titular 2</label><input type="number" id="hip-edad2" placeholder="35" min="18" max="70" oninput="hipCalc()"><div class="unit">años</div></div>
+      </div>
+      <div class="hip-microcopy" id="hip-tit-nota" style="display:none">Sumamos los ingresos de los dos titulares y usamos la edad de la persona mayor para calcular el plazo máximo.</div>
+      <div class="hip-seg-label" id="hip-pagas1-label">Número de pagas al año</div>
+      <div class="hip-seg">
+        <button class="on" onclick="hipPagasSeg(1,12,this)">12 pagas</button>
+        <button onclick="hipPagasSeg(1,14,this)">14 pagas</button>
+      </div>
+      <div class="hip-microcopy">Si cobras <b>14 pagas</b>, las 2 pagas extra (verano y Navidad) se reparten entre los 12 meses del año para calcular tu ingreso mensual real de cara al banco.</div>
+      <div id="hip-pagas2-wrap" style="display:none">
+        <div class="hip-seg-label">Pagas al año · titular 2</div>
+        <div class="hip-seg">
+          <button class="on" onclick="hipPagasSeg(2,12,this)">12 pagas</button>
+          <button onclick="hipPagasSeg(2,14,this)">14 pagas</button>
+        </div>
+      </div>
+      <div class="sim-grid one">
+        <div class="sim-field"><label>Ahorro disponible</label><input type="text" id="hip-ahorro" placeholder="40.000" inputmode="numeric" oninput="hipFmtLive(this);hipCalc()"><div class="unit">€ · todo lo que tienes ahorrado, para entrada + gastos</div></div>
       </div>
     </div>
 
@@ -158,17 +217,50 @@
     <div class="sim-section">
       <div class="sim-section-head"><div class="sim-section-num">3</div><div class="sim-section-title">Tipo de hipoteca</div></div>
       <div class="hip-seg">
-        <button class="on" onclick="hipSeg('tipo','fijo',this)">Tipo fijo</button>
-        <button onclick="hipSeg('tipo','variable',this)">Variable</button>
-        <button onclick="hipSeg('tipo','mixto',this)">Mixto</button>
+        <button class="on" onclick="hipTipoSeg('fijo',this)">Tipo fijo</button>
+        <button onclick="hipTipoSeg('variable',this)">Variable</button>
+        <button onclick="hipTipoSeg('mixto',this)">Mixto</button>
       </div>
-      <div class="sim-grid">
-        <div class="sim-field"><label>Tipo de interés</label><input type="text" id="hip-tin" value="3,5" inputmode="decimal" oninput="hipCalc()"><div class="unit">% anual · puedes ajustarlo</div></div>
-        <div class="sim-field" style="display:flex;flex-direction:column;justify-content:center"><label>Referencia de mercado</label><div style="font-size:1rem;font-weight:700;color:#8a8f98;margin-top:.2rem" id="hip-tin-ref">Fijo: 2,5% – 3,5% según perfil</div></div>
+
+      <!-- FIJO -->
+      <div class="hip-tipo-panel" id="hip-panel-fijo">
+        <div class="sim-grid one">
+          <div class="sim-field"><label>Tipo fijo pactado con el banco</label><input type="text" id="hip-tin-fijo" value="3,00" inputmode="decimal" oninput="hipCalc()"><div class="unit">% TIN anual · no cambia durante toda la hipoteca. Ponlo tú, es lo que negocies con el banco</div></div>
+        </div>
+        <div class="sim-slider-wrap">
+          <div class="sim-slider-head"><span class="lbl">Ajustar con el deslizador</span><span class="val" id="hip-tin-fijo-label">3,0%</span></div>
+          <input type="range" class="sim-slider" id="hip-tin-fijo-slider" min="1" max="7" step="0.1" value="3.0" oninput="hipTinFijoSlider();hipCalc()">
+        </div>
       </div>
-      <div class="sim-slider-wrap">
-        <div class="sim-slider-head"><span class="lbl">Arrastra para ajustar el interés</span><span class="val" id="hip-tin-label">3,5%</span></div>
-        <input type="range" class="sim-slider" id="hip-tin-slider" min="1" max="7" step="0.1" value="3.5" oninput="hipTinSlider();hipCalc()">
+
+      <!-- VARIABLE -->
+      <div class="hip-tipo-panel" id="hip-panel-variable" style="display:none">
+        <div class="sim-grid">
+          <div class="sim-field"><label>Diferencial del banco</label><input type="text" id="hip-diferencial" value="0,60" inputmode="decimal" oninput="hipCalc()"><div class="unit">% sobre euríbor · el margen que añade el banco</div></div>
+          <div class="sim-field"><label>Euríbor 12 meses</label><input type="text" id="hip-euribor" value="3,10" inputmode="decimal" oninput="hipCalc()"><div class="unit">% · referencia septiembre 2026, ajústalo si quieres otro</div></div>
+        </div>
+        <div class="hip-tipo-resultado">Tipo aplicado el primer año (diferencial + euríbor): <b id="hip-tipo-variable-total">3,70%</b>. Después sube o baja cada 6-12 meses según se mueva el euríbor.</div>
+      </div>
+
+      <!-- MIXTO -->
+      <div class="hip-tipo-panel" id="hip-panel-mixto" style="display:none">
+        <div class="sim-grid">
+          <div class="sim-field"><label>Años a tipo fijo</label>
+            <select id="hip-mixto-anos" onchange="hipCalc()">
+              <option value="5">5 años</option>
+              <option value="10" selected>10 años</option>
+              <option value="15">15 años</option>
+              <option value="20">20 años</option>
+            </select>
+            <div class="unit">periodo inicial con cuota fija</div>
+          </div>
+          <div class="sim-field"><label>Tipo fijo en ese periodo</label><input type="text" id="hip-mixto-fijo" value="2,80" inputmode="decimal" oninput="hipCalc()"><div class="unit">% TIN durante los años fijos</div></div>
+        </div>
+        <div class="sim-grid">
+          <div class="sim-field"><label>Diferencial variable (después)</label><input type="text" id="hip-mixto-dif" value="0,60" inputmode="decimal" oninput="hipCalc()"><div class="unit">% sobre euríbor, a partir del año siguiente</div></div>
+          <div class="sim-field"><label>Euríbor 12 meses</label><input type="text" id="hip-mixto-euribor" value="3,10" inputmode="decimal" oninput="hipCalc()"><div class="unit">% · referencia septiembre 2026, ajústalo si quieres otro</div></div>
+        </div>
+        <div class="hip-tipo-resultado">Tipo medio estimado para el cálculo: <b id="hip-tipo-mixto-total">—</b> · media ponderada entre el periodo fijo y el variable, según cuántos años dura cada uno.</div>
       </div>
     </div>
 
@@ -177,8 +269,18 @@
     <div class="sim-section">
       <div class="sim-section-head"><div class="sim-section-num">4</div><div class="sim-section-title">Tus deudas actuales</div></div>
       <div class="sim-grid">
-        <div class="sim-field"><label>Cuotas mensuales</label><input type="text" id="hip-deudas" placeholder="0" inputmode="numeric" oninput="hipFmtLive(this);hipCalc()"><div class="unit">€ /mes · préstamos, coche, tarjetas</div></div>
-        <div class="sim-field"><label>Tipo de contrato</label><select id="hip-contrato" onchange="HIP.contrato=this.value;hipCalc()"><option value="indefinido">Indefinido</option><option value="temporal">Temporal</option><option value="autonomo">Autónomo</option><option value="funcionario">Funcionario</option></select><div class="unit">situación laboral</div></div>
+        <div class="sim-field"><label id="hip-lbl-deudas1">Cuotas mensuales</label><input type="text" id="hip-deudas1" placeholder="0" inputmode="numeric" oninput="hipFmtLive(this);hipCalc()"><div class="unit">€ /mes · préstamos, coche, tarjetas</div></div>
+      </div>
+      <div class="sim-grid" id="hip-deudas2-wrap" style="display:none">
+        <div class="sim-field"><label>Cuotas mensuales · titular 2</label><input type="text" id="hip-deudas2" placeholder="0" inputmode="numeric" oninput="hipFmtLive(this);hipCalc()"><div class="unit">€ /mes</div></div>
+      </div>
+      <div class="hip-microcopy" id="hip-deudas-tit-nota" style="display:none">El tipo de contrato y la antigüedad de abajo se refieren al titular principal — el que presenta el caso.</div>
+      <div class="hip-seg-label">Tipo de contrato</div>
+      <div class="hip-seg">
+        <button class="on" onclick="hipSeg('contrato','indefinido',this)">Indefinido</button>
+        <button onclick="hipSeg('contrato','temporal',this)">Temporal</button>
+        <button onclick="hipSeg('contrato','autonomo',this)">Autónomo</button>
+        <button onclick="hipSeg('contrato','funcionario',this)">Funcionario</button>
       </div>
 
       <button class="hip-adv-toggle" onclick="hipAdv()"><span class="ic" id="hip-adv-ic">+</span>Afinar mi caso (opcional)</button>
@@ -204,24 +306,28 @@
       </div>
 
       <div class="hip-big">
-        <div class="hip-bigcard hl"><div class="l">El banco te prestaría</div><div class="v" id="hip-capital-v">—</div><div class="s">capital máximo estimado</div></div>
+        <div class="hip-bigcard hl"><div class="l">El banco te prestaría</div><div class="v" id="hip-capital-v">—</div><div class="s" id="hip-capital-limita">techo por ingresos</div></div>
         <div class="hip-bigcard"><div class="l">Vivienda que te puedes permitir</div><div class="v" id="hip-precio-v">—</div><div class="s">precio máximo de compra</div></div>
+        <div class="hip-bigcard gold"><div class="l">Intereses que pagarías</div><div class="v" id="hip-intereses-v">—</div><div class="s" id="hip-intereses-sub">en todo el plazo, al tipo elegido</div></div>
       </div>
 
-      <div class="sim-section-head" style="margin-bottom:.75rem"><div class="sim-section-title" style="font-size:12px;color:#8a8f98">Según el ratio de endeudamiento que aplique el banco</div></div>
+      <div class="sim-section-head" style="margin-bottom:.75rem"><div class="sim-section-title" style="font-size:12px;color:#8a8f98">Según el ratio de endeudamiento que te acepte el banco (cuota ÷ ingresos)</div></div>
+      <div class="hip-microcopy">El ratio de endeudamiento es qué parte de tu sueldo puede irse en la cuota. Cuanto más bajo, más conservador es el banco; cuanto más alto, más te aprieta.</div>
       <div class="hip-esc">
-        <div class="hip-esccard"><div class="et">Conservador · 30%</div><div class="ev" id="hip-esc0-v">—</div><div class="es" id="hip-esc0-s"></div></div>
-        <div class="hip-esccard mid"><div class="et">Estándar · 35%</div><div class="ev" id="hip-esc1-v">—</div><div class="es" id="hip-esc1-s"></div></div>
-        <div class="hip-esccard"><div class="et">Máximo · 40%</div><div class="ev" id="hip-esc2-v">—</div><div class="es" id="hip-esc2-s"></div></div>
+        <div class="hip-esccard"><div class="et">Ratio conservador · 30%</div><div class="ev" id="hip-esc0-v">—</div><div class="es" id="hip-esc0-s"></div></div>
+        <div class="hip-esccard mid"><div class="et">Ratio estándar · 35%</div><div class="ev" id="hip-esc1-v">—</div><div class="es" id="hip-esc1-s"></div></div>
+        <div class="hip-esccard"><div class="et">Ratio máximo · 40%</div><div class="ev" id="hip-esc2-v">—</div><div class="es" id="hip-esc2-s"></div></div>
       </div>
+      <div class="hip-microcopy" id="hip-ahorro-nota" style="display:none"></div>
 
       <div class="hip-detalle">
         <div class="hip-det-row"><span class="k">Cuota mensual estimada</span><span class="v" id="hip-cuota-v">—</span></div>
         <div class="hip-det-row"><span class="k">Plazo máximo (la hipoteca debe acabar antes de tus 75)</span><span class="v" id="hip-plazo-v">—</span></div>
-        <div class="hip-det-row"><span class="k">Tipo de interés de referencia</span><span class="v" id="hip-tin-v">—</span></div>
+        <div class="hip-det-row"><span class="k">Tipo de interés usado en el cálculo</span><span class="v" id="hip-tin-v">—</span></div>
+        <div class="hip-det-row"><span class="k">Total a devolver al banco (capital + intereses)</span><span class="v" id="hip-totaldevuelto-v">—</span></div>
         <div class="hip-det-row"><span class="k">El banco financia hasta el</span><span class="v" id="hip-ltv-v">—</span></div>
         <div class="hip-det-row"><span class="k">Entrada que necesitas</span><span class="v" id="hip-entrada-v">—</span></div>
-        <div class="hip-det-row"><span class="k">Gastos de compra (impuestos, notaría, registro)</span><span class="v" id="hip-gastos-v">—</span></div>
+        <div class="hip-det-row"><span class="k" id="hip-gastos-label">Gastos de compra (estimado)</span><span class="v" id="hip-gastos-v">—</span></div>
         <div class="hip-det-row"><span class="k">Ahorro total necesario</span><span class="v" id="hip-necesario-v">—</span></div>
       </div>
 
@@ -230,12 +336,12 @@
         <ul id="hip-tips"></ul>
       </div>
 
-      <div class="hip-nota"><b>Cálculo orientativo.</b> Cada banco aplica sus propios criterios: revisa tus deudas registradas, tu historial, los productos que contrates con ellos y la tasación real de la vivienda. Esta herramienta usa los estándares de mercado y la referencia del 35% de esfuerzo del Banco de España, pero no sustituye a un estudio de viabilidad ni constituye una oferta de financiación.</div>
+      <div class="hip-nota"><b>Cálculo orientativo.</b> Cada banco aplica sus propios criterios: revisa tus deudas registradas, tu historial, los productos que contrates con ellos y la tasación real de la vivienda. Esta herramienta usa los estándares de mercado y la referencia del 35% de esfuerzo del Banco de España, pero no sustituye a un estudio de viabilidad ni constituye una oferta de financiación. Los impuestos de compra (ITP, IVA, AJD) son un tipo general estimado por comunidad autónoma, sin bonificaciones por edad, familia numerosa o vivienda protegida — no lo tomes como una cifra exacta.</div>
 
       <div class="calc-cta-final">
         <div class="calc-cta-final-eyebrow">El siguiente paso</div>
         <div class="calc-cta-final-title">Ya sabes tu capacidad.<br>Ahora veamos qué banco te la da.</div>
-        <div class="calc-cta-final-sub">Una consultoría gratuita de 30 minutos por Zoom, sin compromiso.<br>Revisamos tu caso y te digo con qué entidades encaja tu perfil.</div>
+        <div class="calc-cta-final-sub">Analizo tu caso sin coste ni compromiso y comparo tus condiciones con más de 7 entidades bancarias.<br>30 minutos por Zoom para saber con cuál encajas mejor.</div>
         <a href="#" id="hip-wa" target="_blank" rel="noopener" class="calc-cta-final-btn">Reservar consultoría gratuita →</a>
         <div class="calc-cta-final-guarantee">Sin coste · Sin compromiso · Directo por WhatsApp</div>
       </div>
@@ -246,53 +352,108 @@
 </div>
 
 <script>
-var HIP={uso:'habitual',resid:'residente',titulares:1,contrato:'indefinido',tipo:'fijo'};
-function hipSeg(grupo,val,btn){HIP[grupo]=val;var p=btn.parentNode;var bs=p.getElementsByTagName('button');for(var i=0;i<bs.length;i++)bs[i].classList.remove('on');btn.classList.add('on');if(grupo==='tipo'||grupo==='resid'||grupo==='uso'){var d=hipTinRef();hipSetTin(d);}hipCalc();}
+var HIP={uso:'habitual',resid:'residente',titulares:1,pagas1:12,pagas2:12,contrato:'indefinido',tipo:'fijo',ccaa:'',regimen:'segunda-mano'};
+
+// Tipos estimados/orientativos, no exactos: cambian por comunidad y por ley de presupuestos de cada año
+var ITP_CCAA={'':8.0,'andalucia':7.0,'aragon':8.0,'asturias':8.0,'baleares':8.0,'canarias':6.5,'cantabria':9.0,'castilla-la-mancha':9.0,'castilla-y-leon':8.0,'cataluna':10.0,'ceuta':6.0,'madrid':6.0,'valencia':10.0,'extremadura':8.0,'galicia':9.0,'rioja':7.0,'melilla':6.0,'murcia':8.0,'navarra':6.0,'pais-vasco':4.0};
+var AJD_CCAA={'':1.2,'andalucia':1.2,'aragon':1.5,'asturias':1.2,'baleares':1.5,'canarias':0.75,'cantabria':1.5,'castilla-la-mancha':1.5,'castilla-y-leon':1.5,'cataluna':1.5,'ceuta':0.5,'madrid':0.75,'valencia':1.4,'extremadura':1.5,'galicia':1.5,'rioja':1.0,'melilla':0.5,'murcia':1.5,'navarra':0.5,'pais-vasco':0.5};
+
+function hipSeg(grupo,val,btn){HIP[grupo]=val;var p=btn.parentNode;var bs=p.getElementsByTagName('button');for(var i=0;i<bs.length;i++)bs[i].classList.remove('on');btn.classList.add('on');hipCalc();}
+
+function hipTitSeg(val,btn){
+  HIP.titulares=val;
+  var p=btn.parentNode;var bs=p.getElementsByTagName('button');for(var i=0;i<bs.length;i++)bs[i].classList.remove('on');btn.classList.add('on');
+  var wrap=document.getElementById('hip-titular2-wrap');
+  var nota=document.getElementById('hip-tit-nota');
+  var l1=document.getElementById('hip-lbl-ingresos1'), l2=document.getElementById('hip-lbl-edad1');
+  var dWrap=document.getElementById('hip-deudas2-wrap');
+  var dLbl=document.getElementById('hip-lbl-deudas1');
+  var dNota=document.getElementById('hip-deudas-tit-nota');
+  var pWrap=document.getElementById('hip-pagas2-wrap');
+  var pLbl=document.getElementById('hip-pagas1-label');
+  if(val===2){
+    wrap.style.display='grid'; nota.style.display='block';
+    l1.textContent='Ingresos netos · titular 1'; l2.textContent='Edad · titular 1';
+    dWrap.style.display='grid'; dLbl.textContent='Cuotas mensuales · titular 1'; dNota.style.display='block';
+    pWrap.style.display='block'; pLbl.textContent='Pagas al año · titular 1';
+  } else {
+    wrap.style.display='none'; nota.style.display='none';
+    l1.textContent='Ingresos netos mensuales'; l2.textContent='Tu edad';
+    dWrap.style.display='none'; dLbl.textContent='Cuotas mensuales'; dNota.style.display='none';
+    pWrap.style.display='none'; pLbl.textContent='Número de pagas al año';
+  }
+  hipCalc();
+}
+
+function hipPagasSeg(tit,val,btn){
+  HIP['pagas'+tit]=val;
+  var p=btn.parentNode;var bs=p.getElementsByTagName('button');for(var i=0;i<bs.length;i++)bs[i].classList.remove('on');btn.classList.add('on');
+  hipCalc();
+}
+
+function hipTipoSeg(val,btn){
+  HIP.tipo=val;
+  var p=btn.parentNode;var bs=p.getElementsByTagName('button');for(var i=0;i<bs.length;i++)bs[i].classList.remove('on');btn.classList.add('on');
+  document.getElementById('hip-panel-fijo').style.display=(val==='fijo')?'block':'none';
+  document.getElementById('hip-panel-variable').style.display=(val==='variable')?'block':'none';
+  document.getElementById('hip-panel-mixto').style.display=(val==='mixto')?'block':'none';
+  hipCalc();
+}
+
 function hipNum(id){var el=document.getElementById(id);if(!el)return 0;var v=parseFloat(String(el.value).replace(/\./g,'').replace(',','.'));return isNaN(v)?0:v;}
+function hipNumRaw(id){var el=document.getElementById(id);if(!el)return 0;var v=parseFloat(el.value);return isNaN(v)?0:v;}
+function hipDec(id){var el=document.getElementById(id);if(!el)return 0;var v=parseFloat(String(el.value).replace(',','.'));return isNaN(v)?0:v;}
 function hipFmt(n){return new Intl.NumberFormat('es-ES',{maximumFractionDigits:0}).format(Math.round(n))+'€';}
 function hipFmtLive(el){var v=el.value.replace(/[^\d]/g,'');if(v==='' ){el.value='';return;}el.value=new Intl.NumberFormat('es-ES').format(parseInt(v,10));}
 function hipAdv(){var d=document.getElementById('hip-adv');var t=document.getElementById('hip-adv-ic');d.classList.toggle('open');t.textContent=d.classList.contains('open')?'−':'+';}
-function hipTinRef(){
-  var t=HIP.tipo, r=HIP.resid;
-  var txt,def;
-  if(t==='fijo'){ txt='Fijo: 2,5% – 3,5% según perfil'; def=3.0; }
-  else if(t==='variable'){ txt='Variable: euríbor + 0,5% – 1% (sube o baja cada año)'; def=2.8; }
-  else { txt='Mixto: interés fijo los primeros años, después variable'; def=2.6; }
-  if(r==='no-residente'){ txt+=' · siendo no residente suele salir algo más caro'; def+=0.7; }
-  if(HIP.uso==='inversion'){ def+=0.6; }
-  var el=document.getElementById('hip-tin-ref'); if(el) el.textContent=txt;
-  return def;
+
+function hipTinFijoSlider(){
+  var v=parseFloat(document.getElementById('hip-tin-fijo-slider').value);
+  document.getElementById('hip-tin-fijo').value=String(v.toFixed(1)).replace('.',',');
+  document.getElementById('hip-tin-fijo-label').textContent=v.toFixed(1).replace('.',',')+'%';
 }
-function hipSetTin(v){
-  document.getElementById('hip-tin').value=String(v.toFixed(1)).replace('.',',');
-  document.getElementById('hip-tin-slider').value=v;
-  document.getElementById('hip-tin-label').textContent=v.toFixed(1).replace('.',',')+'%';
-}
-function hipTinSlider(){
-  var v=parseFloat(document.getElementById('hip-tin-slider').value);
-  document.getElementById('hip-tin').value=String(v.toFixed(1)).replace('.',',');
-  document.getElementById('hip-tin-label').textContent=v.toFixed(1).replace('.',',')+'%';
-}
-function hipGetTin(){
-  var el=document.getElementById('hip-tin');
-  var v=parseFloat(String(el.value).replace(',','.'));
-  if(isNaN(v)||v<=0) return 3.5;
+
+function hipCuotaMax(capital,tin,meses){var i=(tin/100)/12;if(i===0)return capital/meses;return capital*(i*Math.pow(1+i,meses))/(Math.pow(1+i,meses)-1);}
+function hipCapitalDesdeCuota(cuota,tin,meses){if(cuota<=0)return 0;var i=(tin/100)/12;if(i===0)return cuota*meses;return cuota*(Math.pow(1+i,meses)-1)/(i*Math.pow(1+i,meses));}
+
+function hipGetTin(anosTotales){
+  var v;
+  if(HIP.tipo==='fijo'){
+    v=hipDec('hip-tin-fijo');
+  } else if(HIP.tipo==='variable'){
+    var dif=hipDec('hip-diferencial'), eur=hipDec('hip-euribor');
+    v=dif+eur;
+    var elv=document.getElementById('hip-tipo-variable-total'); if(elv) elv.textContent=v.toFixed(2).replace('.',',')+'%';
+  } else {
+    var anosFijo=parseInt(document.getElementById('hip-mixto-anos').value,10)||10;
+    var fijo=hipDec('hip-mixto-fijo');
+    var dif=hipDec('hip-mixto-dif'), eur=hipDec('hip-mixto-euribor');
+    var variable=dif+eur;
+    var anosVar=Math.max((anosTotales||30)-anosFijo,1);
+    v=(fijo*anosFijo + variable*anosVar)/(anosFijo+anosVar);
+    var elm=document.getElementById('hip-tipo-mixto-total'); if(elm) elm.textContent=v.toFixed(2).replace('.',',')+'%';
+  }
+  if(isNaN(v)||v<=0) v=3.5;
   return Math.min(v,15);
 }
-function hipCuotaMax(capital,tin,meses){var i=(tin/100)/12;if(i===0)return capital/meses;return capital*(i*Math.pow(1+i,meses))/(Math.pow(1+i,meses)-1);}
-function hipCapitalDesdeCuota(cuota,tin,meses){var i=(tin/100)/12;if(i===0)return cuota*meses;return cuota*(Math.pow(1+i,meses)-1)/(i*Math.pow(1+i,meses));}
 
 function hipCalc(){
-  var ingresos=hipNum('hip-ingresos'), pagas=parseInt(document.getElementById('hip-pagas').value||'12',10);
-  var deudas=hipNum('hip-deudas'), edad=hipNum('hip-edad'), ahorro=hipNum('hip-ahorro');
-  var pendiente=hipNum('hip-pendiente'), mesesDeuda=hipNum('hip-mesesdeuda'), variables=hipNum('hip-variables');
-  var antig=hipNum('hip-antiguedad');
+  var ingresos1=hipNum('hip-ingresos1'), edad1=hipNumRaw('hip-edad1');
+  var ingresos2=0, edad2=0, deudas2=0;
+  if(HIP.titulares===2){ ingresos2=hipNum('hip-ingresos2'); edad2=hipNumRaw('hip-edad2'); deudas2=hipNum('hip-deudas2'); }
+  var ingresos=ingresos1+ingresos2;
+  var deudas1=hipNum('hip-deudas1'), deudas=deudas1+deudas2;
+  var edad=Math.max(edad1,edad2), ahorro=hipNum('hip-ahorro');
+  var pendiente=hipNum('hip-pendiente'), mesesDeuda=hipNumRaw('hip-mesesdeuda'), variables=hipNum('hip-variables');
+  var antig=hipNumRaw('hip-antiguedad');
   var res=document.getElementById('hip-result');
   if(!ingresos||!edad){res.style.display='none';return;}
   res.style.display='block';
 
-  // ingresos mensuales normalizados (14 pagas -> prorrateo)
-  var ingMes=pagas===14?(ingresos*14)/12:ingresos;
+  // ingresos mensuales normalizados por titular (14 pagas -> prorrateo, cada uno con su propio número de pagas)
+  var ing1Mes = HIP.pagas1===14 ? (ingresos1*14)/12 : ingresos1;
+  var ing2Mes = (HIP.titulares===2) ? (HIP.pagas2===14 ? (ingresos2*14)/12 : ingresos2) : 0;
+  var ingMes = ing1Mes + ing2Mes;
   // ingresos variables: los bancos computan ~50%
   if(variables>0) ingMes+=variables*0.5;
 
@@ -302,46 +463,76 @@ function hipCalc(){
   // --- FILTRO 2: plazo por edad (hipoteca debe acabar antes de los 75) ---
   var plazoMaxEdad=Math.max(5,Math.min(HIP.resid==='residente'?30:25, 75-edad));
 
-  // --- tipo de interés: el que ponga el usuario ---
-  var tin = hipGetTin();
+  // --- tipo de interés: el que fija el usuario según el tipo de hipoteca ---
+  var tin = hipGetTin(plazoMaxEdad);
 
   // --- FILTRO 3: LTV ---
   var ltv;
   if(HIP.resid==='residente') ltv = HIP.uso==='habitual'?80:70;
   else ltv = HIP.uso==='habitual'?70:60;
 
-  // gastos de compraventa aprox
-  var gastosPct = HIP.uso==='habitual'?12:13;
+  // gastos de compraventa: segunda mano paga ITP; obra nueva paga IVA (10%) + AJD. Ambos + notaría/registro/gestoría aprox. Tipos estimativos, no exactos.
+  var gastosPct, gastosLabel;
+  if(HIP.regimen==='obra-nueva'){
+    var ajdPct = (AJD_CCAA[HIP.ccaa]!==undefined) ? AJD_CCAA[HIP.ccaa] : AJD_CCAA[''];
+    gastosPct = 10 + ajdPct + 1.0;
+    gastosLabel = 'Gastos de compra (IVA 10% + AJD '+ajdPct.toFixed(2).replace('.',',')+'% + notaría, estimado)';
+  } else {
+    var itpPct = (ITP_CCAA[HIP.ccaa]!==undefined) ? ITP_CCAA[HIP.ccaa] : ITP_CCAA[''];
+    gastosPct = itpPct + 1.5;
+    gastosLabel = 'Gastos de compra (ITP '+itpPct.toFixed(1).replace('.',',')+'% + notaría, estimado)';
+  }
+  document.getElementById('hip-gastos-label').textContent = gastosLabel;
+
+  // techo por ahorro: no depende del ratio de esfuerzo elegido, es un límite aparte
+  var precioPorAhorro = ahorro>0 ? ahorro/((100-ltv)/100 + gastosPct/100) : 0;
+  var capitalPorAhorro = precioPorAhorro*(ltv/100);
 
   var out=escenarios.map(function(e){
-    var cuotaTope = ingMes*(e.r/100) - deudas;
-    if(cuotaTope<0) cuotaTope=0;
-    var capital = hipCapitalDesdeCuota(cuotaTope, tin, plazoMaxEdad*12);
-    // límite por LTV y ahorro: el ahorro debe cubrir entrada + gastos
-    var precioPorLTV = capital/(ltv/100);
-    var precioPorAhorro = ahorro/((100-ltv)/100 + gastosPct/100);
-    var precio = Math.min(precioPorLTV, precioPorAhorro);
-    var capitalFinal = Math.min(capital, precio*(ltv/100));
-    return {r:e.r,nombre:e.n,cuota:cuotaTope,capital:capitalFinal,precio:precio,limitadoPor:(precioPorAhorro<precioPorLTV)?'ahorro':'ingresos'};
+    var cuotaTope = Math.max(ingMes*(e.r/100) - deudas, 0);
+    var capitalIngresos = hipCapitalDesdeCuota(cuotaTope, tin, plazoMaxEdad*12);
+    var precioIngresos = capitalIngresos/(ltv/100);
+    return {r:e.r,nombre:e.n,cuota:cuotaTope,capitalIngresos:capitalIngresos,precioIngresos:precioIngresos};
   });
 
   var std=out[1]; // escenario 35%
-  document.getElementById('hip-capital-v').textContent=hipFmt(std.capital);
-  document.getElementById('hip-precio-v').textContent=hipFmt(std.precio);
-  document.getElementById('hip-cuota-v').textContent=hipFmt(std.cuota)+'/mes';
+  var limitaAhorro = ahorro>0 && capitalPorAhorro < std.capitalIngresos;
+  var capitalFinal = limitaAhorro ? capitalPorAhorro : std.capitalIngresos;
+  var precioFinal = limitaAhorro ? precioPorAhorro : std.precioIngresos;
+
+  // cuota e intereses reales sobre el capital que de verdad se prestaría (no sobre el tope teórico del 35%)
+  var mesesTotales = plazoMaxEdad*12;
+  var cuotaFinal = hipCuotaMax(capitalFinal, tin, mesesTotales);
+  var totalPagado = cuotaFinal*mesesTotales;
+  var interesesTotales = Math.max(totalPagado-capitalFinal, 0);
+
+  document.getElementById('hip-capital-v').textContent=hipFmt(capitalFinal);
+  document.getElementById('hip-precio-v').textContent=hipFmt(precioFinal);
+  document.getElementById('hip-capital-limita').textContent = limitaAhorro ? 'techo por tu ahorro' : 'techo por tus ingresos (ratio 35%)';
+  document.getElementById('hip-intereses-v').textContent=hipFmt(interesesTotales);
+  document.getElementById('hip-intereses-sub').textContent = (HIP.tipo==='fijo') ? 'en '+plazoMaxEdad+' años, tipo fijo' : 'estimado al tipo actual · si es variable o mixto, subirá o bajará con el euríbor';
+  document.getElementById('hip-cuota-v').textContent=hipFmt(cuotaFinal)+'/mes';
   document.getElementById('hip-plazo-v').textContent=plazoMaxEdad+' años';
-  document.getElementById('hip-tin-v').textContent=tin.toFixed(1).replace('.',',')+'%';
+  document.getElementById('hip-tin-v').textContent=tin.toFixed(2).replace('.',',')+'%';
+  document.getElementById('hip-totaldevuelto-v').textContent=hipFmt(totalPagado);
   document.getElementById('hip-ltv-v').textContent=ltv+'%';
-  var entrada=std.precio*((100-ltv)/100), gastos=std.precio*(gastosPct/100);
+  var entrada=precioFinal*((100-ltv)/100), gastos=precioFinal*(gastosPct/100);
   document.getElementById('hip-entrada-v').textContent=hipFmt(entrada);
   document.getElementById('hip-gastos-v').textContent=hipFmt(gastos);
   document.getElementById('hip-necesario-v').textContent=hipFmt(entrada+gastos);
 
-  // escenarios
+  // escenarios: SIEMPRE muestran lo que darían los ingresos solos (no se colapsan por el ahorro)
   for(var i=0;i<3;i++){
-    document.getElementById('hip-esc'+i+'-v').textContent=hipFmt(out[i].capital);
-    var sfx = out[i].limitadoPor==='ahorro' ? ' · te limita el ahorro' : '';
+    document.getElementById('hip-esc'+i+'-v').textContent=hipFmt(out[i].capitalIngresos);
+    var sfx = (ahorro>0 && capitalPorAhorro < out[i].capitalIngresos) ? ' · tu ahorro topa antes, en '+hipFmt(capitalPorAhorro) : '';
     document.getElementById('hip-esc'+i+'-s').textContent='cuota '+hipFmt(out[i].cuota)+'/mes'+sfx;
+  }
+  var notaAhorro=document.getElementById('hip-ahorro-nota');
+  if(limitaAhorro){
+    notaAhorro.style.display='block';
+    notaAhorro.textContent='Por ingresos llegarías a más, pero tu ahorro de '+hipFmt(ahorro)+' solo te permite cubrir entrada y gastos hasta una vivienda de '+hipFmt(precioPorAhorro)+'. Ese es tu techo real hoy.';
+  } else {
+    notaAhorro.style.display='none';
   }
 
   // ---- SEMÁFORO ----
@@ -354,23 +545,31 @@ function hipCalc(){
   if(plazoMaxEdad<15) problemas.push('edad');
   if(antig>0 && antig<1) problemas.push('antiguedad');
   if(HIP.contrato==='temporal'||HIP.contrato==='autonomo') problemas.push('contrato');
+  var etiquetasProblema={
+    deudas:'tus deudas actuales, que ya se comen buena parte de tu ratio',
+    ahorro:'que te falta ahorro para cubrir entrada y gastos al precio que podrías optar',
+    edad:'tu edad, que acorta el plazo máximo y sube la cuota',
+    antiguedad:'tu antigüedad laboral, todavía corta para lo que suelen pedir',
+    contrato: HIP.contrato==='autonomo' ? 'ser autónomo (piden más documentación y aplican criterios más estrictos)' : 'tener contrato temporal (los bancos aprietan el ratio al 30%)'
+  };
 
   if(ahorro<=0){
     estado='no'; titulo='Necesitas ahorro para empezar';
-    texto='Aunque tus ingresos den para pagar una cuota de <b>'+hipFmt(std.cuota)+'/mes</b>, ningún banco financia el 100%. Necesitas cubrir la entrada (<b>'+(100-ltv)+'%</b>) más los gastos de compra (<b>~'+gastosPct+'%</b>) con ahorro propio.';
+    texto='Aunque tus ingresos den para pagar una cuota de <b>'+hipFmt(cuotaFinal)+'/mes</b>, ningún banco financia el 100%. Necesitas cubrir la entrada (<b>'+(100-ltv)+'%</b>) más los gastos de compra (<b>~'+gastosPct+'%</b>) con ahorro propio.';
   } else if(std.cuota<=0 || ratioActual>=35){
     estado='no'; titulo='Difícil con tu situación actual';
     texto='Tus deudas actuales ya consumen <b>'+ratioActual.toFixed(0)+'%</b> de tus ingresos. Los bancos rara vez aprueban por encima del 35% contando la nueva cuota.';
   } else if(problemas.length>=2){
     estado='mid'; titulo='Viable, pero ajustado';
-    texto='Tu capacidad da para <b>'+hipFmt(std.capital)+'</b>, pero hay factores que el banco mirará con lupa. Con algún ajuste mejorarías bastante.';
+    var listaProblemas=problemas.map(function(p){return etiquetasProblema[p];}).join('; ');
+    texto='Tu capacidad da para <b>'+hipFmt(capitalFinal)+'</b>, pero el banco mirará con lupa: <b>'+listaProblemas+'</b>. Mira el plan de mejora debajo para saber cómo abordarlo.';
   } else if(problemas.length===1){
     estado='mid'; titulo='Viable con un matiz';
-    texto='Tu perfil encaja para unos <b>'+hipFmt(std.capital)+'</b>. Hay un punto a pulir antes de ir al banco.';
+    texto='Tu perfil encaja para unos <b>'+hipFmt(capitalFinal)+'</b>. El punto a vigilar es <b>'+etiquetasProblema[problemas[0]]+'</b>. Mira el plan de mejora debajo para saber cómo abordarlo.';
   } else {
     estado='ok'; titulo='Perfil viable';
-    texto='Con tus datos, un banco estándar podría financiarte alrededor de <b>'+hipFmt(std.capital)+'</b>, con una cuota de <b>'+hipFmt(std.cuota)+'/mes</b>.';
-    if(std.limitadoPor==='ahorro'){var porIngresos=hipCapitalDesdeCuota(ingMes*0.35-deudas,tin,plazoMaxEdad*12);texto+=' Por ingresos llegarías a <b>'+hipFmt(porIngresos)+'</b>, pero <b>tu ahorro es el que marca el techo</b>.';}
+    texto='Con tus datos, un banco estándar podría financiarte alrededor de <b>'+hipFmt(capitalFinal)+'</b>, con una cuota de <b>'+hipFmt(cuotaFinal)+'/mes</b>.';
+    if(limitaAhorro){texto+=' Por ingresos llegarías a <b>'+hipFmt(std.capitalIngresos)+'</b>, pero <b>tu ahorro es el que marca el techo</b>.';}
   }
   var vEl=document.getElementById('hip-verdict');
   vEl.className='hip-verdict '+estado;
@@ -381,7 +580,7 @@ function hipCalc(){
   var tips=[];
   if(deudas>0){
     var capSinDeudas=hipCapitalDesdeCuota(ingMes*0.35, tin, plazoMaxEdad*12);
-    var gana=capSinDeudas-std.capital;
+    var gana=capSinDeudas-std.capitalIngresos;
     if(gana>1000){
       var txt='Cancelando tus deudas actuales (<b>'+hipFmt(deudas)+'/mes</b>) tu capacidad subiría hasta <b>'+hipFmt(capSinDeudas)+'</b>, unos '+hipFmt(gana)+' más.';
       if(pendiente>0) txt+=' Te quedan <b>'+hipFmt(pendiente)+'</b> por pagar.';
@@ -394,9 +593,9 @@ function hipCalc(){
     var viviendaObj=porIng/(ltv/100);
     tips.push('Por ingresos podrías optar a unos <b>'+hipFmt(porIng)+'</b>. Para una vivienda de <b>'+hipFmt(viviendaObj)+'</b> necesitarías reunir <b>'+hipFmt(viviendaObj*((100-ltv)/100+gastosPct/100))+'</b> entre entrada y gastos.');
   }
-  if(faltaAhorro>0&&ahorro>0) tips.push('Para ese precio de vivienda te faltarían <b>'+hipFmt(faltaAhorro)+'</b> de ahorro. Con lo que tienes hoy llegas a una vivienda de <b>'+hipFmt(std.precio)+'</b>.');
+  if(faltaAhorro>0&&ahorro>0) tips.push('Para ese precio de vivienda te faltarían <b>'+hipFmt(faltaAhorro)+'</b> de ahorro. Con lo que tienes hoy llegas a una vivienda de <b>'+hipFmt(precioFinal)+'</b>.');
   if(plazoMaxEdad<20) tips.push('Por tu edad el plazo máximo se queda en <b>'+plazoMaxEdad+' años</b>, lo que sube la cuota. Un segundo titular más joven ampliaría el plazo.');
-  if(HIP.titulares===1&&std.capital>0) tips.push('Añadir un <b>segundo titular</b> con ingresos sumaría su nómina al cálculo y subiría bastante el máximo.');
+  if(HIP.titulares===1&&capitalFinal>0) tips.push('Añadir un <b>segundo titular</b> con ingresos sumaría su nómina al cálculo y subiría bastante el máximo.');
   if(HIP.contrato==='temporal') tips.push('Con contrato temporal muchos bancos aprietan el ratio al <b>30%</b>. Consolidar un indefinido cambia mucho la operación.');
   if(HIP.contrato==='autonomo') tips.push('Como autónomo te pedirán <b>2 ejercicios completos</b> de declaraciones y suelen aplicar criterios más estrictos.');
   if(antig>0&&antig<2) tips.push('Con <b>'+antig+' año(s)</b> de antigüedad vas justo: la mayoría pide un mínimo de 1-2 años en el puesto actual.');
@@ -406,7 +605,10 @@ function hipCalc(){
 
   // WhatsApp
   var tipoTxt=HIP.tipo==='fijo'?'fijo':(HIP.tipo==='variable'?'variable':'mixto');
-  var msg='Hola Lucho, he hecho la simulación en tu calculadora de hipoteca y me gustaría que estudies mi caso para ver a qué hipoteca puedo acceder y cuál es la mejor opción del mercado para mí.\n\nMi simulación:\n• '+(HIP.uso==='habitual'?'Vivienda habitual':'Inversión/segunda vivienda')+' · '+(HIP.resid==='residente'?'Residente en España':'No residente')+'\n• Ingresos: '+hipFmt(ingresos)+'/mes ('+pagas+' pagas)\n• Deudas actuales: '+hipFmt(deudas)+'/mes\n• Ahorro disponible: '+hipFmt(ahorro)+'\n• Tipo '+tipoTxt+' al '+tin.toFixed(1).replace('.',',')+'%\n• Capacidad estimada: '+hipFmt(std.capital)+' · vivienda hasta '+hipFmt(std.precio);
+  var pagasTxt = HIP.titulares===2 ? ('T1 '+HIP.pagas1+'p · T2 '+HIP.pagas2+'p') : (HIP.pagas1+' pagas');
+  var ccaaEl=document.getElementById('hip-ccaa');
+  var ccaaTxt = (ccaaEl && ccaaEl.selectedIndex>0) ? ccaaEl.options[ccaaEl.selectedIndex].text : 'sin especificar';
+  var msg='Hola Lucho, he hecho la simulación en tu calculadora de hipoteca y me gustaría que estudies mi caso para ver a qué hipoteca puedo acceder y cuál es la mejor opción del mercado para mí.\n\nMi simulación:\n• '+(HIP.uso==='habitual'?'Vivienda habitual':'Inversión/segunda vivienda')+' · '+(HIP.resid==='residente'?'Residente en España':'No residente')+'\n• Comunidad autónoma: '+ccaaTxt+' · '+(HIP.regimen==='obra-nueva'?'Obra nueva':'Segunda mano')+'\n• Ingresos: '+hipFmt(ingresos)+'/mes ('+pagasTxt+')\n• Deudas actuales: '+hipFmt(deudas)+'/mes\n• Ahorro disponible: '+hipFmt(ahorro)+'\n• Tipo '+tipoTxt+' al '+tin.toFixed(2).replace('.',',')+'%\n• Capacidad estimada: '+hipFmt(capitalFinal)+' · vivienda hasta '+hipFmt(precioFinal);
   document.getElementById('hip-wa').href='https://wa.me/34646604591?text='+encodeURIComponent(msg);
 }
 
